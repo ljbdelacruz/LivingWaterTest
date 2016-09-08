@@ -1059,6 +1059,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\js\directives\template1\ui\adminDashboard\adminToolBar\" />
+    <Folder Include="Assets\js\directives\template2\ui\newsComponents\newsBody\css\" />
     <Folder Include="Assets\js\directives\template2\ui\products\productItem\" />
   </ItemGroup>
   <ItemGroup>
