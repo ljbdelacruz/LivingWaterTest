@@ -1,0 +1,20 @@
+﻿body {
+}
+
+.backgroundOpacity{
+    background: rgb(217, 222, 229);
+    background: rgba(217, 222, 229, 1);
+}
+
+.noBorders{
+    border: none;
+}
+
+.padding5px{
+    padding-right:5px;
+    padding-left:5px;
+}
+
+.container{
+    margin-top: 10px;
+}

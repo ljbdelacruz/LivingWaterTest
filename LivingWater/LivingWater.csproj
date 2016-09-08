@@ -197,8 +197,10 @@
     <Content Include="Assets\js\directives\template1\ui\carouselImage\carouselImage.html" />
     <Content Include="Assets\js\directives\template1\ui\carouselImage\carouselImage.js" />
     <Content Include="Assets\js\directives\template1\ui\carouselImage\css\carousel.css" />
+    <Content Include="Assets\js\directives\template1\ui\concernComponent\concernComponent.css" />
     <Content Include="Assets\js\directives\template1\ui\concernComponent\concernComponent.html" />
     <Content Include="Assets\js\directives\template1\ui\concernComponent\concernComponent.js" />
+    <Content Include="Assets\js\directives\template1\ui\contactComponents\contactUsBody\contactUs.css" />
     <Content Include="Assets\js\directives\template1\ui\contactComponents\contactUsBody\contactUsBody.html" />
     <Content Include="Assets\js\directives\template1\ui\contactComponents\contactUsBody\contactUsBody.js" />
     <Content Include="Assets\js\directives\template1\ui\displayImage\css\displayImage.css" />
