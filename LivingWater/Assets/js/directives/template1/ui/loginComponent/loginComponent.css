@@ -1,17 +1,14 @@
-﻿#loginOnly {
+﻿.whiteOpacity{
     background: rgb(255, 255, 255);
     background: rgba(255, 255, 255, .2);
-    border: none;
+    }
+.noBorders{
+    border:none;
     padding-right:5px;
     padding-left:5px;
-   
 }
 
-#usernameInput{
+.loginSpacing{
     margin-top:10px;
-}
-
-#loginButton{
     margin-bottom: 10px;
-    
 }
