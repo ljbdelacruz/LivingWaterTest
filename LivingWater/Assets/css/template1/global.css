@@ -26,8 +26,11 @@
 .contentDiv {
     position:absolute; margin-top:50px; width:100%; z-index: -1;
 }
-.displayMargin100px {
-    margin-top:100px;
+.displayMarginTop100px {
+    margin-top:300px;
+}
+.displayMarginBot100px {
+    margin-bottom:100px;
 }
 .tableWidth1000px {
     width:1000px;
