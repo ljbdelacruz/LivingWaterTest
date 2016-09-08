@@ -70,6 +70,8 @@
     <!--Service Properties-->
     <script src="/Assets/js/directives/services/properties/productsService.js"></script>
     <script src="/Assets/js/directives/services/properties/registrationProperties.js"></script>
+    <script src="/Assets/js/directives/services/properties/newsProperties.js"></script>
+
     <!--Functionalities Service-->
     <script src="Assets/js/directives/services/tempFunction/modifyCart.js"></script>
     <!--Filters Service-->

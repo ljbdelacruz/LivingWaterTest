@@ -141,6 +141,7 @@
     <Content Include="Assets\js\directives\services\Globalization.js" />
     <Content Include="Assets\js\directives\services\processChecker.js" />
     <Content Include="Assets\js\directives\services\properties\inboxProperties.js" />
+    <Content Include="Assets\js\directives\services\properties\newsProperties.js" />
     <Content Include="Assets\js\directives\services\properties\productsService.js" />
     <Content Include="Assets\js\directives\services\properties\registrationProperties.js" />
     <Content Include="Assets\js\directives\services\registrationService.js" />
@@ -235,8 +236,8 @@
     <Content Include="Assets\js\directives\template1\ui\verificationCode\css\verificationCode.css" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.html" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.js" />
-    <Content Include="Assets\js\directives\template2\ui\products\newsComponents\newsBody\newsBody.html" />
-    <Content Include="Assets\js\directives\template2\ui\products\newsComponents\newsBody\newsBody.js" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.html" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.js" />
     <Content Include="Assets\js\directives\template2\ui\products\productBody\productBody.html" />
     <Content Include="Assets\js\directives\template2\ui\products\productBody\productBody.js" />
     <Content Include="index.aspx" />
