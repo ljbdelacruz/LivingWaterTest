@@ -229,6 +229,7 @@
     <Content Include="Assets\js\directives\template1\ui\products\productLine\productLine.js" />
     <Content Include="Assets\js\directives\template1\ui\registration\registration.js" />
     <Content Include="Assets\js\directives\template1\ui\registration\registrationComponent.html" />
+    <Content Include="Assets\js\directives\template1\ui\socialNavBar\socialNavBar.css" />
     <Content Include="Assets\js\directives\template1\ui\socialNavBar\socialNavBar.html" />
     <Content Include="Assets\js\directives\template1\ui\socialNavBar\socialNavBar.js" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\css\verificationCode.css" />
