@@ -29,7 +29,6 @@ angular.module('ngStarterKit', [
             'directives.concernSection',
             'directives.newsSection',
             'directives.newsContainer',
-            'directives.newsBody',
             'directives.playlistComponent',
             'directives.carouselImage',
             'directives.embedVideo',
@@ -38,6 +37,7 @@ angular.module('ngStarterKit', [
             'directives.modifyNews',
             'directives.dAboutUs',
             'directives.productBody',
+            'directives.newsBody',
             /*Modules*/
             'modules.Home',
             'modules.Login',

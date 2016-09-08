@@ -33,7 +33,6 @@
     <script src="/Assets/js/directives/template1/ui/adminDashboard/inboxMessage/inboxMessage.js"></script>
     <script src="/Assets/js/directives/template1/ui/adminDashboard/concernSection/concernSection.js"></script>
     <script src="/Assets/js/directives/template1/ui/adminDashboard/newsSection/newsSection.js"></script>
-    <script src="/Assets/js/directives/template1/ui/newsComponents/newsBody/newsBody.js"></script>
     <script src="/Assets/js/directives/template1/ui/newsComponents/newsContainer/newsContainer.js"></script>
     <script src="/Assets/js/directives/template1/ui/displayImage/displayImage.js"></script>
     <script src="/Assets/js/directives/template1/ui/displayVideo/displayVideo.js"></script>
@@ -44,6 +43,7 @@
     <script src="/Assets/js/directives/template1/ui/newsComponents/modifyNews/modifyNews.js"></script>
     <script src="/Assets/js/directives/template1/ui/aboutUs/aboutUs.js"></script>
     <script src="/Assets/js/directives/template2/ui/products/productBody/productBody.js"></script>
+    <script src="/Assets/js/directives/template2/ui/newsComponents/newsBody/newsBody.js"></script>
 
     <!--Services-->
     <script src="/Assets/js/directives/services/sharedControllerService.js"></script>
