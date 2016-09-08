@@ -2,13 +2,13 @@
     <div>
         <center>
             <div ng-controller="productsCtrl">
-                <table>
+                <table class="displayMargin100px">
                     <tr>
                         <td>
                             <input type="button" value="Products" ng-click="SwitchMode('product')" ng-disabled="showProd" style="width:100px; height:50px;" />
                         </td>
                         <td>
-                            <input type="button" value="Cart" ng-click="SwitchMode('cart')" ng-disabled="showCart" style="width:100px; height:50px;"/>
+                            <input type="button" value="Cart" ng-click="SwitchMode('cart')" ng-disabled="showCart" style="width:100px; height:50px;" />
                         </td>
                         <td>
                             <select  ng-model="selectedFilter" ng-change="ChangeFilter($index)" style="width:150px; height:50px;">

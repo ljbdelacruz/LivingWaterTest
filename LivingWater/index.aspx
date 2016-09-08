@@ -14,7 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 </head>
-<body ng-controller="AppCtrl" ng-init="filterNavItems(); loadVerificationCodes(); loadSlideImages(); loadNews();" >
+<body ng-controller="AppCtrl" ng-init="filterNavItems(); loadVerificationCodes(); loadSlideImages(); loadNews();" class="bg1">
     <navigation-bar items="navItems"></navigation-bar>
     <div class="contentDiv" ng-view></div>
 
