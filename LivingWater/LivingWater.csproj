@@ -1050,14 +1050,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\__MACUPDATEOBJECTS\ClassLibraryRepository\ClassLibraryRepository.csproj">
+    <Folder Include="Assets\js\directives\template1\ui\adminDashboard\adminToolBar\" />
+    <Folder Include="Assets\js\directives\template2\ui\products\productItem\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryRepository\ClassLibraryRepository.csproj">
       <Project>{f10093f5-78f0-4624-b6e4-ecbfb9ac600b}</Project>
       <Name>ClassLibraryRepository</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\js\directives\template1\ui\adminDashboard\adminToolBar\" />
-    <Folder Include="Assets\js\directives\template2\ui\products\productItem\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

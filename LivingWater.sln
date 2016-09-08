@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivingWater", "LivingWater\LivingWater.csproj", "{11ABFD26-FC61-4E44-A55A-AC85FA611353}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryRepository", "..\..\..\..\__MACUPDATEOBJECTS\ClassLibraryRepository\ClassLibraryRepository.csproj", "{F10093F5-78F0-4624-B6E4-ECBFB9AC600B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryRepository", "ClassLibraryRepository\ClassLibraryRepository.csproj", "{F10093F5-78F0-4624-B6E4-ECBFB9AC600B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
