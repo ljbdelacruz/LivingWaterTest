@@ -1,26 +1,32 @@
 ﻿<div>
     <table>
         <tr ng-repeat="row in items">
-            <td ng-repeat="col in row.items">
+            <td ng-repeat="col in row.items" style="padding-right:50px; padding-top:50px">
                 <table>
                     <tr>
                         <td>
-                            <img src="col.source" />
+                            <img src="col.source" style="width:200px; height:200px"/>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p>{{col.item}}</p>
+                            <center>
+                                <p>{{col.item}}</p>
+                            </center>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p>{{col.price}}</p>
+                            <center>
+                                <p>{{col.price}}</p>
+                            </center>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="button" value="BUY"/>
+                            <center>
+                                <input type="button" value="BUY" />
+                            </center>
                         </td>
                     </tr>
                 </table>
