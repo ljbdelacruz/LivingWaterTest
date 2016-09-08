@@ -1,10 +1,11 @@
 ﻿<div class="affix mainNav">
+    <link rel="stylesheet" type="text/css" href="/Assets/js/directives/template1/ui/navigationBar/css/navigationBar.css" />
     <div class="bg3">
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs gradientBg">
             <!--<ul class="nav nav-pills nav-justified">-->
             <!---if home ang gipindot, dapat siya lang active. add class="active" sa li--->
             <li role="presentation" ng-repeat="item in items" ng-click="goto()" ng-show="{{item.show}}">
-                <a class="fontFranklinGothicMedium">{{item.label}}</a>
+                <button class="fontFranklinGothicMedium gradientBg padding5px hideBorder blackFont buttonSize ">{{item.label}}</button>
             </li>
         </ul>
     </div>
