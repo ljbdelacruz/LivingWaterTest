@@ -8,7 +8,7 @@
                         <td>
                             <div>
                                 <div style="float:left; position:absolute; margin-left:10px; margin-top:280px; z-index:1;">
-                                    <a>
+                                    <a ng-click="ShowNewsInformation()">
                                         <table>
                                             <tr>
                                                 <td>
@@ -17,7 +17,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <p ng-bind="content"></p>
+                                                    <p ng-bind="content | limitTo:30"></p>
                                                 </td>
                                             </tr>
                                         </table>

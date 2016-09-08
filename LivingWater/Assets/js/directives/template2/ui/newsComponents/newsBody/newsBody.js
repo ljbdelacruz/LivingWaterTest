@@ -5,13 +5,15 @@ angular.module('directives.newsBody', [])
 .directive('newsBody',
            ['$location',
             'newsProperties',
-            function ($location, newsProperties) {
+            'userInformation',
+            function ($location, newsProperties, userInformation) {
                 function preFn(scope, element, attr) {
                     /* TODO: Do something here before post function */
                 }
                 /* Do the directive's logic here */
                 function postFn(scope, element, attr) {
                     scope.news = newsProperties.news;
+                    scope.selectedNews = newsProperties.news[0];
                     scope.displayImage = newsProperties.news[0].images[0].image;
                     scope.title=newsProperties.news[0].title;
                     scope.content = newsProperties.news[0].content;
@@ -20,6 +22,12 @@ angular.module('directives.newsBody', [])
                         scope.displayImage = selected.images[0].image;
                         scope.title = selected.title;
                         scope.content = selected.content;
+                        scope.selectedNews = selected;
+                    };
+                    scope.ShowNewsInformation = function () {
+                        userInformation.newsToView = scope.selectedNews;
+                        userInformation.newsToView.datePublished = 'September 8, 2015';
+                        $location.path('/ViewNews');
                     };
                 }
                 return {

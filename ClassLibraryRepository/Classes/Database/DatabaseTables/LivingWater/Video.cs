@@ -15,7 +15,7 @@ namespace ClassLibraryRepository
 		public int frameborder { get; set; }
 
 		public Video(){ 
-			
+
 		}
 		public Video(int nId, int nNews_id, string nTitle, string nDesign, string nType, double nWidth, double nHeight, string nSource, string nThumbnail ,int nFrameBorder)
 		{
