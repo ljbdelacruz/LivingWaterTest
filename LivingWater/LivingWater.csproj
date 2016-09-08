@@ -111,6 +111,7 @@
     <Content Include="Assets\images\bg\bg2.jpg" />
     <Content Include="Assets\images\bg\bg3.jpg" />
     <Content Include="Assets\images\bg\bg4.jpg" />
+    <Content Include="Assets\images\bg\sampleImage.jpg" />
     <Content Include="Assets\images\etc\bg1.jpg" />
     <Content Include="Assets\images\etc\img1.jpg" />
     <Content Include="Assets\images\etc\img2.jpg" />
@@ -118,6 +119,7 @@
     <Content Include="Assets\images\etc\img4.jpg" />
     <Content Include="Assets\images\etc\img5.jpg" />
     <Content Include="Assets\images\FB-fLogo-Blue-broadcast.png" />
+    <Content Include="Assets\images\GPlus-Logo.png" />
     <Content Include="Assets\images\icons\ic1.png" />
     <Content Include="Assets\images\icons\ic2.png" />
     <Content Include="Assets\images\icons\ic3.png" />
@@ -141,6 +143,7 @@
     <Content Include="Assets\js\directives\services\Globalization.js" />
     <Content Include="Assets\js\directives\services\processChecker.js" />
     <Content Include="Assets\js\directives\services\properties\inboxProperties.js" />
+    <Content Include="Assets\js\directives\services\properties\newsProperties.js" />
     <Content Include="Assets\js\directives\services\properties\productsService.js" />
     <Content Include="Assets\js\directives\services\properties\registrationProperties.js" />
     <Content Include="Assets\js\directives\services\registrationService.js" />
@@ -194,8 +197,10 @@
     <Content Include="Assets\js\directives\template1\ui\carouselImage\carouselImage.html" />
     <Content Include="Assets\js\directives\template1\ui\carouselImage\carouselImage.js" />
     <Content Include="Assets\js\directives\template1\ui\carouselImage\css\carousel.css" />
+    <Content Include="Assets\js\directives\template1\ui\concernComponent\concernComponent.css" />
     <Content Include="Assets\js\directives\template1\ui\concernComponent\concernComponent.html" />
     <Content Include="Assets\js\directives\template1\ui\concernComponent\concernComponent.js" />
+    <Content Include="Assets\js\directives\template1\ui\contactComponents\contactUsBody\contactUs.css" />
     <Content Include="Assets\js\directives\template1\ui\contactComponents\contactUsBody\contactUsBody.html" />
     <Content Include="Assets\js\directives\template1\ui\contactComponents\contactUsBody\contactUsBody.js" />
     <Content Include="Assets\js\directives\template1\ui\displayImage\css\displayImage.css" />
@@ -205,6 +210,7 @@
     <Content Include="Assets\js\directives\template1\ui\displayVideo\displayVideo.js" />
     <Content Include="Assets\js\directives\template1\ui\embeddedVideo\embedVideo.html" />
     <Content Include="Assets\js\directives\template1\ui\embeddedVideo\embedVideo.js" />
+    <Content Include="Assets\js\directives\template1\ui\loginComponent\loginComponent.css" />
     <Content Include="Assets\js\directives\template1\ui\loginComponent\loginComponent.html" />
     <Content Include="Assets\js\directives\template1\ui\loginComponent\loginComponent.js" />
     <Content Include="Assets\js\directives\template1\ui\navigationBar\css\navigationBar.css" />
@@ -229,13 +235,14 @@
     <Content Include="Assets\js\directives\template1\ui\products\productLine\productLine.js" />
     <Content Include="Assets\js\directives\template1\ui\registration\registration.js" />
     <Content Include="Assets\js\directives\template1\ui\registration\registrationComponent.html" />
+    <Content Include="Assets\js\directives\template1\ui\socialNavBar\socialNavBar.css" />
     <Content Include="Assets\js\directives\template1\ui\socialNavBar\socialNavBar.html" />
     <Content Include="Assets\js\directives\template1\ui\socialNavBar\socialNavBar.js" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\css\verificationCode.css" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.html" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.js" />
-    <Content Include="Assets\js\directives\template2\ui\products\newsComponents\newsBody\newsBody.html" />
-    <Content Include="Assets\js\directives\template2\ui\products\newsComponents\newsBody\newsBody.js" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.html" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.js" />
     <Content Include="Assets\js\directives\template2\ui\products\productBody\productBody.html" />
     <Content Include="Assets\js\directives\template2\ui\products\productBody\productBody.js" />
     <Content Include="index.aspx" />

@@ -1,0 +1,63 @@
+﻿<div>
+    <table>
+        <tr>
+            <td>
+                <!--News With Images-->
+                <table>
+                    <tr>
+                        <td>
+                            <div>
+                                <div style="float:left; position:absolute; margin-left:10px; margin-top:280px; z-index:1;">
+                                    <a ng-click="ShowNewsInformation()">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <h1 ng-bind="title"></h1>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p ng-bind="content | limitTo:30"></p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </div>
+                                <img src="{{displayImage}}" style="width:1000px; height:400px" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="margin-top:50px;">
+                        <td>
+                            <h2>Latest News</h2>
+                        </td>
+                    </tr>
+                    <tr style="margin-top:50px;">
+                        <td>
+                            <table style="overflow-y:scroll; display:block;  height:150px; width:1000px;" >
+                                <tr>
+                                    <td ng-repeat="new in news" style="padding-right:10px">
+                                        <a ng-click="ChangeDisplayNews(new)">
+                                            <img src="{{new.images[0].image}}"style="width:150px; height:100px;" />
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <!--Here is where i will put top stories-->
+            </td>
+            <td>
+                <!--Here Is Where i will put -->
+            </td>
+        </tr>
+    </table>
+</div>
+
+
