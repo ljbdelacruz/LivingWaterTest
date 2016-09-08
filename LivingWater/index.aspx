@@ -44,6 +44,7 @@
     <script src="/Assets/js/directives/template1/ui/aboutUs/aboutUs.js"></script>
     <script src="/Assets/js/directives/template2/ui/products/productBody/productBody.js"></script>
     <script src="/Assets/js/directives/template2/ui/newsComponents/newsBody/newsBody.js"></script>
+    <script src="/Assets/js/directives/template2/ui/newsComponents/newsPreview/newsPreview.js"></script>
 
     <!--Services-->
     <script src="/Assets/js/directives/services/sharedControllerService.js"></script>
