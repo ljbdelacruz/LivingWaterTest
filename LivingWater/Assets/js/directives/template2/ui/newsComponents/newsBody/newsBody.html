@@ -12,18 +12,18 @@
                                         <table>
                                             <tr>
                                                 <td>
-                                                    <h1>Title Here</h1>
+                                                    <h1 ng-bind="title"></h1>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <p>Kim Kardashian Is The Fashionable Women For This Week</p>
+                                                    <p ng-bind="content"></p>
                                                 </td>
                                             </tr>
                                         </table>
                                     </a>
                                 </div>
-                                <img src="/Assets/images/etc/img1.jpg" style="width:1000px; height:400px" />
+                                <img src="{{displayImage}}" style="width:1000px; height:400px" />
                             </div>
                         </td>
                     </tr>
@@ -36,11 +36,10 @@
                         <td>
                             <table style="overflow-y:scroll; display:block;  height:150px; width:1000px;" >
                                 <tr>
-                                    <td>
-                                        <img src="/Assets/images/etc/img1.jpg" style="width:150px; height:100px;"/>
-                                    </td>
-                                    <td>
-                                        <img src="/Assets/images/etc/img2.jpg" style="width:150px; height:100px;" />
+                                    <td ng-repeat="new in news" style="padding-right:10px">
+                                        <a ng-click="ChangeDisplayNews(new)">
+                                            <img src="{{new.images[0].image}}"style="width:150px; height:100px;" />
+                                        </a>
                                     </td>
                                 </tr>
                             </table>
