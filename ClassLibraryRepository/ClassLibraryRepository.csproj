@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F10093F5-78F0-4624-B6E4-ECBFB9AC600B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassLibraryRepository</RootNamespace>
+    <AssemblyName>ClassLibraryRepository</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.ProtocolBuffers, Version=2.4.1.555, Culture=neutral, PublicKeyToken=55f7125234beb589, processorArchitecture=MSIL">
+      <HintPath>packages\Google.ProtocolBuffers.2.4.1.555\lib\net40\Google.ProtocolBuffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers.Serialization, Version=2.4.1.555, Culture=neutral, PublicKeyToken=55f7125234beb589, processorArchitecture=MSIL">
+      <HintPath>packages\Google.ProtocolBuffers.2.4.1.555\lib\net40\Google.ProtocolBuffers.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=7.0.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.7.0.4-IR19\lib\net451\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Globalization.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\InformationDisplay.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Manager\GlobalizationManager.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Manager\ProductManager.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Manager\SlideManager.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Manager\VerificationCodeManager.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Products.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Translation.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Users.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\UserSettings.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\VerificationCode.cs" />
+    <Compile Include="Classes\Util\Converter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\UserProfile.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Concern.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Inbox.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Manager\InboxManager.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Manager\ConcernManager.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Manager\UserManager.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Manager\FileManager.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\File.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\ConcernsAnswer.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\ConcernsAnswerRate.cs" />
+    <Compile Include="Classes\Util\Math.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\News.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Images.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Buttons.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Manager\NewsManager.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Video.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Util\DatabaseHandler.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Page.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Util\UserSettings.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\OSS\Util\UserSettings.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\OSS\Stores.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\OSS\Products.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\OSS\Item.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\OSS\StoreSettings.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\OSS\ItemInfo.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\OSS\Feedbacks.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\OSS\ItemConcern.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\OSS\ConversationConcern.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\InboxContent.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\OSS\Manager\InboxManager.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\OSS\Manager\DashboardManager.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\OSS\News.cs" />
+    <Compile Include="Classes\Util\Database.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\jobs\" />
+    <Folder Include="Classes\Objects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
