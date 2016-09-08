@@ -1,0 +1,8 @@
+﻿.imgVerificationCode {
+    width:300px;
+    height:250px;
+}
+.wrongVerificationCode {
+    color:red;
+}
+

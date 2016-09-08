@@ -1,0 +1,13 @@
+﻿#slides_control > div{
+  height: 200px;
+}
+img{
+  margin:auto;
+}
+#slides_control {
+  position:absolute;
+  width: 500px;
+  left:50%;
+  top:300px;
+ margin-left:-200px;
+}

@@ -1,0 +1,18 @@
+﻿<section>
+    <!--ui  bootstrap-->
+    <link rel="stylesheet" type="text/css" href="/Assets/js/directives/template1/ui/carouselImage/css/carousel.css" />
+    <div>
+        <div id="slides_control">
+            <div>
+                <carousel interval="slideInterval">
+                    <slide ng-repeat="slide in slides" active="slide.active">
+                        <img style="width:{{slide.width}}; height:{{slide.height}}" ng-src="{{slide.image}}">
+                        <div class="carousel-caption">
+                            <button ng-show="isShowButton">Learn More</button>
+                        </div>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+    </div>  
+</section>

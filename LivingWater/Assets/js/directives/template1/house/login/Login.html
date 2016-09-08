@@ -1,0 +1,23 @@
+﻿<div class="bg2">
+    <div ng-controller="LoginCtrl">
+        <center>
+            <!--Directives login component-->
+            <login-component update="filterNavItems()"></login-component>
+            <h4>
+                <span class="label label-default">
+                    Don't have an account?
+                </span>
+                <input type="button" class="btn btn-link" value="Sign Up as Guest." ng-click="showRegistrationForm()" />
+            </h4>
+            <div ng-show="isRegister">
+                            <input type="button" style="margin-bottom:20px" class="btn btn-md btn-hover btn-warning btn-sm" value="Cancel" ng-click="collapseRegistrationForm()" />
+                            <registration-component></registration-component>
+            </div>
+        </center>
+    </div>
+</div>
+
+
+
+
+

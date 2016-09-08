@@ -1,0 +1,17 @@
+﻿<div>
+    <link rel="stylesheet" type="text/css" href="/Assets/js/directives/template1/ui/displayImage/css/displayImage.css" />
+    <div>
+        <img src="{{displayImage}}" ng-if="enableRemove==false" class="origDisplayImg"/>
+    </div>
+    <table class="displayImageImageTable">
+        <tr>
+            <td ng-repeat="img in images" style="padding-right:30px">
+                <a ng-click="clickImageToDisplay(img.image)">
+                    <img class="displayImageImg" src="{{img.image}}" />
+                </a>
+                <input ng-show="enableRemove" type="button" value="DELETE" ng-click="remove($index)" />
+            </td>
+        </tr>
+    </table>
+    <input type="file" ng-show="true" accept="image/png, image/jpeg"  multiple />
+</div>

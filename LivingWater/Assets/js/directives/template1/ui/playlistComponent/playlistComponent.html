@@ -1,0 +1,29 @@
+﻿<div>
+    <link rel="stylesheet" type="text/css" href="/Assets/js/directives/template1/ui/playlistComponent/css/playlistComponent.css" />
+    <table>
+        <tr>
+            <td style="padding-right:50px">
+                <table class="imageTable" style="width:250px; height:500px">
+                    <tr ng-repeat="video in videos">
+                        <td ng-click="playVideo($index)" style="padding-bottom:30px">
+                            <img src="{{video.thumbnail}}" />
+                            <input type="button" value="DELETE" ng-click="remove($index)" ng-show="isShowDelete"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <embed-video video="videoPlayed"></embed-video>
+            </td>
+        </tr>
+        <tr ng-show="isShowDelete">
+            <td>
+                <input type="text" placeholder="Video Code" ng-model="videoCode"/>
+            </td>
+            <td>
+                <input type="button" value="Add" ng-click="add()"/>
+            </td>
+        </tr>
+
+    </table>
+</div>

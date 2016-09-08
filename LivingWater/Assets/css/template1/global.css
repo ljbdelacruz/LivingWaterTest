@@ -1,0 +1,30 @@
+﻿.bg1 {
+    background-image:url('/Assets/images/bg/bg1.jpg');
+}
+.bg2 {
+    background-image:url('/Assets/images/bg/bg2.jpg');
+}
+.bg3 {
+   background-image:url('/Assets/images/bg/bg3.jpg');
+}
+.bg4 {
+    background-image:url('/Assets/images/bg/bg4.jpg');
+}
+.divTransparent {
+    opacity:0.7;
+    filter:alpha(opacity=50);
+}
+.fontFranklinGothicMedium {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.marginNavBar {
+    padding-top:100px;
+}
+
+.contentDiv {
+    position:absolute; margin-top:50px; width:100%; z-index: -1;
+}
+.mainNav {
+    width: 100%;
+}

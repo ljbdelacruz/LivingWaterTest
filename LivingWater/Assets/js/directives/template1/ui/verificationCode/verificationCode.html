@@ -1,0 +1,29 @@
+﻿<div>
+    <link href="/Assets/js/directives/template1/ui/verificationCode/css/verificationCode.css" rel="stylesheet">
+    <table>
+        <tr>
+            <td>
+                <img class="imgVerificationCode" src="{{image.source}}" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td style="padding-right:30px; padding-top:10px">
+                            <input  type="text" placeholder="Enter Verification Code" ng-model="userInput" />
+                        </td>
+                        <td style="padding-right:30px; padding-top:10px">
+                            <input type="button" value="Verify" ng-click="Verify()" /> 
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="wrongVerificationCode" ng-show="showError">Please Enter A Correct Code</p>
+            </td>
+        </tr>
+    </table>
+</div>

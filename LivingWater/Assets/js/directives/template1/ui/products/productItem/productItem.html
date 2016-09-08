@@ -1,0 +1,38 @@
+﻿
+            <table>
+                    <tr>
+                        <td>
+                            <img src="item.source" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>{{item.item}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>{{item.price}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>{{item.quantity}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" placeholder="Quantity" value="1" ng-model="productQuantity" ng-show="showAddCart"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="Learn More" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="ADD TO CART" ng-click="AddToCart()" ng-show="showAddCart" />
+                        </td>
+                    </tr>
+            </table>

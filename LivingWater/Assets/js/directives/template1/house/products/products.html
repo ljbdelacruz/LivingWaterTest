@@ -1,0 +1,41 @@
+﻿<div>
+    <div>
+        <center>
+            <div ng-controller="productsCtrl">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="button" value="Products" ng-click="SwitchMode('product')" ng-disabled="showProd" />
+                        </td>
+                        <td>
+                            <input type="button" value="Cart" ng-click="SwitchMode('cart')" ng-disabled="showCart" />
+                        </td>
+                        <td>
+                            <select  ng-model="selectedFilter" ng-change="ChangeFilter($index)">
+                                <option ng-repeat="genre in filters" value="{{genre.id}}">{{genre.name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr ng-if="showProd">
+                        <td>
+                            <product-body items="items"></product-body>
+                        </td>
+                    </tr>
+                    <tr ng-if='showCart'>
+                        <td>
+                            <input type="button" value="PURCHASE" ng-if="isEnablePurchase" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </center>
+    </div>
+</div>
+
+
+
+
+

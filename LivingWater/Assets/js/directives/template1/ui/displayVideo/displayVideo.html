@@ -1,0 +1,8 @@
+﻿<table>
+    <tr>
+        <td ng-repeat="video in videos">
+            <embed-video video="video"></embed-video>
+            <input ng-show="enableRemove" type="button" value="DELETE" ng-click="remove($index)"/>
+        </td>
+    </tr>
+</table>

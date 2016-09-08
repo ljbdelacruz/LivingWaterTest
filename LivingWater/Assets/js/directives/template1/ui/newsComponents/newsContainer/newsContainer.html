@@ -1,0 +1,64 @@
+﻿<div>
+    <table>
+        <tr>
+            <td>
+                <div>
+                    <display-image images="news.images" enable-remove="editMode"></display-image>
+                </div>
+            </td>
+        </tr>
+        <tr ng-if="viewMode">
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:500px">
+                            <article>
+                                <h1 ng-bind="news.title"></h1>
+                                <p ng-bind="news.content | limitTo:30"></p>
+                            </article>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="LEARN MORE" ng-click="ModifyNews('learnMore', index)"/>
+            </td>
+        </tr>
+        <tr ng-if="editMode">
+            <td>
+                <h1>Edit Mode</h1>
+                <modify-news ng-if="editMode"></modify-news>
+            </td>
+        </tr>
+        <tr ng-if="addingMode">
+            <td>
+                <h1>Adding Mode</h1>
+                <modify-news ng-if="addingMode"></modify-news>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <playlist-component videos="news.videos" is-show-delete="editMode"></playlist-component>
+                </div>
+            </td>
+        </tr>
+        <tr ng-show="viewMode">
+            <td>
+                <link rel="stylesheet" type="text/css" href="/Assets/js/directives/template1/ui/newsComponents/newsContainer/css/newsContainer.css" />
+                <div ng-show="allowModifyNews">
+                    <input ng-click="ModifyNews('edit', index)" type="button" value="EDIT" />
+                    <input ng-click="ModifyNews('delete', index)" type="button" value="DELETE" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input ng-click="ModifyNews('save', index)" type="button" value="Save Changes" ng-show="editMode" />
+                <input ng-click="ModifyNews('add', index)" type="button" value="ADD" ng-show="addingMode" />
+            </td>
+        </tr>
+    </table>
+</div>

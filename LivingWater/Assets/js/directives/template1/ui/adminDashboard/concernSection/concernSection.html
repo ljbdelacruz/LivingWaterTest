@@ -1,0 +1,26 @@
+﻿<section>
+    <div>
+        <h1>Concern Section</h1>
+        <table>
+            <tr>
+                <td>
+                    <table style="overflow-y:scroll; display:block; height:300px; width:200px;">
+                        <tr ng-repeat="item in items" style="height:100px; width:200px">
+                            <td>
+                                <button ng-click="showInformation(item)">{{item.title}}<br/><span ng-bind="item.username"></span></button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <div>
+                        <h1 ng-bind="sTitle"></h1>
+                        <h3 ng-bind="sMessage"></h3>
+                        <p ng-bind="sUsername"></p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</section>

@@ -1,0 +1,11 @@
+﻿<div class="affix mainNav">
+    <div class="bg3">
+        <ul class="nav nav-tabs">
+            <!--<ul class="nav nav-pills nav-justified">-->
+            <!---if home ang gipindot, dapat siya lang active. add class="active" sa li--->
+            <li role="presentation" ng-repeat="item in items" ng-click="goto()" ng-show="{{item.show}}">
+                <a class="fontFranklinGothicMedium">{{item.label}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

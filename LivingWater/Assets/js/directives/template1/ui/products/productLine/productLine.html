@@ -1,0 +1,11 @@
+﻿<div>
+    <h1>{{genre}}</h1>
+    <link rel="stylesheet" type="text/css" href="/Assets/js/directives/template1/ui/products/productLine/css/productLine.css" />
+    <table class="imageTable">
+        <tr>
+            <td ng-repeat="item in items.items">
+                <product-item item="item" id="item.id" mode="nMode"></product-item>
+            </td>
+        </tr>
+    </table>
+</div>

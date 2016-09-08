@@ -1,0 +1,10 @@
+﻿.imageTable {
+overflow-y:scroll; display:block; 
+height:500px;
+width:200px;
+}
+img{
+  margin:auto;
+  width: 200px;
+  height: 150px;
+}

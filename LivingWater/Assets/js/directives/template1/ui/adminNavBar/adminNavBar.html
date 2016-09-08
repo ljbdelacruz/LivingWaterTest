@@ -1,0 +1,7 @@
+﻿<div class="affix">
+    <ul class="nav nav-fixed-bottom">
+        <li role="presentation" ng-repeat="item in items" ng-show="{{item.show}}">
+            <a ng-click="goto(item.path)">{{item.label}}</a>
+        </li>
+    </ul>
+</div>

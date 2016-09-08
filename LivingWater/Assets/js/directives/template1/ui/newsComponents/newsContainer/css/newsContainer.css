@@ -1,0 +1,11 @@
+﻿
+.imageTable {
+overflow-x:scroll; display:block; height:200px; width:500px;
+}
+.videoTable {
+    overflow-x:scroll; display:block; height:330px; width:500px;
+}
+article {
+    display:block;
+}
+
