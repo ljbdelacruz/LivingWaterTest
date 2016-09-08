@@ -1,8 +1,8 @@
 ﻿'use strict';
 
 /* Create module for navbar directive */
-angular.module('directives.productBody', [])
-.directive('productBody',
+angular.module('directives.newsBody', [])
+.directive('newsBody',
            ['$location',
             function ($location) {
                 function preFn(scope, element, attr) {
@@ -15,10 +15,7 @@ angular.module('directives.productBody', [])
                 return {
                     restrict: 'E',
                     replace: true,
-                    scope: {
-                        items:'=',
-                    },
-                    templateUrl: '/Assets/js/directives/template2/ui/products/productBody/productBody.html',
+                    templateUrl: '/Assets/js/directives/template2/ui/newsComponents/newsBody/newsBody.html',
                     compile: function (scope, element, attr) {
                         return {
                             pre: preFn,
