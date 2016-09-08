@@ -14,13 +14,19 @@
                 </tr>
                 <tr>
                     <td>
-                        <table style="margin-top: 100px; width: 400px; ">
+                        <table style="margin-top: 100px; margin-bottom:50px; width: 400px; ">
                             <tr>
                                 <td>
                                     <p ng-bind="content"></p>
                                 </td>
                             </tr>
                         </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <playlist-component videos="videos" is-show-delete="editMode"></playlist-component>
                     </td>
                 </tr>
             </table>

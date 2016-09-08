@@ -8,6 +8,7 @@
                  $scope.title = userInformation.newsToView.title;
                  $scope.datePublished = userInformation.newsToView.datePublished;
                  $scope.content = userInformation.newsToView.content;
+                 $scope.videos = userInformation.newsToView.videos;
              }
             ]
 );
