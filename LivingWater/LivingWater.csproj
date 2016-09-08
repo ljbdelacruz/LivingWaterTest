@@ -111,6 +111,7 @@
     <Content Include="Assets\images\bg\bg2.jpg" />
     <Content Include="Assets\images\bg\bg3.jpg" />
     <Content Include="Assets\images\bg\bg4.jpg" />
+    <Content Include="Assets\images\bg\sampleImage.jpg" />
     <Content Include="Assets\images\etc\bg1.jpg" />
     <Content Include="Assets\images\etc\img1.jpg" />
     <Content Include="Assets\images\etc\img2.jpg" />
@@ -118,6 +119,7 @@
     <Content Include="Assets\images\etc\img4.jpg" />
     <Content Include="Assets\images\etc\img5.jpg" />
     <Content Include="Assets\images\FB-fLogo-Blue-broadcast.png" />
+    <Content Include="Assets\images\GPlus-Logo.png" />
     <Content Include="Assets\images\icons\ic1.png" />
     <Content Include="Assets\images\icons\ic2.png" />
     <Content Include="Assets\images\icons\ic3.png" />
@@ -206,6 +208,7 @@
     <Content Include="Assets\js\directives\template1\ui\displayVideo\displayVideo.js" />
     <Content Include="Assets\js\directives\template1\ui\embeddedVideo\embedVideo.html" />
     <Content Include="Assets\js\directives\template1\ui\embeddedVideo\embedVideo.js" />
+    <Content Include="Assets\js\directives\template1\ui\loginComponent\loginComponent.css" />
     <Content Include="Assets\js\directives\template1\ui\loginComponent\loginComponent.html" />
     <Content Include="Assets\js\directives\template1\ui\loginComponent\loginComponent.js" />
     <Content Include="Assets\js\directives\template1\ui\navigationBar\css\navigationBar.css" />
