@@ -10,14 +10,13 @@ angular.module('directives.inboxMessage', [])
                 }
                 /* Do the directive's logic here */
                 function postFn(scope, element, attr) {
-                    scope.user = scope.content.user;
-                    scope.subject = scope.content.subject;
-                    scope.body = scope.content.body;
                 }
                 return {
                     restrict: 'E',
                     scope: {
-                        content: "="
+                        content: "=",
+                        username: "=",
+                        subject:"=",
                     },
                     replace: true,
                     templateUrl: '/Assets/js/directives/template1/ui/adminDashboard/inboxMessage/inboxMessage.html',

@@ -4,16 +4,32 @@
 angular.module('directives.inboxSection', [])
 .directive('inboxSection',
            ['$location',
-            function ($location) {
+            'inboxProperties',
+            function ($location, inboxProperties) {
+                scope.messages = inboxProperties.inbox;
+
                 function preFn(scope, element, attr) {
                     /* TODO: Do something here before post function */
                 }
                 /* Do the directive's logic here */
                 function postFn(scope, element, attr) {
                     scope.content = { user: '', subject: '', content: '' };
+                    scope.username = "";
+                    scope.subject = "";
                     scope.showInformation = function (itm) {
-                        scope.content = itm;
+                        scope.username = itm.sender_username;
+                        scope.subject = itm.subject;
+                        scope.content = itm.InboxContent;
                     };
+                    scope.CheckIfUnread = function (itm) {
+                        for (var i = 0; i < itm.InboxContent; i++) {
+                            if (itm.InboxContent[i].unread == false) {
+                                itm.unreadcount++;
+                            }
+                        }
+                    };
+
+
                 }
                 return {
                     restrict: 'E',

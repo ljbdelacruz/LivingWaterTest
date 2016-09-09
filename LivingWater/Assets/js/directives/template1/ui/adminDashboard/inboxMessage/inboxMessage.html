@@ -1,19 +1,28 @@
 ﻿<div>
-    <table>
+    <table style="width:600px; height:300px">
         <tr>
             <td>
-                <h1 ng-bind="user"></h1>
+                <h5>From: <span ng-bind="username"></span></h5>
             </td>
         </tr>
         <tr>
             <td>
-                <h3 ng-bind="subject"></h3>
+                <h6>Subject: <span ng-bind="subject"></span></h6>
             </td>
         </tr>
-        <tr>
+        <tr ng-repeat="itm in content">
             <td>
-                <p ng-bind="body"></p>
+                <table>
+                    <tr>
+                        <td>
+                            <div style="width:600px;">
+                                <p ng-bind="itm.message"></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </td>
         </tr>
     </table>
+
 </div>

@@ -2,6 +2,7 @@
 angular.module('otherApp')
 .factory('userInformation', function () {
     var userInformation = {
+        user_id: -1,
         username: '',
         language_id:1,
         isadmin: false,
