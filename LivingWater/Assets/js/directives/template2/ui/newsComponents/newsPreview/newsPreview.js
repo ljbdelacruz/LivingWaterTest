@@ -16,7 +16,7 @@ angular.module('directives.newsPreview', [])
                     scope.title = newsProperties.news[0].title;
                     scope.content = newsProperties.news[0].content;
 
-                    scope.ShowNewsInformation = function (itm) {
+                    scope.ShowNewsInformationPreview = function (itm) {
                         userInformation.newsToView = itm;
                         userInformation.newsToView.datePublished = 'September 8, 2015';
                         $location.path('/ViewNews');
