@@ -2,6 +2,7 @@
 angular.module('otherApp')
 .factory('loadNews', ['userListService','$http', function (userListService, $http) {
     return function () {
+
         $http.post('index.aspx/ListOfNews', { data: {} })
                            .success(function (data, status, headers, config) {
                                userListService.news = [];

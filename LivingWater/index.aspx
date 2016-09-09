@@ -56,6 +56,7 @@
     <script src="/Assets/js/directives/services/checkRequiredField.js"></script>
     <script src="/Assets/js/directives/services/routeChecker.js"></script>
     <script src="Assets/js/directives/services/siteSettings.js"></script>
+    <script src="/Assets/js/directives/services/loadData.js"></script>
 
     <!--Database Fetcher Service-->
     <script src="/Assets/js/directives/services/dbfetcher/dbInbox.js"></script>
@@ -63,6 +64,8 @@
     <script src="/Assets/js/directives/services/dbfetcher/dbSlideImage.js"></script>
     <script src="/Assets/js/directives/services/dbfetcher/dbNews.js"></script>
     <script src="/Assets/js/directives/services/dbfetcher/dbConcern.js"></script>
+    <script src="/Assets/js/directives/services/dbfetcher/dbInbox.js"></script>
+
     <!--DB POST-->
     <script src="Assets/js/directives/services/dbpost/dbSubmitLogin.js"></script>
     <script src="Assets/js/directives/services/dbpost/dbSubmitConcern.js"></script>
@@ -80,6 +83,9 @@
     <script src="Assets/js/directives/services/filters/allProduct.js"></script>
     <script src="Assets/js/directives/services/filters/bySlots.js"></script>
     <script src="Assets/js/directives/services/filters/byGenre.js"></script>
+
+
+
     <!--Modules-->
     <!--Home-->
     <script src="/Assets/js/directives/template1/house/home/module.js"></script>
