@@ -11,10 +11,10 @@ angular.module('directives.loginComponent', [])
             'userInformation',
             'userListService',
             'processChecker',
-            'loadInbox',
             'loadConcern',
             'submitLogin',
-            function ($location, userInformation, userListService, processChecker, loadInbox, loadConcern, submitLogin) {
+            'loadData',
+            function ($location, userInformation, userListService, processChecker, loadConcern, submitLogin, loadData) {
                 function preFn(scope, element, attr) {
                     /* TODO: Do something here before post function */
                 }
@@ -30,13 +30,17 @@ angular.module('directives.loginComponent', [])
                     scope.login = function () {
                         var data = { username: scope.username, password: scope.password };
                         submitLogin(data, scope.Checking);
-                     }
+                    }
+                    scope.loadInbox = function () {
+                        loadData(1);
+                    };
                     scope.Checking = function () {
                         if (userInformation.islogin == true) {
-                            loadInbox();
                             //loads the concerns
                             loadConcern();
                             scope.update();
+                            //this one loads the inbox for a certain user
+                            scope.loadInbox();
                             processChecker('/Home');
                             $location.path('/Home');
                         } else {

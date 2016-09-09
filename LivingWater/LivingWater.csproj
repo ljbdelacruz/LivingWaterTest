@@ -142,6 +142,7 @@
     <Content Include="Assets\js\directives\services\filters\byGenre.js" />
     <Content Include="Assets\js\directives\services\filters\bySlots.js" />
     <Content Include="Assets\js\directives\services\Globalization.js" />
+    <Content Include="Assets\js\directives\services\loadData.js" />
     <Content Include="Assets\js\directives\services\processChecker.js" />
     <Content Include="Assets\js\directives\services\properties\inboxProperties.js" />
     <Content Include="Assets\js\directives\services\properties\newsProperties.js" />
