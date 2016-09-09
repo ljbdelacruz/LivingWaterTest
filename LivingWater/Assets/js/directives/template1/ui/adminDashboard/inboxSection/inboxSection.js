@@ -6,13 +6,12 @@ angular.module('directives.inboxSection', [])
            ['$location',
             'inboxProperties',
             function ($location, inboxProperties) {
-                scope.messages = inboxProperties.inbox;
-
                 function preFn(scope, element, attr) {
                     /* TODO: Do something here before post function */
                 }
                 /* Do the directive's logic here */
                 function postFn(scope, element, attr) {
+                    scope.messages = inboxProperties.inbox;
                     scope.content = { user: '', subject: '', content: '' };
                     scope.username = "";
                     scope.subject = "";
@@ -28,8 +27,6 @@ angular.module('directives.inboxSection', [])
                             }
                         }
                     };
-
-
                 }
                 return {
                     restrict: 'E',

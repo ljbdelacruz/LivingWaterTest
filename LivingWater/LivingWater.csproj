@@ -137,6 +137,7 @@
     <Content Include="Assets\js\directives\services\dbpost\dbSubmitLogin.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbSubmitOrder.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbSubmitRegistration.js" />
+    <Content Include="Assets\js\directives\services\errorProtocols.js" />
     <Content Include="Assets\js\directives\services\filters\allProduct.js" />
     <Content Include="Assets\js\directives\services\filters\byGenre.js" />
     <Content Include="Assets\js\directives\services\filters\bySlots.js" />

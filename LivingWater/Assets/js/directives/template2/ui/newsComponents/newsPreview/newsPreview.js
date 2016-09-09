@@ -15,13 +15,11 @@ angular.module('directives.newsPreview', [])
                     scope.news = newsProperties.news;
                     scope.title = newsProperties.news[0].title;
                     scope.content = newsProperties.news[0].content;
-
                     scope.ShowNewsInformationPreview = function (itm) {
                         userInformation.newsToView = itm;
                         userInformation.newsToView.datePublished = 'September 8, 2015';
                         $location.path('/ViewNews');
                     };
-
                 }
                 return {
                     restrict: 'E',
