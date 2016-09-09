@@ -137,6 +137,7 @@
     <Content Include="Assets\js\directives\services\dbpost\dbSubmitLogin.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbSubmitOrder.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbSubmitRegistration.js" />
+    <Content Include="Assets\js\directives\services\errorProtocols.js" />
     <Content Include="Assets\js\directives\services\filters\allProduct.js" />
     <Content Include="Assets\js\directives\services\filters\byGenre.js" />
     <Content Include="Assets\js\directives\services\filters\bySlots.js" />
@@ -243,6 +244,8 @@
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.js" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.html" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.js" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\newsPreview\newsPreview.html" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\newsPreview\newsPreview.js" />
     <Content Include="Assets\js\directives\template2\ui\products\productBody\productBody.html" />
     <Content Include="Assets\js\directives\template2\ui\products\productBody\productBody.js" />
     <Content Include="index.aspx" />
@@ -1059,6 +1062,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\js\directives\template1\ui\adminDashboard\adminToolBar\" />
+    <Folder Include="Assets\js\directives\template2\ui\newsComponents\newsBody\css\" />
     <Folder Include="Assets\js\directives\template2\ui\products\productItem\" />
   </ItemGroup>
   <ItemGroup>

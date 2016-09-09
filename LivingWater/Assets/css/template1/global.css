@@ -10,6 +10,7 @@
 .bg4 {
     background-image:url('/Assets/images/bg/bg4.jpg');
 }
+
 .divTransparent {
     opacity:0.7;
     filter:alpha(opacity=50);
@@ -25,6 +26,16 @@
 .contentDiv {
     position:absolute; margin-top:50px; width:100%; z-index: -1;
 }
+.displayMarginTop100px {
+    margin-top:300px;
+}
+.displayMarginBot100px {
+    margin-bottom:100px;
+}
+.tableWidth1000px {
+    width:1000px;
+}
+
 .mainNav {
     width: 100%;
 }

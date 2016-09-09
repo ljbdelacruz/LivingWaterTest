@@ -14,7 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 </head>
-<body ng-controller="AppCtrl" ng-init="filterNavItems(); loadVerificationCodes(); loadSlideImages(); loadNews();" >
+<body ng-controller="AppCtrl" ng-init="filterNavItems(); loadVerificationCodes(); loadSlideImages(); loadNews();" class="bg1">
     <navigation-bar items="navItems"></navigation-bar>
     <div class="contentDiv" ng-view></div>
 
@@ -44,6 +44,7 @@
     <script src="/Assets/js/directives/template1/ui/aboutUs/aboutUs.js"></script>
     <script src="/Assets/js/directives/template2/ui/products/productBody/productBody.js"></script>
     <script src="/Assets/js/directives/template2/ui/newsComponents/newsBody/newsBody.js"></script>
+    <script src="/Assets/js/directives/template2/ui/newsComponents/newsPreview/newsPreview.js"></script>
 
     <!--Services-->
     <script src="/Assets/js/directives/services/sharedControllerService.js"></script>
@@ -71,6 +72,7 @@
     <script src="/Assets/js/directives/services/properties/productsService.js"></script>
     <script src="/Assets/js/directives/services/properties/registrationProperties.js"></script>
     <script src="/Assets/js/directives/services/properties/newsProperties.js"></script>
+    <script src="/Assets/js/directives/services/properties/inboxProperties.js"></script>
 
     <!--Functionalities Service-->
     <script src="Assets/js/directives/services/tempFunction/modifyCart.js"></script>
