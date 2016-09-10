@@ -33,11 +33,8 @@ button:hover{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-@import url("http://bootswatch.com/flatly/bootstrap.min.css");
+/*@import url("http://bootswatch.com/flatly/bootstrap.min.css");
 
-
-
-/* responsive nav stacked liked 3.x */
 @media(max-width:992px) {
     #nav1.navbar .navbar-brand {
         float:none;
@@ -78,4 +75,4 @@ button:hover{
     #nav3.navbar .navbar-nav {
         float:none !important;
     }
-}
+}*/
