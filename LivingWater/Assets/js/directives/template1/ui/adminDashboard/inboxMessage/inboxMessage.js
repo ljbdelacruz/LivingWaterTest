@@ -10,6 +10,10 @@ angular.module('directives.inboxMessage', [])
                 }
                 /* Do the directive's logic here */
                 function postFn(scope, element, attr) {
+                    scope.message = "";
+                    scope.Reply = function () {
+                        alert("REPLY");
+                    };
                 }
                 return {
                     restrict: 'E',

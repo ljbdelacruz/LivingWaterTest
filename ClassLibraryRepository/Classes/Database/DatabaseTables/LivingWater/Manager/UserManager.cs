@@ -15,6 +15,7 @@ namespace ClassLibraryRepository
 
 		#region properties
 		public List<UserProfile> usersProfile;
+
         private DatabaseHandler dbh;
         public UserProfile filtered;
 		#endregion

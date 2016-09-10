@@ -23,6 +23,16 @@
                 </table>
             </td>
         </tr>
+        <tr ng-if="username!='' ">
+            <td>
+                <textarea style="width:385px; height:100px;" ng-model="message"></textarea>
+            </td>
+        </tr>
+        <tr ng-if="username!='' ">
+            <td>
+                <input type="button" value="REPLY" ng-click="Reply()"/>
+            </td>
+        </tr>
     </table>
 
 </div>
