@@ -30,9 +30,9 @@ namespace LivingWater
             return nm.news;
         }
         [WebMethod]
-        public static List<Inbox> ListOfInbox()
+        public static List<Inbox> ListOfInbox(int user_id)
         {
-            InboxManager inboxM = new InboxManager(1, 1);
+            InboxManager inboxM = new InboxManager(user_id);
             return inboxM.inbox;
         }
         [WebMethod]
