@@ -2,10 +2,25 @@
         <div>
             <h1>Inbox Section</h1>
             <table style="">
+                <tr ng-if="isadmin">
+                    <td>
+                        <select ng-model="options" ng-change="OnOptionSettingChanged(options)">
+                            <option value="1">Disable Selection</option>
+                            <option value="2">Enable Selection</option>
+                            <option value="3">Select All</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="button" value="DELETE" />
+                    </td>
+                </tr>
                 <tr>
                     <td>
                         <table style="overflow-y:scroll; display:block; height:300px; width:200px">
                                 <tr ng-repeat="item in messages">
+                                    <td  ng-if="enableSelection">
+                                        <input type="checkbox" ng-model="item.isSelected" />
+                                    </td>
                                     <td>
                                         <a ng-click="showInformation(item)">
                                             <div style="width:200px; height:50px; background-color:yellow" ng-init="CheckIfUnread(item)">

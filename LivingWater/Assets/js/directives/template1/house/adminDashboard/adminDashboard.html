@@ -5,9 +5,9 @@
             <admin-nav-bar items="navItems"></admin-nav-bar>
             <table style="table-layout:fixed">
                 <tr style="width:800px">
-                    <td>
+                    <td ng-if="inboxShow">
                         <input type="button" ng-click="toggleInbox()" value="Toggle Inbox" />
-                        <inbox-section items="inbox" ng-show="inboxShow" id="secInbox"></inbox-section>
+                        <inbox-section isadmin="true"></inbox-section>
                     </td>
                 </tr>
                 <tr style="width:800px">

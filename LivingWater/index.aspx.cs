@@ -111,7 +111,7 @@ namespace LivingWater
                         //do a database insertion from database here call a method from a class to insert data from registration of new users
                         break;
                     case 4:
-
+                        //deleting inbox from a user
                         break;
                     default:
                         break;
