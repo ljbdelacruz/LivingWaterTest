@@ -37,7 +37,6 @@ angular.module('ngStarterKit')
                  $scope.assignMainNav = function () {
                      $scope.navItems = Globalization.globalizationTranslationMainNav;
                  };
-
                  $scope.click = function () {
                      alert($scope.shared.isAdmin);
                  }

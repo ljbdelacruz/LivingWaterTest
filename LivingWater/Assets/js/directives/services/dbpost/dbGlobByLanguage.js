@@ -14,7 +14,7 @@ angular.module('otherApp')
 
             for (var i = 0; i < result.length; i++) {
                 var isShow = false;
-                if (result[i].filteredLanguage.translation == "Admin Dashboard" && userInformation.isadmin == false) {
+                if (result[i].filteredLanguage.translation == "Admin Dashboard" && userInformation.isadmin == false || result[i].filteredLanguage.translation=="Log out" && userInformation.islogin==false) {
                     isShow = false;
                 } else {
                     isShow = true;

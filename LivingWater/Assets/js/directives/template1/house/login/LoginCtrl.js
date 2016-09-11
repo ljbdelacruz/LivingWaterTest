@@ -1,8 +1,9 @@
 ﻿angular.module('modules.Login')
 .controller('LoginCtrl',
             ['$scope',
+             'globalizationByLanguage',
              'userInformation',
-             function ($scope, userInformation) {
+             function ($scope, globalizationByLanguage, userInformation) {
                  userInformation.islogin = false;
                  userInformation.isadmin = false;
                  userInformation.language_id = 1;
@@ -14,5 +15,6 @@
                  $scope.collapseRegistrationForm = function () {
                      $scope.isRegister = false;
                  };
+
              }
 ]);

@@ -3,31 +3,19 @@
         <div ng-controller="adminDashboardCtrl"  ng-init="filterAdminNavBar();">
             <h1>Admin Dashboard</h1>
             <admin-nav-bar items="navItems"></admin-nav-bar>
-            <table style="table-layout:fixed">
-                <tr style="width:800px">
-                    <td ng-if="inboxShow">
+            <table style="width:800px; ">
+                <tr>
+                    <td>
                         <input type="button" ng-click="toggleInbox()" value="Toggle Inbox" />
-                        <inbox-section isadmin="true"></inbox-section>
+                        <inbox-section isadmin="true" ng-if="inboxShow"></inbox-section>
                     </td>
                 </tr>
-                <tr style="width:800px">
+                <tr>
                     <td>
                         <input type="button" ng-click="toggleNews()" value="Toggle News" />
                         <news-section></news-section>
                     </td>
                 </tr>
-                <tr style="width:800px">
-                    <td>
-                        <input type="button" ng-click="toggleConcerns()" value="Toggle Concern" />
-                        <concern-section id="secConcern" ng-show="concernShow" items="concernData"></concern-section>
-                    </td>
-                </tr>
-                <!--<tr>
-                    <td>
-                        <admin-tool-bar ng-cloak></admin-tool-bar>
-                    </td>
-                </tr>-->
-
             </table>
         </div>
     </center>

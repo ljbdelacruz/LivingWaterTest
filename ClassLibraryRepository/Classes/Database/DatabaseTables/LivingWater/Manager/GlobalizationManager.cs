@@ -50,11 +50,10 @@ namespace ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater.Man
             g.AppendTranslation(new Translation(2, "お問い合わせ"));
             this.globalization.Add(g);
 
-            g = new Globalization(6, "/Login", true, 1);
+            g = new Globalization(6, "/Login", false, 1);
             g.AppendTranslation(new Translation(1, "Log out"));
             g.AppendTranslation(new Translation(2, "ログアウト"));
             this.globalization.Add(g);
-
 
             //admin navbar case 2
             g = new Globalization(6, "secInbox", true, 2);
