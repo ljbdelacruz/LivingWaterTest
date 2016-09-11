@@ -132,6 +132,7 @@
     <Content Include="Assets\js\directives\services\dbfetcher\dbSlideImage.js" />
     <Content Include="Assets\js\directives\services\dbfetcher\dbUserSettings.js" />
     <Content Include="Assets\js\directives\services\dbfetcher\dbVerificationCode.js" />
+    <Content Include="Assets\js\directives\services\dbpost\dbDeleteInboxSelected.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbGlobByLanguage.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbSubmitConcern.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbSubmitLogin.js" />

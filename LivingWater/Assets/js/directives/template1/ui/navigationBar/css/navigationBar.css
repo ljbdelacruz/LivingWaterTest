@@ -33,3 +33,46 @@ button:hover{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/*
+
+@media(max-width:992px) {
+    #nav1.navbar .navbar-brand {
+        float:none;
+        display: block;
+    }
+    #nav1.navbar .navbar-nav>.nav-item {
+        float: none;
+        margin-left: .1rem;
+    }
+    #nav1.navbar .navbar-nav {
+        float:none !important;
+    }
+}
+
+@media(max-width:768px) {
+    #nav2.navbar .navbar-brand {
+        float:none;
+        display: block;
+    }
+    #nav2.navbar .navbar-nav>.nav-item {
+        float: none;
+        margin-left: .1rem;
+    }
+    #nav2.navbar .navbar-nav {
+        float:none !important;
+    }
+}
+
+@media(max-width:544px) {
+    #nav3.navbar .navbar-brand {
+        float:none;
+        display: block;
+    }
+    #nav3.navbar .navbar-nav>.nav-item {
+        float: none;
+        margin-left: .1rem;
+    }
+    #nav3.navbar .navbar-nav {
+        float:none !important;
+    }
+}*/

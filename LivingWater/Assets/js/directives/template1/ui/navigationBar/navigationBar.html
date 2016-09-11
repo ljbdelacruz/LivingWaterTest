@@ -5,8 +5,9 @@
             <!--<ul class="nav nav-pills nav-justified">-->
             <!---if home ang gipindot, dapat siya lang active. add class="active" sa li--->
             <li role="presentation" ng-repeat="item in items" ng-click="goto()" ng-show="{{item.show}}" style="margin-right:10px;">
-                <button class="fontFranklinGothicMedium gradientBg padding5px hideBorder blackFont buttonSize" >{{item.label}}</button>
+                <a class="fontFranklinGothicMedium blackFont">{{item.label}}</a>
             </li>
         </ul>
     </div>
 </div>
+

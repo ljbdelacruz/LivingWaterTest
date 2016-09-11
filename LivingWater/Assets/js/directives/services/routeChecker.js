@@ -1,6 +1,6 @@
 ﻿
 angular.module('otherApp')
-.factory('routeChecker', ['userInformation','$location','productService', function (userInformation, $location, productService) {
+.factory('routeChecker', ['userInformation', '$location', 'productService', 'globalizationByLanguage', function (userInformation, $location, productService, globalizationByLanguage) {
     return function (path) {
         switch (path) {
             case '/Home':
@@ -24,6 +24,9 @@ angular.module('otherApp')
                 if (userInformation.newsToView.title == '') {
                     $location.path('/News');
                 }
+                break;
+            case '/Login':
+                globalizationByLanguage(userInformation.language_id);
                 break;
             default:
                 break;

@@ -17,6 +17,7 @@ angular.module('otherApp')
                                        sender_username:data['d'][i]['sender_username'],
                                        receiver_id: data['d'][i]['receiver_id'],
                                        subject: data['d'][i]['subject'],
+                                       isSelected:false,
                                    };
                                    temp.InboxContent=[];
                                    for (var c = 0; c < data['d'][i]['InboxContent'].length; c++) {

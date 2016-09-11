@@ -1,17 +1,20 @@
 ﻿<div class="Home">
     <center ng-controller="HomeCtrl">
-        <table>
+        <table style="width:1000px;">
             <tr>
                 <td>
                     <h1>Home</h1>
-                    <greeting-component></greeting-component>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <news-preview></news-preview>
+                </td>
+                <td ng-if="isUser">
+                    <inbox-section isadmin="false"></inbox-section>
                 </td>
             </tr>
         </table>
     </center>
 </div>
-
-
-
-
 

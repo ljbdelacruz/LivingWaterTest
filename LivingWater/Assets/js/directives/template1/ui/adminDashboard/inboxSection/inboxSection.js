@@ -11,6 +11,7 @@ angular.module('directives.inboxSection', [])
                 }
                 /* Do the directive's logic here */
                 function postFn(scope, element, attr) {
+                    
                     scope.messages = inboxProperties.inbox;
                     scope.content = { user: '', subject: '', content: '' };
                     scope.username = "";
@@ -27,13 +28,40 @@ angular.module('directives.inboxSection', [])
                             }
                         }
                     };
+                    scope.enableSelection = false;
+                    scope.options = 1;
+                    scope.OnOptionSettingChanged = function (option) {
+                        switch(+option){
+                            case 1:
+                                scope.enableSelection = false;
+                                break;
+                            case 2:
+                                scope.enableSelection = true;
+                                scope.disableSelectionAll();
+                                break;
+                            default:
+                                scope.enableSelection = true;
+                                scope.enableSelectionAll();
+                                break;
+                        }
+                    };
+                    scope.disableSelectionAll = function () {
+                        for (var i = 0; i < scope.messages.length; i++) {
+                            scope.messages[i].isSelected = false;
+                        }
+                    };
+                    scope.enableSelectionAll = function () {
+                        for (var i = 0; i < scope.messages.length; i++) {
+                            scope.messages[i].isSelected = true;
+                        }
+                    };
                 }
                 return {
                     restrict: 'E',
-                    scope: {
-                        items: "="
-                    },
                     replace: true,
+                    scope : {
+                        isadmin:'=',
+                    },
                     templateUrl: '/Assets/js/directives/template1/ui/adminDashboard/inboxSection/inboxSection.html',
                     compile: function (scope, element, attr) {
                         return {
