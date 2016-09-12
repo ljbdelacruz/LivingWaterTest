@@ -22,9 +22,10 @@ namespace ClassLibraryRepository
 		public InboxManager ()
 		{
 			this.inbox = new List<Inbox> ();
+            dbh = new DatabaseHandler();
             //init();
             //this.loadInboxBasedOnUser(receiver_id);
-		}
+        }
         //temporary data
         public void init() {
             Inbox newInbox = new Inbox(1, 1, "ljbdelacruz", "Production", 1);
@@ -38,10 +39,9 @@ namespace ClassLibraryRepository
 		public void loadInboxBasedOnUser(int receiver_id){
             //loads user here based on its receiver and sender id
             //loads data from database
-            dbh = new DatabaseHandler();
             dbh.newConnection();
             string sql = "select i.id AS id, u.username AS username, i.receiver_id AS receiver_id, i.sender_id AS sender_id, i.subject AS subject, i.dateCreated AS dateCreated"+
-                          " FROM user u, inbox i WHERE i.receiver_id = u.id AND i.receiver_id = "+receiver_id+" OR i.sender_id = "+receiver_id+" AND u.id = i.sender_id ORDER BY i.dateCreated desc;" ;
+                          " FROM user u, inbox i WHERE i.sender_id = u.id AND i.receiver_id = "+receiver_id+" OR i.sender_id = "+receiver_id+" AND u.id = i.receiver_id ORDER BY i.dateCreated desc;" ;
             IDataReader reader = dbh.GetQueryResult(sql);
             while (reader.Read()) {
                 Inbox newInbox = new Inbox(Convert.ToInt16(reader["id"]), Convert.ToInt16(reader["sender_id"]), 
@@ -60,8 +60,8 @@ namespace ClassLibraryRepository
                 inbox.Add(newInbox);
             }
 		}
-		#endregion
-		#region filters
+        #endregion
+        #region filters
         /*
 		public List<Inbox> filterByReceiverID(int receiver_id){
 			List<Inbox> temp = new List<Inbox> ();
@@ -82,7 +82,15 @@ namespace ClassLibraryRepository
 			return temp;
 		}
         */
-		#endregion
-	}
+        #endregion
+
+        #region database
+        public void insertNewMessageContent(InboxContent ic) {
+            dbh.newConnection();
+            string sql = "insert inboxContent(message, unread, inbox_id, dateSent) values('"+ic.message+"', "+ic.unread+", "+ic.inbox_id+", NOW());";
+            dbh.ExecuteNonQuery(sql);
+        }
+        #endregion
+    }
 }
 

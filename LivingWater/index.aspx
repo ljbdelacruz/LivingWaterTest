@@ -71,6 +71,8 @@
     <script src="Assets/js/directives/services/dbpost/dbSubmitConcern.js"></script>
     <script src="Assets/js/directives/services/dbpost/dbSubmitRegistration.js"></script>
     <script src="Assets/js/directives/services/dbpost/dbGlobByLanguage.js"></script>
+    <script src="Assets/js/directives/services/dbpost/dbAddInboxContent.js"></script>
+
     <!--Service Properties-->
     <script src="/Assets/js/directives/services/properties/productsService.js"></script>
     <script src="/Assets/js/directives/services/properties/registrationProperties.js"></script>

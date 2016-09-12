@@ -9,7 +9,8 @@ angular.module('directives.navigationBar', [])
 .directive('navigationBar',
            ['$location',
             'processChecker',
-            function ($location, processChecker) {
+            'routeChecker',
+            function ($location, processChecker, routeChecker) {
                 function preFn(scope, element, attr) {
                     /* TODO: Do something here before post function */
                 }
@@ -18,7 +19,7 @@ angular.module('directives.navigationBar', [])
                     scope.goto = function () {
                         //this one changes the path/url
                         processChecker(this.item.path);
-                        $location.path(this.item.path);
+                        routeChecker(this.item.path);
                     };
                 }
                 return {

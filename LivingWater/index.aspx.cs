@@ -90,6 +90,7 @@ namespace LivingWater
         [WebMethod]
         public static void VerifyUser(string userInput)
         {
+
         }
         [WebMethod]
         public static bool AddNew(string data, int process)
@@ -99,7 +100,6 @@ namespace LivingWater
                 switch (process)
                 {
                     case 1:
-                        Debug.WriteLine("1");
                         //this process is for adding new user from registration saves from database
                         var user = JsonConvert.DeserializeObject<UserProfile>(data);
                         UserManager um = new UserManager();
@@ -111,9 +111,12 @@ namespace LivingWater
                         break;
                     case 3:
                         //do a database insertion from database here call a method from a class to insert data from registration of new users
+                        var ic = JsonConvert.DeserializeObject<InboxContent>(data);
+                        InboxManager im = new InboxManager();
+                        im.insertNewMessageContent(ic);
                         break;
                     case 4:
-                        //deleting inbox from a user
+                        //Adding inbox from a user
                         break;
                     default:
                         break;
@@ -129,7 +132,16 @@ namespace LivingWater
         [WebMethod]
         public static void DeleteItem(string data, int process)
         {
-
+            switch (process) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                default:
+                    break;
+            }
         }
         #endregion
     }
