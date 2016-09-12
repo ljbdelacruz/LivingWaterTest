@@ -138,6 +138,19 @@ namespace LivingWater
                 case 2:
                     break;
                 case 3:
+                    var inbox = JsonConvert.DeserializeObject<List<Inbox>>(data);
+                    string inboxQ="";
+                    string inboxC = "";
+                    InboxManager im = new InboxManager();
+                    for (int i = 0; i < inbox.Count; i++) {
+                        inboxQ = im.concatDeleteInbox(inboxQ, inbox[i].id);
+                        for (int c = 0; c < inbox[i].InboxContent.Count; c++) {
+                            inboxC = im.concatDeleteInboxContent(inboxC, inbox[i].InboxContent[c].id);
+                        }
+                    }
+                    im.ExecuteNonQuery(inboxQ);
+                    im.ExecuteNonQuery(inboxC);
+                    
                     break;
                 default:
                     break;

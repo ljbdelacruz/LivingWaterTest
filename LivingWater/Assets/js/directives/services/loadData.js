@@ -7,7 +7,6 @@ angular.module('otherApp')
             switch (+action) {
                 case 1:
                     //loads inbox under this user
-                    alert(userInformation.user_id);
                     dbInbox(userInformation.user_id);
                     break;
                 case 2:

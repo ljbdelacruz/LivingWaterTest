@@ -123,6 +123,10 @@
     <Content Include="Assets\images\icons\ic1.png" />
     <Content Include="Assets\images\icons\ic2.png" />
     <Content Include="Assets\images\icons\ic3.png" />
+    <Content Include="Assets\images\products\1.jpg" />
+    <Content Include="Assets\images\products\2.jpg" />
+    <Content Include="Assets\images\products\3.jpg" />
+    <Content Include="Assets\images\products\4.jpg" />
     <Content Include="Assets\images\verificationCode\vc1.png" />
     <Content Include="Assets\images\verificationCode\vc2.png" />
     <Content Include="Assets\js\directives\services\checkRequiredField.js" />

@@ -90,6 +90,17 @@ namespace ClassLibraryRepository
             string sql = "insert inboxContent(message, unread, inbox_id, dateSent) values('"+ic.message+"', "+ic.unread+", "+ic.inbox_id+", NOW());";
             dbh.ExecuteNonQuery(sql);
         }
+        public string concatDeleteInbox(string query, int id) {
+            return query + " DELETE FROM inbox WHERE id=" + id + "; ";
+        }
+        public string concatDeleteInboxContent(string query, int id) {
+            return query + " DELETE FROM inboxContent WHERE id=" + id + "; ";
+        }
+        public void ExecuteNonQuery(string query) {
+            dbh.newConnection();
+            dbh.ExecuteNonQuery(query);
+        }
+
         #endregion
     }
 }

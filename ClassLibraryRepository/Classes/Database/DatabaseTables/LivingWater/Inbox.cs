@@ -2,9 +2,10 @@
 using ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater;
 using System.Collections.Generic;
 
+
 namespace ClassLibraryRepository
 {
-	public class Inbox
+	public class Inbox 
 	{
 		#region properties
 		public int id{ get; set;}
@@ -12,13 +13,10 @@ namespace ClassLibraryRepository
         public int sender_id{ get; set;}
 		public string sender_username{ get; set;}
 		public string subject{ get; set;}
+        public bool isSelected { get; set; }
         public List<InboxContent> InboxContent;
 		#endregion
 		#region constructors
-		public Inbox ()
-		{
-
-		}
 		public Inbox(int nId, int nSender_id,string nUser, string nSubject, int nReceiver_id){
 			this.id = nId;
 			this.sender_id = nSender_id;
@@ -27,6 +25,9 @@ namespace ClassLibraryRepository
 			this.receiver_id = nReceiver_id;
             this.InboxContent = new List<InboxContent>();
 		}
+
+
+
         #endregion
 
         public void appendInboxContent(InboxContent ic) {

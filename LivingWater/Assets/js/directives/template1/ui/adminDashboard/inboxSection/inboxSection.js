@@ -5,7 +5,9 @@ angular.module('directives.inboxSection', [])
 .directive('inboxSection',
            ['$location',
             'inboxProperties',
-            function ($location, inboxProperties) {
+            'deleteInboxSelected',
+            'loadData',
+            function ($location, inboxProperties, deleteInboxSelected, loadData) {
                 function preFn(scope, element, attr) {
                     /* TODO: Do something here before post function */
                 }
@@ -54,6 +56,13 @@ angular.module('directives.inboxSection', [])
                         for (var i = 0; i < scope.messages.length; i++) {
                             scope.messages[i].isSelected = true;
                         }
+                    };
+                    scope.DeleteSelected = function () {
+                        deleteInboxSelected(scope.messages, scope.SuccessDelete);
+                    };
+                    scope.SuccessDelete = function () {
+                        alert("Success Deleting");
+                        loadData(1);
                     };
                 }
                 return {
