@@ -22,6 +22,7 @@ namespace LivingWater
         [WebMethod]
         public static void ListOfGlobalization()
         {
+
         }
         [WebMethod]
         public static List<News> ListOfNews()
@@ -32,7 +33,8 @@ namespace LivingWater
         [WebMethod]
         public static List<Inbox> ListOfInbox(int user_id)
         {
-            InboxManager inboxM = new InboxManager(user_id);
+            InboxManager inboxM = new InboxManager();
+            inboxM.loadInboxBasedOnUser(user_id);
             return inboxM.inbox;
         }
         [WebMethod]

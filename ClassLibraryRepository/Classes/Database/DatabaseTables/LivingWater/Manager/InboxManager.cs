@@ -19,7 +19,7 @@ namespace ClassLibraryRepository
 		#region constructors
 		//sends a parameter of the receiving and the sender id of a specific user to filter
 		//in database on which data will be fetched
-		public InboxManager (int receiver_id)
+		public InboxManager ()
 		{
 			this.inbox = new List<Inbox> ();
             //init();
@@ -35,33 +35,30 @@ namespace ClassLibraryRepository
             newInbox.appendInboxContent(new InboxContent(1, "Hello I Am Josh", true, "2016-9-9", 2));
             this.inbox.Add(newInbox);
         }
-		private void loadInboxBasedOnUser(int receiver_id){
+		public void loadInboxBasedOnUser(int receiver_id){
             //loads user here based on its receiver and sender id
             //loads data from database
             dbh = new DatabaseHandler();
             dbh.newConnection();
-            string sql = "SELECT i.id AS id, i.receiver_id AS receiver_id, i.sender_id"+
-                         " AS sender_id, u.username AS username FROM inbox i, user u WHERE"+
-                         " i.receiver_id="+receiver_id+" AND i.sender_id=u.id;";
-
+            string sql = "select i.id AS id, u.username AS username, i.receiver_id AS receiver_id, i.sender_id AS sender_id, i.subject AS subject, i.dateCreated AS dateCreated"+
+                          " FROM user u, inbox i WHERE i.receiver_id = u.id AND i.receiver_id = "+receiver_id+" OR i.sender_id = "+receiver_id+" AND u.id = i.sender_id ORDER BY i.dateCreated desc;" ;
             IDataReader reader = dbh.GetQueryResult(sql);
             while (reader.Read()) {
                 Inbox newInbox = new Inbox(Convert.ToInt16(reader["id"]), Convert.ToInt16(reader["sender_id"]), 
-                                           ""+reader["sender_username"], ""+reader["subject"], Convert.ToInt16(reader["receiver_id"]));
+                                           ""+reader["username"], ""+reader["subject"], Convert.ToInt16(reader["receiver_id"]));
                 DatabaseHandler dbh2 = new DatabaseHandler();
                 dbh2.newConnection();
-                string sql2 = "";
+                string sql2 = "SELECT id, message, unread, dateSent, inbox_id FROM inboxContent WHERE inbox_id="+newInbox.id+"; ";
                 IDataReader reader2 = dbh2.GetQueryResult(sql2);
                 while (reader2.Read()) {
-                    InboxContent ic = new InboxContent(Convert.ToInt16(reader["id"]), ""+reader["message"], 
-                                                      (Convert.ToInt16(reader["unread"])==1) ? true : false,
-                                                      ""+reader["dateSent"], Convert.ToInt16(reader["inbox_id"]));
+                    InboxContent ic = new InboxContent(Convert.ToInt16(reader2["id"]), ""+reader2["message"], 
+                                                      (Convert.ToInt16(reader2["unread"])==1) ? true : false,
+                                                      ""+reader2["dateSent"], Convert.ToInt16(reader2["inbox_id"]));
                     newInbox.appendInboxContent(ic);
                 }
                 dbh2.CloseConnection();
                 inbox.Add(newInbox);
             }
-
 		}
 		#endregion
 		#region filters

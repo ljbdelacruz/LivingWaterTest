@@ -32,7 +32,8 @@ angular.module('directives.loginComponent', [])
                         submitLogin(data, scope.Checking);
                     }
                     scope.loadInbox = function () {
-                        //loadData(1);
+                        alert("Loading Inbox");
+                        loadData(1);
                     };
                     scope.Checking = function () {
                         if (userInformation.islogin == true) {
