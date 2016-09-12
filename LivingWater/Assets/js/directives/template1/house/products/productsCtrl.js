@@ -9,17 +9,16 @@
              'filterByGenre',
              function ($scope, userListService, routeChecker, productService, filterProductAll, filterBySlots, filterByGenre) {
                  routeChecker('/Products');
-                 $scope.filters = [{ id: 1, name: 'All' }, { id: 2, name: 'Accessory' }, {id: 3, name: 'Products'} ];
+                 $scope.filters = [{ id: 1, name: 'All' }, { id: 2, name: 'Despenser' }, {id: 3, name: 'Products'} ];
                  $scope.selectedFilter = 1;
 
                  //get data from userListService the products
-                 $scope.items = userListService.items;
+                 $scope.items = productService.items;
                  $scope.cart = userListService.cart;
                  //this is for disabling and enabling 
                  $scope.showProd = true;
                  $scope.showCart = false;
                  $scope.isEnablePurchase = productService.isenableAddingToCart;
-
                  $scope.SwitchMode = function (action) {
                      if (action == 'product') {
                          $scope.showProd = true;
@@ -35,17 +34,17 @@
                          case 1:
                              filterProductAll();
                              filterBySlots(4);
-                             $scope.items = userListService.productSlots;
+                             $scope.items = productService.productSlots;
                              break;
                          case 2:
                              filterByGenre($scope.selectedFilter);
                              filterBySlots(4);
-                             $scope.items = userListService.productSlots;
+                             $scope.items = productService.productSlots;
                              break;
                          case 3:
                              filterByGenre($scope.selectedFilter);
                              filterBySlots(4);
-                             $scope.items = userListService.productSlots;
+                             $scope.items = productService.productSlots;
                              break;
                          default:
                              alert("Default");

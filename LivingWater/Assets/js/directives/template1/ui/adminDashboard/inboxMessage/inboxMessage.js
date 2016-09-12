@@ -4,15 +4,21 @@
 angular.module('directives.inboxMessage', [])
 .directive('inboxMessage',
            ['$location',
-            function ($location) {
+            'addInboxContent',
+            function ($location, addInboxContent) {
                 function preFn(scope, element, attr) {
                     /* TODO: Do something here before post function */
                 }
                 /* Do the directive's logic here */
                 function postFn(scope, element, attr) {
-                    scope.message = "";
+                    scope.newInboxContent = { id: 1, message: '', unread: true, inbox_id: -1, dateCreated: '' };
                     scope.Reply = function () {
-                        alert("REPLY");
+                        scope.newInboxContent.inbox_id = scope.content[0].inbox_id;
+                        scope.newInboxContent.dateCreated = '9-12-2016';
+                        addInboxContent(scope.newInboxContent, scope.SuccessReply);
+                    };
+                    scope.SuccessReply = function () {
+                        alert("Success");
                     };
                 }
                 return {

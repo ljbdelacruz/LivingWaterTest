@@ -1,13 +1,13 @@
 ﻿
 angular.module('otherApp')
-.factory('filterByGenre', ['userListService', function (userListService) {
+.factory('filterByGenre', ['productService', function (productService) {
     return function (genre) {
         genre--;
-        userListService.items = [];
-        for (var i = 0; i < userListService.products.length; i++) {
-            if (genre == userListService.products[i].id) {
-                for (var c = 0; c < userListService.products[i].items.length; c++) {
-                    userListService.items.push(userListService.products[i].items[c]);
+        productService.items = [];
+        for (var i = 0; i < productService.products.length; i++) {
+            if (genre == productService.products[i].id) {
+                for (var c = 0; c < productService.products[i].items.length; c++) {
+                    productService.items.push(productService.products[i].items[c]);
                 }
             }
         }

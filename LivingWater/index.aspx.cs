@@ -22,6 +22,7 @@ namespace LivingWater
         [WebMethod]
         public static void ListOfGlobalization()
         {
+
         }
         [WebMethod]
         public static List<News> ListOfNews()
@@ -32,7 +33,8 @@ namespace LivingWater
         [WebMethod]
         public static List<Inbox> ListOfInbox(int user_id)
         {
-            InboxManager inboxM = new InboxManager(user_id);
+            InboxManager inboxM = new InboxManager();
+            inboxM.loadInboxBasedOnUser(user_id);
             return inboxM.inbox;
         }
         [WebMethod]
@@ -88,6 +90,7 @@ namespace LivingWater
         [WebMethod]
         public static void VerifyUser(string userInput)
         {
+
         }
         [WebMethod]
         public static bool AddNew(string data, int process)
@@ -97,7 +100,6 @@ namespace LivingWater
                 switch (process)
                 {
                     case 1:
-                        Debug.WriteLine("1");
                         //this process is for adding new user from registration saves from database
                         var user = JsonConvert.DeserializeObject<UserProfile>(data);
                         UserManager um = new UserManager();
@@ -109,9 +111,12 @@ namespace LivingWater
                         break;
                     case 3:
                         //do a database insertion from database here call a method from a class to insert data from registration of new users
+                        var ic = JsonConvert.DeserializeObject<InboxContent>(data);
+                        InboxManager im = new InboxManager();
+                        im.insertNewMessageContent(ic);
                         break;
                     case 4:
-                        //deleting inbox from a user
+                        //Adding inbox from a user
                         break;
                     default:
                         break;
@@ -127,7 +132,29 @@ namespace LivingWater
         [WebMethod]
         public static void DeleteItem(string data, int process)
         {
-
+            switch (process) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    var inbox = JsonConvert.DeserializeObject<List<Inbox>>(data);
+                    string inboxQ="";
+                    string inboxC = "";
+                    InboxManager im = new InboxManager();
+                    for (int i = 0; i < inbox.Count; i++) {
+                        inboxQ = im.concatDeleteInbox(inboxQ, inbox[i].id);
+                        for (int c = 0; c < inbox[i].InboxContent.Count; c++) {
+                            inboxC = im.concatDeleteInboxContent(inboxC, inbox[i].InboxContent[c].id);
+                        }
+                    }
+                    im.ExecuteNonQuery(inboxQ);
+                    im.ExecuteNonQuery(inboxC);
+                    
+                    break;
+                default:
+                    break;
+            }
         }
         #endregion
     }

@@ -28,9 +28,16 @@ namespace ClassLibraryRepository
         }
 		public IDataReader GetQueryResult(string sql)
 		{
-			dbcmd.CommandText = sql;
-			IDataReader reader = dbcmd.ExecuteReader();
-			return reader;
+            try
+            {
+                dbcmd.CommandText = sql;
+                IDataReader reader = dbcmd.ExecuteReader();
+                return reader;
+            }
+            catch{
+                Debug.WriteLine("Error When Executing this query " + sql);
+            }
+            return null;
 		}
 		public void ExecuteNonQuery(string sql) {
 			dbcmd.CommandText = sql;

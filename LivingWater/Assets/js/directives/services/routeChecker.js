@@ -1,16 +1,20 @@
 ﻿
 angular.module('otherApp')
-.factory('routeChecker', ['userInformation', '$location', 'productService', 'globalizationByLanguage', function (userInformation, $location, productService, globalizationByLanguage) {
+.factory('routeChecker', ['userInformation', '$location', '$window', 'productService', 'globalizationByLanguage', function (userInformation, $location, $window, productService, globalizationByLanguage) {
     return function (path) {
         switch (path) {
             case '/Home':
                 if (userInformation.islogin == false) {
                     $location.path('/Login');
+                } else {
+                    $location.path(path);
                 }
                 break;
             case '/AdminDashboard':
                 if (userInformation.isadmin == false && userInformation.islogin == false) {
                     $location.path('\Login');
+                } else {
+                    $location.path(path);
                 }
                 break;
             case '/Products':
@@ -19,14 +23,27 @@ angular.module('otherApp')
                 } else {
                     productService.isenableAddingToCart = true;
                 }
+                $location.path(path);
+                break;
+            case '/News':
+                $location.path(path);
                 break;
             case '/ViewNews':
                 if (userInformation.newsToView.title == '') {
                     $location.path('/News');
+                } else {
+                    $location.path(path);
                 }
                 break;
+            case '/AboutUs':
+                $location.path(path);
+                break;
+            case '/ContactUs':
+                $location.path(path);
+                break;
             case '/Login':
-                globalizationByLanguage(userInformation.language_id);
+                $location.path('/Login');
+                $window.location.reload();
                 break;
             default:
                 break;

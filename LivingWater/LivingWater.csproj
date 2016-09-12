@@ -123,6 +123,10 @@
     <Content Include="Assets\images\icons\ic1.png" />
     <Content Include="Assets\images\icons\ic2.png" />
     <Content Include="Assets\images\icons\ic3.png" />
+    <Content Include="Assets\images\products\1.jpg" />
+    <Content Include="Assets\images\products\2.jpg" />
+    <Content Include="Assets\images\products\3.jpg" />
+    <Content Include="Assets\images\products\4.jpg" />
     <Content Include="Assets\images\verificationCode\vc1.png" />
     <Content Include="Assets\images\verificationCode\vc2.png" />
     <Content Include="Assets\js\directives\services\checkRequiredField.js" />
@@ -132,6 +136,7 @@
     <Content Include="Assets\js\directives\services\dbfetcher\dbSlideImage.js" />
     <Content Include="Assets\js\directives\services\dbfetcher\dbUserSettings.js" />
     <Content Include="Assets\js\directives\services\dbfetcher\dbVerificationCode.js" />
+    <Content Include="Assets\js\directives\services\dbpost\dbAddInboxContent.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbDeleteInboxSelected.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbGlobByLanguage.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbSubmitConcern.js" />
