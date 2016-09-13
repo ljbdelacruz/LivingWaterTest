@@ -49,6 +49,7 @@
     <Compile Include="Classes\Database\DatabaseTables\LivingWater\Manager\ProductManager.cs" />
     <Compile Include="Classes\Database\DatabaseTables\LivingWater\Manager\SlideManager.cs" />
     <Compile Include="Classes\Database\DatabaseTables\LivingWater\Manager\VerificationCodeManager.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\ProductItem.cs" />
     <Compile Include="Classes\Database\DatabaseTables\LivingWater\Products.cs" />
     <Compile Include="Classes\Database\DatabaseTables\LivingWater\Translation.cs" />
     <Compile Include="Classes\Database\DatabaseTables\LivingWater\Users.cs" />

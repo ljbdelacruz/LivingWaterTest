@@ -1,40 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater;
 namespace ClassLibraryRepository
 {
-	public class Products : InformationDisplay
+	public class Products
 	{
 		#region properties
 		public int id { get; set; }
-		public string productName { get; set; }
-		public double productPrice { get; set; }
-		public int numtype { get; set; } //integer to identify which type of product is it
-		public string stringType { get; set; } //string to display in the filter on which product type is it
-        public List<Images> images;
-        public List<Video> videos;
+        public string genre { get; set; }
+        public List<ProductItem> items;
 		#endregion
 
 		#region constructors
-		public Products() { 
-		}
-		public Products(int nId, string nProductName, double nProductPrice, int nNumType, string nStringType ,string title, string information)
-					   :base(title, information)
-		{
-			this.id = nId;
-			this.productName = nProductName;
-			this.productPrice = nProductPrice;
-			this.numtype = nNumType;
-			this.stringType = nStringType;
-            this.images = new List<Images>();
-            this.videos = new List<Video>();
+		public Products(int nId, string nGenre) {
+            this.id = nId;
+            this.genre = nGenre;
+            this.items = new List<ProductItem>();
 		}
         #endregion
-        public void AppendImages(Images img) {
-            this.images.Add(img);
-        }
-        public void AppendVideo(Video vid) {
-            this.videos.Add(vid);
+        public void appendProductItem(ProductItem pi) {
+            this.items.Add(pi);
         }
 	}
 }
