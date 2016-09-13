@@ -9,7 +9,17 @@
              'filterByGenre',
              function ($scope, userListService, routeChecker, productService, filterProductAll, filterBySlots, filterByGenre) {
                  routeChecker('/Products');
-                 $scope.filters = [{ id: 1, name: 'All' }, { id: 2, name: 'Despenser' }, {id: 3, name: 'Products'} ];
+                 $scope.filters = [];
+                 $scope.GetProductGenre = function () {
+                     $scope.filters = [{id:1, name:'All'}];
+                     temp = {};
+                     for (var i = 0; i < productService.products.length; i++) {
+                         temp = { id: productService.products[i].id, name: productService.products[i].genre };
+                         temp.id += 1;
+                         $scope.filters.push(temp);
+                     }
+                 };
+                 $scope.GetProductGenre();
                  $scope.selectedFilter = 1;
 
                  //get data from userListService the products
@@ -36,18 +46,10 @@
                              filterBySlots(4);
                              $scope.items = productService.productSlots;
                              break;
-                         case 2:
-                             filterByGenre($scope.selectedFilter);
-                             filterBySlots(4);
-                             $scope.items = productService.productSlots;
-                             break;
-                         case 3:
-                             filterByGenre($scope.selectedFilter);
-                             filterBySlots(4);
-                             $scope.items = productService.productSlots;
-                             break;
                          default:
-                             alert("Default");
+                             filterByGenre($scope.selectedFilter);
+                             filterBySlots(4);
+                             $scope.items = productService.productSlots;
                              break;
                      }
                  };
