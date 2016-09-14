@@ -55,6 +55,12 @@ namespace LivingWater
             SlideManager sm = new SlideManager();
             return sm.images;
         }
+        [WebMethod]
+        public static List<Products> ListOfProducts() {
+            ProductManager pm = new ProductManager();
+            pm.loadData();
+            return pm.products;
+        }
         #endregion
 
         #region database posting stuff

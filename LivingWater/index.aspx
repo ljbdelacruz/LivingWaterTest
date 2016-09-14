@@ -14,7 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 </head>
-<body ng-controller="AppCtrl" ng-init="filterNavItems(); loadVerificationCodes(); loadSlideImages(); loadNews();" class="bg1">
+<body ng-controller="AppCtrl" ng-init="filterNavItems(); loadAllData()" class="bg1">
     <navigation-bar items="navItems"></navigation-bar>
     <div class="contentDiv" ng-view></div>
 
@@ -57,7 +57,6 @@
     <script src="/Assets/js/directives/services/routeChecker.js"></script>
     <script src="Assets/js/directives/services/siteSettings.js"></script>
     <script src="/Assets/js/directives/services/loadData.js"></script>
-
     <!--Database Fetcher Service-->
     <script src="/Assets/js/directives/services/dbfetcher/dbInbox.js"></script>
     <script src="/Assets/js/directives/services/dbfetcher/dbVerificationCode.js"></script>
@@ -65,7 +64,7 @@
     <script src="/Assets/js/directives/services/dbfetcher/dbNews.js"></script>
     <script src="/Assets/js/directives/services/dbfetcher/dbConcern.js"></script>
     <script src="/Assets/js/directives/services/dbfetcher/dbInbox.js"></script>
-
+    <script src="/Assets/js/directives/services/dbfetcher/dbProducts.js"></script>
     <!--DB POST-->
     <script src="Assets/js/directives/services/dbpost/dbSubmitLogin.js"></script>
     <script src="Assets/js/directives/services/dbpost/dbSubmitConcern.js"></script>

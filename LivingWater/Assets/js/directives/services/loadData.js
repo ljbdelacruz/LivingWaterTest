@@ -1,7 +1,7 @@
 ﻿
 angular.module('otherApp')
-.factory('loadData', ['dbInbox', '$http', 'userInformation', 'loadVerificationCodes',
-    function (dbInbox, $http, userInformation, loadVerificationCodes) {
+.factory('loadData', ['$http', 'userInformation', 'loadVerificationCodes', 'dbProducts', 'dbInbox',
+function ( $http, userInformation, loadVerificationCodes, dbProducts, dbInbox) {
         return function (action) {
             alert("User "+action);
             switch (+action) {
@@ -12,6 +12,9 @@ angular.module('otherApp')
                 case 2:
                     //loads verificationCodes
                     loadVerificationCodes();
+                    break;
+                case 3:
+                    dbProducts();
                     break;
                 default:
                     break;

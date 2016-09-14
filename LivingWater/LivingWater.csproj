@@ -133,6 +133,7 @@
     <Content Include="Assets\js\directives\services\dbfetcher\dbConcern.js" />
     <Content Include="Assets\js\directives\services\dbfetcher\dbInbox.js" />
     <Content Include="Assets\js\directives\services\dbfetcher\dbNews.js" />
+    <Content Include="Assets\js\directives\services\dbfetcher\dbProducts.js" />
     <Content Include="Assets\js\directives\services\dbfetcher\dbSlideImage.js" />
     <Content Include="Assets\js\directives\services\dbfetcher\dbUserSettings.js" />
     <Content Include="Assets\js\directives\services\dbfetcher\dbVerificationCode.js" />

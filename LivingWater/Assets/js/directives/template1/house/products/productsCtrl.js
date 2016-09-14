@@ -9,8 +9,8 @@
              'filterByGenre',
              function ($scope, userListService, routeChecker, productService, filterProductAll, filterBySlots, filterByGenre) {
                  routeChecker('/Products');
-                 $scope.filters = [{ id: 1, name: 'All' }, { id: 2, name: 'Despenser' }, {id: 3, name: 'Products'} ];
-                 $scope.selectedFilter = 1;
+                 $scope.filters = productService.productGenre;
+                 $scope.selectedFilter = 0;
 
                  //get data from userListService the products
                  $scope.items = productService.items;
@@ -31,23 +31,15 @@
 
                  $scope.ChangeFilter = function(index) {
                      switch(+$scope.selectedFilter){
-                         case 1:
+                         case 0:
                              filterProductAll();
                              filterBySlots(4);
                              $scope.items = productService.productSlots;
                              break;
-                         case 2:
-                             filterByGenre($scope.selectedFilter);
-                             filterBySlots(4);
-                             $scope.items = productService.productSlots;
-                             break;
-                         case 3:
-                             filterByGenre($scope.selectedFilter);
-                             filterBySlots(4);
-                             $scope.items = productService.productSlots;
-                             break;
                          default:
-                             alert("Default");
+                             filterByGenre($scope.selectedFilter);
+                             filterBySlots(4);
+                             $scope.items = productService.productSlots;
                              break;
                      }
                  };

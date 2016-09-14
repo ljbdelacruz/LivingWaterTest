@@ -16,11 +16,20 @@ angular.module('ngStarterKit')
              function ($scope, loadData, sharedService, Globalization, userInformation, loadSlideImage, loadNews, globalizationByLanguage, siteSettings) {
                  $scope.width = window.innerWidth;
                  siteSettings.width = $scope.width;
-
                  $scope.navItems = [];
+
+                 $scope.loadAllData = function () {
+                     $scope.loadVerificationCodes();
+                     $scope.loadProducts();
+                    //$scope.loadSlideImages();
+                     $scope.loadNews();
+                 };
                  //this one loades the verification code from database
                  $scope.loadVerificationCodes = function () {
                      loadData(2);
+                 };
+                 $scope.loadProducts = function () {
+                     loadData(3);
                  };
                  //this one will load the slides images from database
                  $scope.loadSlideImages = function () {

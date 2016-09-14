@@ -20,11 +20,17 @@ namespace ClassLibraryRepository
 									"Password=" + nPassword + ";" +
 									"Pooling=false;";
 			dbcon = new MySqlConnection(this.connectionString);
-			dbcon.Open();
+            this.OpenConnection();
 			dbcmd = dbcon.CreateCommand();
 		}
         public void OpenConnection() {
-            this.dbcon.Open();
+            try
+            {
+                this.dbcon.Open();
+            }
+            catch {
+                Debug.WriteLine("Error Upon Opening Connection From Server");
+            }
         }
 		public IDataReader GetQueryResult(string sql)
 		{
@@ -40,11 +46,23 @@ namespace ClassLibraryRepository
             return null;
 		}
 		public void ExecuteNonQuery(string sql) {
-			dbcmd.CommandText = sql;
-			dbcmd.ExecuteNonQuery();
+            try
+            {
+                dbcmd.CommandText = sql;
+                dbcmd.ExecuteNonQuery();
+            }
+            catch {
+                Debug.WriteLine("Error Upon Executing Non Query");
+            }
 		}
 		public void CloseConnection() {
-			dbcon.Close();
+            try
+            {
+                dbcon.Close();
+            }
+            catch {
+                Debug.WriteLine("Error Upon closing connection");
+            }
 		}
 	}
 }

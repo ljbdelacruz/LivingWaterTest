@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater;
+using System.Diagnostics;
 
 namespace ClassLibraryRepository
 {
@@ -23,6 +24,7 @@ namespace ClassLibraryRepository
             dbh.newConnection();
             string sql = "SELECT id, genre from products";
             IDataReader reader = dbh.GetQueryResult(sql);
+            Debug.WriteLine(sql);
             while (reader.Read()) {
                 DatabaseHandler dbh2 = new DatabaseHandler();
                 dbh2.newConnection();
@@ -36,7 +38,28 @@ namespace ClassLibraryRepository
                 this.products.Add(temp);
             }
 		}
-
+        public string insertProduct(Products prod, string query) {
+            return query + " INSERT INTO products(genre) values('" + prod.genre + "');";
+        }
+        public string insertProductItem(ProductItem pi, string query) {
+            return query + " INSERT INTO productitem(item, price, source, stock, product_id) values('" + pi.item + "', " + pi.price + ", '" + pi.source + "', " + pi.stock + ", " + pi.product_id + ")";
+        }
+        public void addProduct(List<Products> prods) {
+            string query = "";
+            for (int i = 0; i < prods.Count; i++) {
+                query = this.insertProduct(prods[i], query);
+            }
+            dbh.newConnection();
+            dbh.ExecuteNonQuery(query);
+        }
+        public void addProductItem(List<ProductItem> pi) {
+            string query = "";
+            for (int i = 0; i < pi.Count; i++) {
+                query = this.insertProductItem(pi[i], query);
+            }
+            dbh.newConnection();
+            dbh.ExecuteNonQuery(query);
+        }
 		#region filters
         /*
 		public List<Products> filterByType(int type) {
