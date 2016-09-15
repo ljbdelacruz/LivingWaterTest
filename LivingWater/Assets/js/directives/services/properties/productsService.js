@@ -10,6 +10,8 @@ angular.module('otherApp')
         productGenre:[],
         isenableAddingToCart: false,
         mode: 1,
+        newProductItem: [],
+        newGenre:[],
     };
     return productService;
 });

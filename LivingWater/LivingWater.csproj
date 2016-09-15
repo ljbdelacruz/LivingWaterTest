@@ -138,6 +138,7 @@
     <Content Include="Assets\js\directives\services\dbfetcher\dbUserSettings.js" />
     <Content Include="Assets\js\directives\services\dbfetcher\dbVerificationCode.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbAddInboxContent.js" />
+    <Content Include="Assets\js\directives\services\dbpost\dbAddProduct.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbDeleteInboxSelected.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbGlobByLanguage.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbSubmitConcern.js" />
@@ -256,6 +257,10 @@
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsPreview\newsPreview.js" />
     <Content Include="Assets\js\directives\template2\ui\products\productBody\productBody.html" />
     <Content Include="Assets\js\directives\template2\ui\products\productBody\productBody.js" />
+    <Content Include="Assets\js\directives\template2\ui\products\productItem\productItem.html" />
+    <Content Include="Assets\js\directives\template2\ui\products\productItem\productItem.js" />
+    <Content Include="Assets\js\directives\template2\ui\products\productModify\productModify.html" />
+    <Content Include="Assets\js\directives\template2\ui\products\productModify\productModify.js" />
     <Content Include="index.aspx" />
     <Content Include="packages.config" />
     <Content Include="scripts\angular-animate.js" />
@@ -1071,7 +1076,6 @@
   <ItemGroup>
     <Folder Include="Assets\js\directives\template1\ui\adminDashboard\adminToolBar\" />
     <Folder Include="Assets\js\directives\template2\ui\newsComponents\newsBody\css\" />
-    <Folder Include="Assets\js\directives\template2\ui\products\productItem\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibraryRepository\ClassLibraryRepository.csproj">

@@ -8,7 +8,6 @@
                                productService.productGenre = [];
                                productService.productGenre.push({id:0, name:'All'});
                                for (var i = 0; i < data['d'].length; i++) {
-                                   alert(data['d'][i]['genre']);
                                    var temp = {id: 0, genre:'', items:[]};
                                    temp.id = data["d"][i]["id"];
                                    temp.genre = data["d"][i]['genre'];

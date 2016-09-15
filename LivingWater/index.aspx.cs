@@ -124,6 +124,15 @@ namespace LivingWater
                     case 4:
                         //Adding inbox from a user
                         break;
+                    case 5:
+                        //this is for inserting genre(Product)
+                        var p = JsonConvert.DeserializeObject<Products>(data);
+                        ProductManager pm = new ProductManager();
+                        pm.addProduct(p);
+                        break;
+                    case 6:
+                        //this is for adding productItem
+                        break;
                     default:
                         break;
                 }

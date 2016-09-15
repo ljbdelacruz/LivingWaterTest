@@ -3,7 +3,6 @@ angular.module('otherApp')
 .factory('loadData', ['$http', 'userInformation', 'loadVerificationCodes', 'dbProducts', 'dbInbox',
 function ( $http, userInformation, loadVerificationCodes, dbProducts, dbInbox) {
         return function (action) {
-            alert("User "+action);
             switch (+action) {
                 case 1:
                     //loads inbox under this user

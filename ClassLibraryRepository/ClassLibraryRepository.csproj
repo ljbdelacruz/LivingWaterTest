@@ -54,6 +54,8 @@
     <Compile Include="Classes\Database\DatabaseTables\LivingWater\Translation.cs" />
     <Compile Include="Classes\Database\DatabaseTables\LivingWater\Users.cs" />
     <Compile Include="Classes\Database\DatabaseTables\LivingWater\UserSettings.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Util\DatabaseQuery.cs" />
+    <Compile Include="Classes\Database\DatabaseTables\LivingWater\Util\FileUpload.cs" />
     <Compile Include="Classes\Database\DatabaseTables\LivingWater\VerificationCode.cs" />
     <Compile Include="Classes\Util\Converter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

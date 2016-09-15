@@ -9,7 +9,6 @@ angular.module('otherApp')
         .success(function (data) {
             var result = angular.fromJson(data.d);
             if (result != null) {
-                alert(result.Id);
                 userInformation.user_id = result.Id;
                 userInformation.username = result.username;
                 userInformation.language_id = result.language_id;

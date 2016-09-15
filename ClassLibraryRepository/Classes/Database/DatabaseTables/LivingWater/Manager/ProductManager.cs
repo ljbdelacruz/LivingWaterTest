@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Data;
 using ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater;
 using System.Diagnostics;
-
+using ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater.Util;
 namespace ClassLibraryRepository
 {
 	public class ProductManager
 	{
 		public List<Products> products;
         public DatabaseHandler dbh;
+        public DatabaseQuery dq;
 		public ProductManager()
 		{
 			products = new List<Products>();
             dbh = new DatabaseHandler();
+            dq = new DatabaseQuery();
 		}
 		public void init() { 
 			//this is for dummy data
@@ -38,28 +40,62 @@ namespace ClassLibraryRepository
                 this.products.Add(temp);
             }
 		}
+        public void loadSpecificGenre(string genre) {
+            dbh.newConnection();
+            string sql = "SELECT id, genre from products WHERE genre='"+genre+"'; ";
+            IDataReader reader = dbh.GetQueryResult(sql);
+            Debug.WriteLine(sql);
+            while (reader.Read())
+            {
+                DatabaseHandler dbh2 = new DatabaseHandler();
+                dbh2.newConnection();
+                Products temp = new Products(Convert.ToInt16(reader["id"]), "" + reader["genre"]);
+                string sql2 = "SELECT id, item, price, source, stock, product_id FROM productitem WHERE product_id=" + reader["id"] + ";";
+                IDataReader reader2 = dbh2.GetQueryResult(sql2);
+                while (reader2.Read())
+                {
+                    temp.appendProductItem(new ProductItem(Convert.ToInt16(reader2["id"]), "" + reader2["item"], Convert.ToDouble(reader2["price"]),
+                                                           "" + reader2["source"], Convert.ToInt16(reader2["stock"]), Convert.ToInt16(reader2["product_id"])));
+                }
+                this.products.Add(temp);
+            }
+        }
+
         public string insertProduct(Products prod, string query) {
-            return query + " INSERT INTO products(genre) values('" + prod.genre + "');";
+            return dq.insertProduct(prod, query);
         }
         public string insertProductItem(ProductItem pi, string query) {
             return query + " INSERT INTO productitem(item, price, source, stock, product_id) values('" + pi.item + "', " + pi.price + ", '" + pi.source + "', " + pi.stock + ", " + pi.product_id + ")";
         }
-        public void addProduct(List<Products> prods) {
-            string query = "";
-            for (int i = 0; i < prods.Count; i++) {
-                query = this.insertProduct(prods[i], query);
-            }
+        //this method is used in executing for locating of genre
+        public string LookForIdUsingGenre(string genre) {
+            return "SELECT id FROM inbox WHERE genre='"+genre+"'; ";
+        }
+        public void addProduct(Products prod) {
+            string query = insertProduct(prod, "");
             dbh.newConnection();
             dbh.ExecuteNonQuery(query);
         }
-        public void addProductItem(List<ProductItem> pi) {
-            string query = "";
-            for (int i = 0; i < pi.Count; i++) {
-                query = this.insertProductItem(pi[i], query);
-            }
+        public void addProductItem(ProductItem pi) {
+            string query = insertProductItem(pi, "");
             dbh.newConnection();
             dbh.ExecuteNonQuery(query);
         }
+        public void insertNewProductAndItems(List<Products> prod)
+        {
+            for (int i = 0; i < prod.Count; i++) {
+                int id = prod[i].id;
+                if (prod[i].id == -2) { //if -2 means product is new
+                    string query = this.insertProduct(prod[i], "");
+                    dbh.newConnection();
+                    dbh.ExecuteNonQuery(query);
+                }
+                for (var c = 0; c < prod[i].items.Count; c++) {
+
+                }
+            }
+        }
+        
 		#region filters
         /*
 		public List<Products> filterByType(int type) {

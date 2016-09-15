@@ -45,6 +45,7 @@
     <script src="/Assets/js/directives/template2/ui/products/productBody/productBody.js"></script>
     <script src="/Assets/js/directives/template2/ui/newsComponents/newsBody/newsBody.js"></script>
     <script src="/Assets/js/directives/template2/ui/newsComponents/newsPreview/newsPreview.js"></script>
+    <script src="/Assets/js/directives/template2/ui/products/productModify/productModify.js"></script>
 
     <!--Services-->
     <script src="/Assets/js/directives/services/sharedControllerService.js"></script>
@@ -72,6 +73,7 @@
     <script src="Assets/js/directives/services/dbpost/dbGlobByLanguage.js"></script>
     <script src="Assets/js/directives/services/dbpost/dbAddInboxContent.js"></script>
     <script src="Assets/js/directives/services/dbpost/dbDeleteInboxSelected.js"></script>
+    <script src="Assets/js/directives/services/dbpost/dbAddProduct.js"></script>
 
     <!--Service Properties-->
     <script src="/Assets/js/directives/services/properties/productsService.js"></script>
