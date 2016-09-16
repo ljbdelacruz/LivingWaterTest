@@ -11,7 +11,8 @@ angular.module('directives.navigationBar', [])
             'routeChecker',
             'userInformation',
             'navigationBarProperties',
-            function ($location, routeChecker, userInformation, navigationBarProperties) {
+            'adminDashboardProperties',
+            function ($location, routeChecker, userInformation, navigationBarProperties, adminDashboardProperties) {
                 function preFn(scope, element, attr) {
                     /* TODO: Do something here before post function */
                 }
@@ -31,7 +32,14 @@ angular.module('directives.navigationBar', [])
                     };
                     navigationBarProperties.update = scope.Update;
                     navigationBarProperties.update();
-                    scope.goto = function (path) {
+                    scope.goto = function (path, btn) {
+                        if (btn == 'News') {
+                            adminDashboardProperties.isAddingNewsEnable = true;
+                            adminDashboardProperties.isModifyProductsEnable = false;
+                        } else if (btn == 'Products') {
+                            adminDashboardProperties.isAddingNewsEnable = false;
+                            adminDashboardProperties.isModifyProductsEnable = true;
+                        }
                         routeChecker(path);
                     };
                 }

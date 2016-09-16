@@ -175,6 +175,9 @@
     <Content Include="Assets\js\directives\template1\house\contactUs\ContactUsCtrl.js" />
     <Content Include="Assets\js\directives\template1\house\contactUs\css\ContactUs.css" />
     <Content Include="Assets\js\directives\template1\house\contactUs\module.js" />
+    <Content Include="Assets\js\directives\template1\house\franchise\Franchise.html" />
+    <Content Include="Assets\js\directives\template1\house\franchise\FranchiseCtrl.js" />
+    <Content Include="Assets\js\directives\template1\house\franchise\module.js" />
     <Content Include="Assets\js\directives\template1\house\home\Home.html" />
     <Content Include="Assets\js\directives\template1\house\home\HomeCtrl.js" />
     <Content Include="Assets\js\directives\template1\house\home\module.js" />

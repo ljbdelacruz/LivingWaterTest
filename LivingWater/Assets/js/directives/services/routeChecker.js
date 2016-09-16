@@ -1,6 +1,6 @@
 ﻿
 angular.module('otherApp')
-.factory('routeChecker', ['userInformation', '$location', '$window', 'productService', 'globalizationByLanguage', function (userInformation, $location, $window, productService, globalizationByLanguage) {
+.factory('routeChecker', ['userInformation', '$location', '$window', 'productService', 'globalizationByLanguage', 'adminDashboardProperties', function (userInformation, $location, $window, productService, globalizationByLanguage, adminDashboardProperties) {
     return function (path) {
         switch (path) {
             case '/Home':
@@ -14,7 +14,11 @@ angular.module('otherApp')
                 if (userInformation.isadmin == false && userInformation.islogin == false) {
                     $location.path('\Login');
                 } else {
+                    if (adminDashboardProperties.update != '&') {
+                        adminDashboardProperties.update();
+                    }
                     $location.path(path);
+
                 }
                 break;
             case '/Products':
@@ -51,6 +55,9 @@ angular.module('otherApp')
                 } else {
                     $location.path(path);
                 }
+                break;
+            case '/Franchise':
+                $location.path(path);
                 break;
             default:
                 break;

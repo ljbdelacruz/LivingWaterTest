@@ -50,6 +50,7 @@ angular.module('ngStarterKit', [
             'modules.AboutUs',
             'modules.ViewNews',
             'modules.Inbox',
+            'modules.Franchise',
             /* Services*/
             'otherApp',
 ])

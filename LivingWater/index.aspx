@@ -96,6 +96,7 @@
     <script src="/Assets/js/directives/services/properties/newsProperties.js"></script>
     <script src="/Assets/js/directives/services/properties/inboxProperties.js"></script>
     <script src="/Assets/js/directives/services/properties/navigationBarProperties.js"></script>
+    <script src="/Assets/js/directives/services/properties/adminDashboardProperties.js"></script>
 
     <!--Functionalities Service-->
     <script src="Assets/js/directives/services/tempFunction/modifyCart.js"></script>
@@ -103,8 +104,6 @@
     <script src="Assets/js/directives/services/filters/allProduct.js"></script>
     <script src="Assets/js/directives/services/filters/bySlots.js"></script>
     <script src="Assets/js/directives/services/filters/byGenre.js"></script>
-
-
 
     <!--Modules-->
     <!--Home-->
@@ -137,7 +136,9 @@
     <!--Modules Inbox-->
     <script src="/Assets/js/directives/template1/house/inbox/module.js"></script>
     <script src="/Assets/js/directives/template1/house/inbox/inboxCtrl.js"></script>
-
+    <!--Modules Franchise-->
+    <script src="/Assets/js/directives/template1/house/franchise/module.js"></script>
+    <script src="/Assets/js/directives/template1/house/franchise/franchiseCtrl.js"></script>
 
     <script src="Assets/js/directives/template1/mainController/App.js"></script>
     <script src="Assets/js/directives/template1/mainController/AppCtrl.js"></script>
