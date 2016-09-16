@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater;
+using ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater.Util;
 using System.Data;
 using System.Diagnostics;
 
@@ -11,13 +12,12 @@ namespace ClassLibraryRepository
 {
 	public class UserManager
 	{
-
-
 		#region properties
 		public List<UserProfile> usersProfile;
-
+        
         private DatabaseHandler dbh;
         public UserProfile filtered;
+        public DatabaseQuery dq;
 		#endregion
 
 		#region constructor
@@ -25,6 +25,7 @@ namespace ClassLibraryRepository
 		{
             usersProfile = new List<UserProfile>();
             dbh = new DatabaseHandler();
+            dq = new DatabaseQuery();
 		}
         public void init() {
             usersProfile.Add(new UserProfile(1, "Lainel", "john", "dela", 12, 5, 1994, 21, 1, "admin", "admin", 1, true));
@@ -32,20 +33,7 @@ namespace ClassLibraryRepository
         }
 		public void loadData(){
             //loads the data from database
-            string sql = "select u.id AS id, " +
-                        " ui.firstname AS fn," +
-                        " ui.middlename AS mn," +
-                        " ui.lastname AS ln," +
-                        " month(ui.birthday) AS Month," +
-                        " day(ui.birthday)AS Day," +
-                        " year(ui.birthday) AS Year," +
-                        " ui.age AS Age," +
-                        " u.username AS user," +
-                        " u.password AS pass," +
-                        " us.language_id AS lang," +
-                        " us.isadmin AS isadmin" +
-                        " from user AS u, userInfo AS ui, usersettings AS us" +
-                        " WHERE ui.user_id = u.id AND us.user_id = u.id;";
+            string sql = dq.GetUserInformation();
             IDataReader reader = dbh.GetQueryResult(sql);
             while(reader.Read()){
                 usersProfile.Add(new UserProfile(Convert.ToInt16(reader["id"]), "" + reader["fn"], "" + reader["mn"], "" + reader["ln"], Convert.ToInt16(reader["Month"]),
@@ -61,20 +49,7 @@ namespace ClassLibraryRepository
             int data = filtered.Id;
             if (exist)
             {
-                string sql = " select u.id AS id, " +
-                " ui.firstname AS fn," +
-                " ui.middlename AS mn," +
-                " ui.lastname AS ln," +
-                " month(ui.birthday) AS Month," +
-                " day(ui.birthday)AS Day," +
-                " year(ui.birthday) AS Year," +
-                " ui.age AS Age," +
-                " u.username AS user," +
-                " u.password AS pass," +
-                " us.language_id AS lang," +
-                " us.isadmin AS isadmin" +
-                " from user AS u, userInfo AS ui, usersettings AS us" +
-                " WHERE u.id = " + data + " AND ui.user_id = u.id AND us.user_id = u.id;";
+                string sql = dq.GetUserInformation(data);
                 dbh.newConnection();
                 IDataReader reader = dbh.GetQueryResult(sql);
                 while (reader.Read())
@@ -96,7 +71,7 @@ namespace ClassLibraryRepository
             {
                 isSuccess = true;
                 dbh.newConnection();
-                string sql = "INSERT INTO user(username, password) values('"+user.username+"', MD5('"+user.password+"'));";
+                string sql = dq.insertNewUser(user, "");
                 user.language_id = 1;
                 dbh.ExecuteNonQuery(sql);
                 user.Id=GetNewlyAddedUser(user);
@@ -117,7 +92,7 @@ namespace ClassLibraryRepository
             try
             {
                 dbh.newConnection();
-                string sql = "SELECT id from user WHERE username='" + up.username + "' AND password=MD5('" + up.password + "')";
+                string sql = dq.GetNewlyAddedUser(up);
                 IDataReader reader = dbh.GetQueryResult(sql);
                 while (reader.Read())
                 {
@@ -132,14 +107,12 @@ namespace ClassLibraryRepository
         public void insertUserInfo(UserProfile up) {
             dbh.newConnection();
             up.age = 2016 - up.birthYear;
-            string sql = "insert userInfo(firstname, middlename, lastname, birthday, age, sex, user_id)"+
-                         "values('"+up.firstname+"', '"+up.middlename+"', '"+up.lastname+"', '"+up.birthYear+"-"+up.birthMonth+"-"+up.birthDay+"', "+up.age+", '"+up.sex+"', "+up.Id+");";
+            string sql = dq.insertNewUserInfo(up, "");
             dbh.ExecuteNonQuery(sql);
         }
         public void insertUserSettings(UserProfile up) {
             dbh.newConnection();
-            string sql = "insert usersettings(isadmin, verified, language_id, user_id)"+
-                         "values(false, false, "+up.language_id+", "+up.Id+")";
+            string sql = dq.insertUserSettings(up, "");
         }
         
         public bool IsUnique(string username, string password, int process) {
@@ -150,10 +123,10 @@ namespace ClassLibraryRepository
             dbh.newConnection();
             switch (process) {
                 case 1:
-                    sql = "select count(*) AS exist, id FROM user WHERE username = '" + username + "';";
+                    sql = dq.GetIsUnique(username);
                     break;
                 case 2:
-                    sql = "select count(*) AS exist, id FROM user WHERE username = '" + username + "' AND password='" + dbh.MD5Equivalent(password) + "';";
+                    sql = dq.GetIsUnique(username, dbh.MD5Equivalent(password));
                     break;
                 default:
                     break;

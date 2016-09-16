@@ -13,6 +13,7 @@ namespace ClassLibraryRepository
 		public string source { get; set; }
 		public string thumbnail { get; set; }
 		public int frameborder { get; set; }
+        public int page_id { get; set; }
 
 		public Video(){ 
 

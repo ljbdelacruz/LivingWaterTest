@@ -251,6 +251,8 @@
     <Content Include="Assets\js\directives\template1\ui\verificationCode\css\verificationCode.css" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.html" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.js" />
+    <Content Include="Assets\js\directives\template2\ui\navigationBar\navigationBar.html" />
+    <Content Include="Assets\js\directives\template2\ui\navigationBar\navigationBar.js" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.html" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.js" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsPreview\newsPreview.html" />

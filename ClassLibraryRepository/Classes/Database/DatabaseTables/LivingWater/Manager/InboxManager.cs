@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater;
-
+using ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater.Util;
 
 namespace ClassLibraryRepository
 {
@@ -14,6 +14,7 @@ namespace ClassLibraryRepository
 		#region properties
 		public List<Inbox> inbox;
         private DatabaseHandler dbh;
+        public DatabaseQuery dq;
 		#endregion
 
 		#region constructors
@@ -23,6 +24,7 @@ namespace ClassLibraryRepository
 		{
 			this.inbox = new List<Inbox> ();
             dbh = new DatabaseHandler();
+            dq = new DatabaseQuery();
             //init();
             //this.loadInboxBasedOnUser(receiver_id);
         }
@@ -37,18 +39,15 @@ namespace ClassLibraryRepository
             this.inbox.Add(newInbox);
         }
 		public void loadInboxBasedOnUser(int receiver_id){
-            //loads user here based on its receiver and sender id
-            //loads data from database
             dbh.newConnection();
-            string sql = "select i.id AS id, u.username AS username, i.receiver_id AS receiver_id, i.sender_id AS sender_id, i.subject AS subject, i.dateCreated AS dateCreated"+
-                          " FROM user u, inbox i WHERE i.sender_id = u.id AND i.receiver_id = "+receiver_id+" OR i.sender_id = "+receiver_id+" AND u.id = i.receiver_id ORDER BY i.dateCreated desc;" ;
+            string sql = dq.GetInbox(receiver_id);
             IDataReader reader = dbh.GetQueryResult(sql);
             while (reader.Read()) {
                 Inbox newInbox = new Inbox(Convert.ToInt16(reader["id"]), Convert.ToInt16(reader["sender_id"]), 
                                            ""+reader["username"], ""+reader["subject"], Convert.ToInt16(reader["receiver_id"]));
                 DatabaseHandler dbh2 = new DatabaseHandler();
                 dbh2.newConnection();
-                string sql2 = "SELECT id, message, unread, dateSent, inbox_id FROM inboxContent WHERE inbox_id="+newInbox.id+"; ";
+                string sql2 = dq.GetInboxContent(newInbox.id);
                 IDataReader reader2 = dbh2.GetQueryResult(sql2);
                 while (reader2.Read()) {
                     InboxContent ic = new InboxContent(Convert.ToInt16(reader2["id"]), ""+reader2["message"], 
@@ -87,20 +86,19 @@ namespace ClassLibraryRepository
         #region database
         public void insertNewMessageContent(InboxContent ic) {
             dbh.newConnection();
-            string sql = "insert inboxContent(message, unread, inbox_id, dateSent) values('"+ic.message+"', "+ic.unread+", "+ic.inbox_id+", NOW());";
+            string sql = dq.InsertNewMessageContent(ic, "");
             dbh.ExecuteNonQuery(sql);
         }
         public string concatDeleteInbox(string query, int id) {
-            return query + " DELETE FROM inbox WHERE id=" + id + "; ";
+            return dq.concatDeleteInbox(query, id); 
         }
         public string concatDeleteInboxContent(string query, int id) {
-            return query + " DELETE FROM inboxContent WHERE id=" + id + "; ";
+            return dq.concatDeleteInboxContent(query, id);
         }
         public void ExecuteNonQuery(string query) {
             dbh.newConnection();
             dbh.ExecuteNonQuery(query);
         }
-
         #endregion
     }
 }

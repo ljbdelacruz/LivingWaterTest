@@ -6,22 +6,33 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" type="text/css" href="/Assets/css/template1/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/Assets/css/template1/Custom.css" />
     <link rel="stylesheet" type="text/css" href="/Assets/css/template1/global.css" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet" />
     <link href="Assets/css/creative/creative.css" />
     <link href="Assets/css/creative/creative.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style type="text/css">
+	.bs-example{
+    	margin: 20px;
+    }
+    </style>
 </head>
 <body ng-controller="AppCtrl" ng-init="filterNavItems(); loadAllData()" class="bg1">
-    <navigation-bar items="navItems"></navigation-bar>
-    <div class="contentDiv" ng-view></div>
-
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+
+    <navigation-bar></navigation-bar>
+    <div ng-view></div>
+
     <!--Directives-->
     <link rel="stylesheet" type="text/css" href="/Assets/js/directives/template1/ui/navigationBar/css/navigationBar.css" />
-    <script src="Assets/js/directives/template1/ui/navigationBar/navigationBar.js"></script>
+    <script src="Assets/js/directives/template2/ui/navigationBar/navigationBar.js"></script>
     <!--Sub Directives-->
     <script src="/Assets/js/directives/template1/ui/registration/registration.js"></script>
     <script src="/Assets/js/directives/template1/ui/loginComponent/loginComponent.js"></script>
@@ -46,7 +57,6 @@
     <script src="/Assets/js/directives/template2/ui/newsComponents/newsBody/newsBody.js"></script>
     <script src="/Assets/js/directives/template2/ui/newsComponents/newsPreview/newsPreview.js"></script>
     <script src="/Assets/js/directives/template2/ui/products/productModify/productModify.js"></script>
-
     <!--Services-->
     <script src="/Assets/js/directives/services/sharedControllerService.js"></script>
     <script src="/Assets/js/directives/services/registrationService.js"></script>

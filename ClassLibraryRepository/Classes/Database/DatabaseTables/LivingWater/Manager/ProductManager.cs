@@ -24,14 +24,14 @@ namespace ClassLibraryRepository
 		public void loadData() {
             //this load the data from database
             dbh.newConnection();
-            string sql = "SELECT id, genre from products";
+            string sql = dq.GetProductGenre();
             IDataReader reader = dbh.GetQueryResult(sql);
             Debug.WriteLine(sql);
             while (reader.Read()) {
                 DatabaseHandler dbh2 = new DatabaseHandler();
                 dbh2.newConnection();
                 Products temp=new Products(Convert.ToInt16(reader["id"]), ""+reader["genre"]);
-                string sql2 = "SELECT id, item, price, source, stock, product_id FROM productitem WHERE product_id="+reader["id"]+";";
+                string sql2 = dq.GetProductItem(Convert.ToInt16(reader["id"]));
                 IDataReader reader2 = dbh2.GetQueryResult(sql2);
                 while (reader2.Read()) {
                     temp.appendProductItem(new ProductItem(Convert.ToInt16(reader2["id"]), "" + reader2["item"], Convert.ToDouble(reader2["price"]), 
@@ -42,7 +42,7 @@ namespace ClassLibraryRepository
 		}
         public void loadSpecificGenre(string genre) {
             dbh.newConnection();
-            string sql = "SELECT id, genre from products WHERE genre='"+genre+"'; ";
+            string sql = dq.GetProductGenre(genre);
             IDataReader reader = dbh.GetQueryResult(sql);
             Debug.WriteLine(sql);
             while (reader.Read())
@@ -50,7 +50,7 @@ namespace ClassLibraryRepository
                 DatabaseHandler dbh2 = new DatabaseHandler();
                 dbh2.newConnection();
                 Products temp = new Products(Convert.ToInt16(reader["id"]), "" + reader["genre"]);
-                string sql2 = "SELECT id, item, price, source, stock, product_id FROM productitem WHERE product_id=" + reader["id"] + ";";
+                string sql2 = dq.GetProductItem(Convert.ToInt16(reader["id"]));
                 IDataReader reader2 = dbh2.GetQueryResult(sql2);
                 while (reader2.Read())
                 {
@@ -60,16 +60,11 @@ namespace ClassLibraryRepository
                 this.products.Add(temp);
             }
         }
-
         public string insertProduct(Products prod, string query) {
             return dq.insertProduct(prod, query);
         }
         public string insertProductItem(ProductItem pi, string query) {
-            return query + " INSERT INTO productitem(item, price, source, stock, product_id) values('" + pi.item + "', " + pi.price + ", '" + pi.source + "', " + pi.stock + ", " + pi.product_id + ")";
-        }
-        //this method is used in executing for locating of genre
-        public string LookForIdUsingGenre(string genre) {
-            return "SELECT id FROM inbox WHERE genre='"+genre+"'; ";
+            return dq.insertProductItem(pi, query);
         }
         public void addProduct(Products prod) {
             string query = insertProduct(prod, "");

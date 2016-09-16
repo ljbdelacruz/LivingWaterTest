@@ -5,17 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
-
+using ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater.Util;
 namespace ClassLibraryRepository
 {
 	public class DatabaseHandler
 	{
 		#region properties
         public string connString { get; set; }
+        public DatabaseQuery dq;
         private Database db;
 		#endregion
 		public DatabaseHandler(){
             db = new Database("MYSQL5014.SmarterASP.NET", "a0c65d_lw", "johnny05", "db_a0c65d_lw");
+            dq = new DatabaseQuery();
         }
         public IDataReader GetQueryResult(string sql)
         {
@@ -26,7 +28,7 @@ namespace ClassLibraryRepository
             db.ExecuteNonQuery(sql);
         }
         public string MD5Equivalent(string data) {
-            string sql = "SELECT MD5('"+data+"') AS result";
+            string sql = dq.GetMD5Values(data);
             IDataReader reader = db.GetQueryResult(sql);
             while(reader.Read()){
                 return (string)reader["result"];
