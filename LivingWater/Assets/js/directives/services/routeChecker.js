@@ -45,6 +45,13 @@ angular.module('otherApp')
                 $location.path('/Login');
                 $window.location.reload();
                 break;
+            case '/Inbox':
+                if (userInformation.islogin == false) {
+                    $location.path('/Login');
+                } else {
+                    $location.path(path);
+                }
+                break;
             default:
                 break;
         }

@@ -12,6 +12,7 @@ angular.module('otherApp')
                     InboxContent: [{id: 1, message: 'Homeland Security We Are Here To Arrest You!', unread:true, inbox_id: 2}]
                 }
         ],
+
     };
     return inboxProperties;
 });

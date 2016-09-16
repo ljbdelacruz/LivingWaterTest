@@ -49,6 +49,7 @@ angular.module('ngStarterKit', [
             'modules.Products',
             'modules.AboutUs',
             'modules.ViewNews',
+            'modules.Inbox',
             /* Services*/
             'otherApp',
 ])

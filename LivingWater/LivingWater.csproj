@@ -152,7 +152,9 @@
     <Content Include="Assets\js\directives\services\Globalization.js" />
     <Content Include="Assets\js\directives\services\loadData.js" />
     <Content Include="Assets\js\directives\services\processChecker.js" />
+    <Content Include="Assets\js\directives\services\properties\adminDashboardProperties.js" />
     <Content Include="Assets\js\directives\services\properties\inboxProperties.js" />
+    <Content Include="Assets\js\directives\services\properties\navigationBarProperties.js" />
     <Content Include="Assets\js\directives\services\properties\newsProperties.js" />
     <Content Include="Assets\js\directives\services\properties\productsService.js" />
     <Content Include="Assets\js\directives\services\properties\registrationProperties.js" />
@@ -176,6 +178,9 @@
     <Content Include="Assets\js\directives\template1\house\home\Home.html" />
     <Content Include="Assets\js\directives\template1\house\home\HomeCtrl.js" />
     <Content Include="Assets\js\directives\template1\house\home\module.js" />
+    <Content Include="Assets\js\directives\template1\house\inbox\inbox.html" />
+    <Content Include="Assets\js\directives\template1\house\inbox\inboxCtrl.js" />
+    <Content Include="Assets\js\directives\template1\house\inbox\module.js" />
     <Content Include="Assets\js\directives\template1\house\login\css\Login.css" />
     <Content Include="Assets\js\directives\template1\house\login\Login.html" />
     <Content Include="Assets\js\directives\template1\house\login\LoginCtrl.js" />

@@ -26,6 +26,11 @@
 </head>
 <body ng-controller="AppCtrl" ng-init="filterNavItems(); loadAllData()" class="bg1">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    
+    <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" class="bgvid1" playsinline autoplay muted loop>
+        <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
+        <source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
+    </video>
 
     <navigation-bar></navigation-bar>
     <div ng-view></div>
@@ -90,6 +95,7 @@
     <script src="/Assets/js/directives/services/properties/registrationProperties.js"></script>
     <script src="/Assets/js/directives/services/properties/newsProperties.js"></script>
     <script src="/Assets/js/directives/services/properties/inboxProperties.js"></script>
+    <script src="/Assets/js/directives/services/properties/navigationBarProperties.js"></script>
 
     <!--Functionalities Service-->
     <script src="Assets/js/directives/services/tempFunction/modifyCart.js"></script>
@@ -128,6 +134,10 @@
     <!--Modules View News-->
     <script src="/Assets/js/directives/template1/house/viewNews/module.js"></script>
     <script src="/Assets/js/directives/template1/house/viewNews/viewNewsCtrl.js"></script>
+    <!--Modules Inbox-->
+    <script src="/Assets/js/directives/template1/house/inbox/module.js"></script>
+    <script src="/Assets/js/directives/template1/house/inbox/inboxCtrl.js"></script>
+
 
     <script src="Assets/js/directives/template1/mainController/App.js"></script>
     <script src="Assets/js/directives/template1/mainController/AppCtrl.js"></script>

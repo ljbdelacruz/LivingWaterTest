@@ -8,14 +8,31 @@ angular.module('directives.navigationBar', [])
  */
 .directive('navigationBar',
            ['$location',
-            function ($location, processChecker, routeChecker) {
+            'routeChecker',
+            'userInformation',
+            'navigationBarProperties',
+            function ($location, routeChecker, userInformation, navigationBarProperties) {
                 function preFn(scope, element, attr) {
                     /* TODO: Do something here before post function */
                 }
                 /* Do the directive's logic here */
                 function postFn(scope, element, attr) {
+                    scope.isShowUser = navigationBarProperties.isUser;
+                    scope.isShowAdmin = navigationBarProperties.isAdmin;
+                    scope.Update = function () {
+                        if (userInformation.isadmin == false && userInformation.islogin == true) {
+                            scope.isShowUser = true;
+                        } else if (userInformation.isadmin == true && userInformation.islogin == true) {
+                            scope.isShowAdmin = true;
+                        } else {
+                            scope.isAdmin = false;
+                            scope.isShowUser = false;
+                        }
+                    };
+                    navigationBarProperties.update = scope.Update;
+                    navigationBarProperties.update();
                     scope.goto = function (path) {
-                        $location.path(path);
+                        routeChecker(path);
                     };
                 }
                 return {

@@ -14,7 +14,9 @@ angular.module('directives.loginComponent', [])
             'loadConcern',
             'submitLogin',
             'loadData',
-            function ($location, userInformation, userListService, processChecker, loadConcern, submitLogin, loadData) {
+            'navigationBarProperties',
+            'routeChecker',
+            function ($location, userInformation, userListService, processChecker, loadConcern, submitLogin, loadData, navigationBarProperties, routeChecker) {
                 function preFn(scope, element, attr) {
                     /* TODO: Do something here before post function */
                 }
@@ -42,8 +44,8 @@ angular.module('directives.loginComponent', [])
                             scope.update();
                             //this one loads the inbox for a certain user
                             scope.loadInbox();
-                            processChecker('/Home');
-                            $location.path('/Home');
+                            navigationBarProperties.update();
+                            routeChecker('/Home');
                         } else {
                             alert("Wrong User Credentials");
                         }
