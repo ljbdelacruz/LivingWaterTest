@@ -32,7 +32,7 @@ angular.module('directives.loginComponent', [])
                     scope.login = function () {
                         var data = { username: scope.username, password: scope.password };
                         submitLogin(data, scope.Checking);
-                    }
+                    };
                     scope.loadInbox = function () {
                         loadData(1);
                     };

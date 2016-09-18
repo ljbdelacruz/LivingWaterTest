@@ -36,9 +36,15 @@ angular.module('directives.navigationBar', [])
                         if (btn == 'News') {
                             adminDashboardProperties.isAddingNewsEnable = true;
                             adminDashboardProperties.isModifyProductsEnable = false;
+                            adminDashboardProperties.isModifySettingsEnable = false;
                         } else if (btn == 'Products') {
                             adminDashboardProperties.isAddingNewsEnable = false;
                             adminDashboardProperties.isModifyProductsEnable = true;
+                            adminDashboardProperties.isModifySettingsEnable = false;
+                        } else if (btn == 'Settings') {
+                            adminDashboardProperties.isAddingNewsEnable = false;
+                            adminDashboardProperties.isModifyProductsEnable = false;
+                            adminDashboardProperties.isModifySettingsEnable = true;
                         }
                         routeChecker(path);
                     };

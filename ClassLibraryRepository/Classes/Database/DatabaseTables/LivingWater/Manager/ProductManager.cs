@@ -26,7 +26,7 @@ namespace ClassLibraryRepository
             dbh.newConnection();
             string sql = dq.GetProductGenre();
             IDataReader reader = dbh.GetQueryResult(sql);
-            Debug.WriteLine(sql);
+            Debug.WriteLine("STOPPED "+sql);
             while (reader.Read()) {
                 DatabaseHandler dbh2 = new DatabaseHandler();
                 dbh2.newConnection();

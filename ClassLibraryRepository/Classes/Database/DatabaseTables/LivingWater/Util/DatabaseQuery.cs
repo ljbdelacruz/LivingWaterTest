@@ -57,11 +57,26 @@ namespace ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater.Uti
         public string GetNews() {
             return "SELECT id, title, content FROM news";
         }
+        public string GetNews(int id) {
+            return "SELECT id, title, content from news WHERE id="+id+"; ";
+        }
         public string GetNewsImages(int news_id) {
-            return "SELECT * FROM news_image WHERE news_id="+news_id+";";
+            return "SELECT id, image, path, width, height, page_id, news_id FROM news_image WHERE news_id="+news_id+";";
         }
         public string GetNewsVideos(int news_id) {
             return "SELECT * FROM news_videos WHERE news_id="+news_id+";";
+        }
+        public string InsertNews(News news, string query) {
+            return query + " INSERT INTO news(title, content) values('"+news.title+"', '"+news.content+"')";
+        }
+        public string GetNewlyAddedNews(News news, string query) {
+            return query + " SELECT id FROM news WHERE title='"+news.title+"', AND content='"+news.content+"'; ";
+        }
+        public string InsertNewsImages(Images img, string query) {
+            return query + " INSERT INTO newsimage(image, path, width, height, page_id, news_id) values('"+img.image+"', '"+img.path+"', "+img.width+", "+img.height+", "+img.page_id+", "+img.news_id+");";
+        }
+        public string InsertNewsVides(Video vid, string query) {
+            return query + " INSERT INTO newsvideos(title, design, type, width, height, source, thumbnail, frameborder, news_id, page_id) values('"+vid.title+"', '"+vid.design+"', '"+vid.type+"', "+vid.width+", "+vid.height+", '"+vid.source+"', '"+vid.thumbnail+"', "+vid.frameborder+", "+vid.news_id+", "+vid.page_id+");";
         }
         #endregion
 

@@ -21,6 +21,7 @@ namespace ClassLibraryRepository
         public void appendProductItem(ProductItem pi) {
             this.items.Add(pi);
         }
+
 	}
 }
 

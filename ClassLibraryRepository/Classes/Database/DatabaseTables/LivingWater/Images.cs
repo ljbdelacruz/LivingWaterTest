@@ -10,6 +10,7 @@ namespace ClassLibraryRepository
 		public int page_id { get; set; }
 		public double width { get; set; }
 		public double height { get; set; }
+        public int news_id { get; set; }
 		#endregion
 
 		#region constructor

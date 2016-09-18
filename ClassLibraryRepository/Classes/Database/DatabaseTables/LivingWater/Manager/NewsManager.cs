@@ -1,20 +1,25 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater;
-
+using ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater.Util;
 
 namespace ClassLibraryRepository
 {
 	public class NewsManager
 	{
 		public List<News> news;
+        public DatabaseHandler dh;
+        public DatabaseQuery dq;
 
 		public NewsManager()
 		{
             news = new List<News>();
+            dh = new DatabaseHandler();
+            dq = new DatabaseQuery();
             init();
 		}
         //this one serves as a temporary data substitute
@@ -30,9 +35,47 @@ namespace ClassLibraryRepository
             news[0].appendButtons(new Buttons(1, "Get Started", "#"));
         }
 		public void loadData() {
-			//loads all news from database and into news list
+            //loads all news from database and into news list
+            dh.newConnection();
+            string sql = dq.GetNews();
+            IDataReader reader = dh.GetQueryResult(sql);
+            while (reader.Read()) {
+                News temp = new News(Convert.ToInt16(reader["id"]), "" + reader["title"], "" + reader["content"]);
+                DatabaseHandler dh2 = new DatabaseHandler();
+                string sql2 = dq.GetNewsImages(Convert.ToInt16(reader["id"]));
+                IDataReader reader2 = dh2.GetQueryResult(sql2);
+                while (reader2.Read()) {
+                    temp.appendImages(new Images(Convert.ToInt16(reader2["id"]), "" + reader["image"], ""+reader["path"], 
+                                                 Convert.ToInt16(reader2["page_id"]), Convert.ToDouble(reader2["width"]),
+                                                 Convert.ToDouble(reader2["height"])) );
+                }
+            }
 		}
-		//create a filter
+        //create a filter
+        public void InsertNewNews(News news) {
+            dh.newConnection();
+            string sql = dq.InsertNews(news, "");
+            dh.ExecuteNonQuery(sql);
+            dh.newConnection();
+            sql = dq.GetNewlyAddedNews(news, "");
+            IDataReader reader = dh.GetQueryResult(sql);
+            while (reader.Read()) {
+                string sql2 = "";
+                for (int i = 0; i < news.images.Count; i++) {
+                    news.images[i].news_id = Convert.ToInt16(reader["id"]);
+                    sql2 = dq.InsertNewsImages(news.images[i], sql2);
+                }
+                for (int i = 0; i < news.videos.Count; i++) {
+                    news.videos[i].news_id= Convert.ToInt16(reader["id"]);
+                    sql2 = dq.InsertNewsVides(news.videos[i], sql2);
+                }
+                DatabaseHandler dh2 = new DatabaseHandler();
+                dh2.newConnection();
+                dh2.ExecuteNonQuery(sql2);
+                dh2.CloseConnection();
+            }
+        }
+
 	}
 }
 
