@@ -3,3 +3,9 @@
     height:200px;
     align-content:center;
 }
+
+.block {
+	background-color:rgba(0,0,0,0.2);
+  	padding-left:12px;
+  	padding-right:12px;
+}

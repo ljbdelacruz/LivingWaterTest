@@ -9,9 +9,16 @@ angular.module('otherApp')
         items: [],
         productGenre:[],
         isenableAddingToCart: false,
-        mode: 1,
+        mode: 4,
         newProductItem: [],
-        newGenre:[],
+        newGenre: [],
+        productViewMode: 1,
+        updateProductView: '&',
+        updateToolBarView: '&',
+        userProductMode: 4,
+        adminProductMode: 1,
+        isEnableDeleteProduct: false,
+        isEnableEditProduct:false,
     };
     return productService;
 });

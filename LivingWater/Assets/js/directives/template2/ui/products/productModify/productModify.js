@@ -19,16 +19,22 @@ angular.module('directives.productModify', [])
                     scope.ChangeModes = function (mode) {
                         switch(+mode){
                             case 1:
+                                productService.isEnableDeleteProduct = true;
+                                productService.isEnableEditProduct = false;
                                 scope.isAddingEnable = true;
                                 scope.isDeleteEnable = false;
                                 scope.isEditEnable = false;
                                 break;
                             case 2:
+                                productService.adminProductMode = 1;
+                                productService.isEnableEditProduct = true;
+                                productService.isEnableDeleteProduct = false;
                                 scope.isAddingEnable = false;
                                 scope.isDeleteEnable = true;
                                 scope.isEditEnable = false;
                                 break;
                             case 3:
+                                productService.adminProductMode = 2;
                                 scope.isAddingEnable = false;
                                 scope.isDeleteEnable = false;
                                 scope.isEditEnable = true;

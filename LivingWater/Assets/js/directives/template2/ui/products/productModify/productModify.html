@@ -56,9 +56,11 @@
                 </div>
                 <div ng-show="isDeleteEnable">
                     <h1>DELETE</h1>
+                    <product-view-filter ng-if="isDeleteEnable"></product-view-filter>
                 </div>
                 <div ng-show="isEditEnable">
                     <h1>Edit</h1>
+                    <product-view-filter ng-if="isEditEnable"></product-view-filter>
                 </div>
 
             </td>

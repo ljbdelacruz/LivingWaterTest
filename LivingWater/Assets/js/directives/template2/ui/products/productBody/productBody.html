@@ -1,8 +1,23 @@
 ﻿<div>
+    <input type="button" value="DELETE" ng-if="enableDeleteMode"/>
     <table>
         <tr ng-repeat="row in items">
             <td ng-repeat="col in row.items" style="padding-right:50px; padding-top:50px">
                 <table>
+                    <tr ng-if="enableDeleteMode">
+                        <td>
+                            <center>
+                                <input type="checkbox" />
+                            </center>
+                        </td>
+                    </tr>
+                    <tr ng-if="enableEditMode">
+                        <td>
+                            <center>
+                                <input type="button" value="EDIT" />
+                            </center>
+                        </td>
+                    </tr>
                     <tr>
                         <td>
                             <img src="{{col.source}}" style="width:200px; height:200px"/>
@@ -22,7 +37,7 @@
                             </center>
                         </td>
                     </tr>
-                    <tr>
+                    <tr ng-if="enablePurchase">
                         <td>
                             <center>
                                 <input type="button" value="BUY" />
