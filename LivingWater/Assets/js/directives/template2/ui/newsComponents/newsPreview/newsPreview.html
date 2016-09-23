@@ -9,21 +9,21 @@
         </tr>
         <tr ng-repeat="new in news">
             <td>
-                <div style="background-color:rgba(0,0,0,0.2); width:400px; height:70px; margin-bottom:10px">
-                    <a ng-click="ShowNewsInformationPreview(new)">
-                        <table>
-                            <tr>
-                                <td>
-                                    <p style="color:white" ng-bind="new.title"></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5 style="color:white" ng-bind="new.content | limitTo:30"></h5>
-                                </td>
-                            </tr>
-                        </table>
-                    </a>
+                <div class="borderRadiusRight50px" style="background-color:rgba(0,0,0,0.2); width:300px; height:70px; margin-bottom:10px">
+                        <a ng-click="ShowNewsInformationPreview(new)">
+                            <table>
+                                <tr>
+                                    <td>
+                                            <p style="color:white;" ng-bind="new.title"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <h5 style="color:white;" ng-bind="new.content | limitTo:30"></h5>
+                                    </td>
+                                </tr>
+                            </table>
+                        </a>
                 </div>
             </td>
         </tr>

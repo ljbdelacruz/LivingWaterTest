@@ -3,7 +3,7 @@
     <table>
         <tr ng-repeat="row in items">
             <td ng-repeat="col in row.items" style="padding-right:50px; padding-top:50px">
-                <table>
+                <table class="bgColorWhiteTransparent padding10px borderRadius50px wordBreak">
                     <tr ng-if="(mode==1)?true:false">
                         <td>
                             <center>
@@ -20,13 +20,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <img src="{{col.source}}" style="width:200px; height:200px"/>
+                            <img  src="{{col.source}}" style="width:200px; height:200px; border-radius:50px;"/>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <center>
-                                <p>{{col.item}}</p>
+                                <p ng-bind="col.item"></p>
                             </center>
                         </td>
                     </tr>

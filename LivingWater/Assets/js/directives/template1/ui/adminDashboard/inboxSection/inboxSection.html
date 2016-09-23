@@ -18,15 +18,21 @@
                     <td>
                         <table style="overflow-y:scroll; display:block; height:300px; width:200px">
                                 <tr ng-repeat="item in messages">
-                                    <td  ng-if="enableSelection">
-                                        <input type="checkbox" ng-model="item.isSelected" />
-                                    </td>
                                     <td>
-                                        <a ng-click="showInformation(item)">
-                                            <div style="width:200px; height:50px; background-color:yellow" ng-init="CheckIfUnread(item)">
-                                                <p ng-bind="item.sender_username"></p>
-                                            </div>
-                                        </a>
+                                        <table class="bgColorWhiteTransparent borderRadiusRight50px" >
+                                            <tr>
+                                                <td ng-if="enableSelection">
+                                                    <input type="checkbox" ng-model="item.isSelected" />
+                                                </td>
+                                                <td>
+                                                    <a ng-click="showInformation(item)">
+                                                        <div style="width:180px; height:50px;" ng-init="CheckIfUnread(item)">
+                                                            <p style="margin-top:30px;" ng-bind="item.sender_username"></p>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
                                 </tr>
                          </table>

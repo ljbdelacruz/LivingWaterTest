@@ -4,7 +4,7 @@
         news: [{
             id: 1, title: 'Headlines', content: "To turn AR mode off, wait until a wild Pokémon appears and tap the AR slider on the top-right of the battle screen. Whichever creature youre trying to enslave into your Poké-army will immediately move to the centre of the display, ready for the taking. Throw a ball or two and that wily Abra will be yours",
             images: [{ id: 1, image: '/Assets/images/etc/img2.jpg', page_id: 1, width: 300, height: 300 }],
-            videos: [{ id: 1, news_id: 1, title: 'Youtube video player', design: 'youtube-player', type: 'text/html', width: 300, height: 300, source: 'https://www.youtube.com/embed/ZL6BP8ss-5Q', thumbnail: 'http://img.youtube.com/vi/ZL6BP8ss-5Q/default.jpg', frameborder:0}]
+            videos: [{ id: 1, news_id: 1, title: 'Youtube video player', design: 'youtube-player', type: 'text/html', width: 300, height: 300, source: 'https://www.youtube.com/embed/ZL6BP8ss-5Q', thumbnail: 'http://img.youtube.com/vi/ZL6BP8ss-5Q/default.jpg', frameborder: 0 }, { id: 1, news_id: 1, title: 'Youtube video player', design: 'youtube-player', type: 'text/html', width: 300, height: 300, source: 'https://www.youtube.com/embed/CqSo-kXjQLU', thumbnail: 'http://img.youtube.com/vi/CqSo-kXjQLU/default.jpg', frameborder: 0 }]
         },
         {
             id: 2, title: 'Headline 2', content: 'This Just In',

@@ -57,3 +57,25 @@
 .facebook{
 
 }
+.borderRadius50px {
+    border-radius:50px;
+}
+.borderRadiusRight50px {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.borderRadiusG100px {
+    border-radius:100px;
+}
+.bgColorWhiteTransparent {
+    background-color:rgba(255,255,255,0.4);
+}
+.bgColorBlackTransparent {
+    background-color:rgba(0,0,0,0.4);
+}
+.padding10px {
+    padding:50px;
+}
+.wordBreak {
+    word-break:break-word;
+}
