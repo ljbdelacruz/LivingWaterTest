@@ -17,10 +17,25 @@
                         </td>
                     </tr>
                 </table>
-                <table>
+                <table ng-if="(mode == 1) ? true : false">
+                    <tr>
+                        <td>
+                            <product-body items="items" mode="1"></product-body>
+                        </td>
+                    </tr>
+                </table>
+                <table ng-if="(mode == 2) ? true : false">
+                    <tr>
+                        <td>
+                            <product-body items="items" mode="2"></product-body>
+                        </td>
+                    </tr>
+                </table>
+
+                <table ng-if="(mode==4 || mode == 3) ? true : false">
                     <tr ng-if="showProd">
                         <td>
-                            <product-body items="items" ></product-body>
+                            <product-body items="items" mode="4"></product-body>
                         </td>
                     </tr>
                     <tr ng-if='showCart'>

@@ -2,24 +2,24 @@
     <table style="overflow-y:scroll;display:block;width:400px; height:400px;">
         <tr>
             <td>
-                <div style="background-color:white; width:400px; height:30px;">
-                    <p><b>TODAYS TOP STORIES</b></p>
+                <div style="background-color:rgba(255,255,255,0.2); width:400px; height:30px;">
+                    <p style="color:white"><b>TODAYS TOP STORIES</b></p>
                 </div>
             </td>
         </tr>
         <tr ng-repeat="new in news">
             <td>
-                <div style="background-color:yellow; width:400px; height:70px; margin-bottom:10px">
+                <div style="background-color:rgba(0,0,0,0.2); width:400px; height:70px; margin-bottom:10px">
                     <a ng-click="ShowNewsInformationPreview(new)">
                         <table>
                             <tr>
                                 <td>
-                                    <p ng-bind="new.title"></p>
+                                    <p style="color:white" ng-bind="new.title"></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <h5 ng-bind="new.content | limitTo:30"></h5>
+                                    <h5 style="color:white" ng-bind="new.content | limitTo:30"></h5>
                                 </td>
                             </tr>
                         </table>

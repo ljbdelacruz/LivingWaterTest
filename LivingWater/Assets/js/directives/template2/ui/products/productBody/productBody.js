@@ -14,12 +14,14 @@ angular.module('directives.productBody', [])
                     scope.enableDeleteMode = productService.isEnableDeleteProduct;
                     scope.enableEditMode = productService.isEnableEditProduct;
                     scope.enablePurchase = productService.isenableAddingToCart;
+                    scope.nMode = scope.mode;
                 }
                 return {
                     restrict: 'E',
                     replace: true,
                     scope: {
                         items: '=',
+                        mode:'=',
                     },
                     templateUrl: '/Assets/js/directives/template2/ui/products/productBody/productBody.html',
                     compile: function (scope, element, attr) {

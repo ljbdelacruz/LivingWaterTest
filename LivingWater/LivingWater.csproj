@@ -1102,6 +1102,7 @@
   <ItemGroup>
     <Folder Include="Assets\js\directives\template1\ui\adminDashboard\adminToolBar\" />
     <Folder Include="Assets\js\directives\template2\ui\newsComponents\newsBody\css\" />
+    <Folder Include="Assets\js\directives\template2\ui\products\productDelete\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibraryRepository\ClassLibraryRepository.csproj">

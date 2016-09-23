@@ -71,6 +71,7 @@ angular.module('directives.productModify', [])
                 return {
                     restrict: 'E',
                     replace: true,
+                    scope:{mode:'='},
                     templateUrl: '/Assets/js/directives/template2/ui/products/productModify/productModify.html',
                     compile: function (scope, element, attr) {
                         return {
