@@ -51,9 +51,6 @@ angular.module('directives.navigationBar', [])
                 }
                 return {
                     restrict: 'E',
-                    scope: {
-                        items: "="
-                    },
                     replace: true,
                     templateUrl: '/Assets/js/directives/template2/ui/navigationBar/navigationBar.html',
                     compile: function (scope, element, attr) {

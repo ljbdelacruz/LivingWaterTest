@@ -61,6 +61,9 @@ angular.module('otherApp')
             case '/Franchise':
                 $location.path(path);
                 break;
+            case '/ViewProducts':
+                $location.path(path);
+                break;
             default:
                 break;
         }

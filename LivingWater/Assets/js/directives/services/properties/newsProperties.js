@@ -23,8 +23,7 @@
         }
         ],
         newNews: [{id:-1, title:'', content:'', images:[], videos:[]}],
-        
-
+        newsToModify:[],
     };
     return newsProperties;
 });
