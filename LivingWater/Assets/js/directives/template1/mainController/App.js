@@ -40,6 +40,7 @@ angular.module('ngStarterKit', [
             'directives.newsBody',
             'directives.newsPreview',
             'directives.productModify',
+            'directives.productViewFilter',
             /*Modules*/
             'modules.Home',
             'modules.Login',
@@ -51,6 +52,7 @@ angular.module('ngStarterKit', [
             'modules.ViewNews',
             'modules.Inbox',
             'modules.Franchise',
+            'modules.ViewProducts',
             /* Services*/
             'otherApp',
 ])

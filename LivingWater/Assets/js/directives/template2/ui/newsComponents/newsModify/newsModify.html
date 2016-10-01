@@ -1,0 +1,88 @@
+﻿<div>
+    <div>
+        <h1>News Modification</h1>
+        <table>
+            <tr>
+                <td>
+                    <input type="button" value="ADD" />
+                </td>
+                <td>
+                    <input type="button" value="EDIT" />
+                </td>
+                <td>
+                    <input type="button" value="DELETE" />
+                </td>
+            </tr>
+        </table>
+        <table ng-if="(mode==1) ? true : false">
+            <tr>
+                <td>
+                    <input type="text" placeholder="Title Of News" ng-model="title"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea placeholder="Content Of News" ng-model="content"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!--Adding Image To Your News and also displays image uploaded-->
+                    <input type="file" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!--Displays Video Uploaded and also can upload video to be displayed in news-->
+                    <display-video mode="1"></display-video>
+                    <input type="text" placeholder="Video Code From Youtube Paste Here" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="POST NEWS" />
+                </td>
+            </tr>
+        </table>
+        <table ng-if="(mode==2) ? true : false">
+            <tr>
+                <td>
+                    <input type="button" value="DELETE NEWS" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h1 ng-bind="title"></h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p ng-bind="content"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!--Displays Images in this news-->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!--Displays Videos in this news-->
+                    <display-video mode="1"></display-video>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" value="SAVE CHANGES" />
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+
+
+</div>
+
+

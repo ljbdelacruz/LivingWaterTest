@@ -197,6 +197,9 @@
     <Content Include="Assets\js\directives\template1\house\viewNews\module.js" />
     <Content Include="Assets\js\directives\template1\house\viewNews\viewNews.html" />
     <Content Include="Assets\js\directives\template1\house\viewNews\viewNewsCtrl.js" />
+    <Content Include="Assets\js\directives\template1\house\viewProducts\module.js" />
+    <Content Include="Assets\js\directives\template1\house\viewProducts\viewProducts.html" />
+    <Content Include="Assets\js\directives\template1\house\viewProducts\viewProductsCtrl.js" />
     <Content Include="Assets\js\directives\template1\mainController\App.js" />
     <Content Include="Assets\js\directives\template1\mainController\AppCtrl.js" />
     <Content Include="Assets\js\directives\template1\ui\aboutUs\aboutUs.html" />
@@ -259,10 +262,14 @@
     <Content Include="Assets\js\directives\template1\ui\verificationCode\css\verificationCode.css" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.html" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.js" />
+    <Content Include="Assets\js\directives\template2\ui\displayVideo\displayVideo.html" />
+    <Content Include="Assets\js\directives\template2\ui\displayVideo\displayVideo.js" />
     <Content Include="Assets\js\directives\template2\ui\navigationBar\navigationBar.html" />
     <Content Include="Assets\js\directives\template2\ui\navigationBar\navigationBar.js" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.html" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.js" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\newsModify\newsModify.html" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\newsModify\newsModify.js" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsPreview\newsPreview.html" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsPreview\newsPreview.js" />
     <Content Include="Assets\js\directives\template2\ui\products\productBody\productBody.html" />
@@ -271,6 +278,13 @@
     <Content Include="Assets\js\directives\template2\ui\products\productItem\productItem.js" />
     <Content Include="Assets\js\directives\template2\ui\products\productModify\productModify.html" />
     <Content Include="Assets\js\directives\template2\ui\products\productModify\productModify.js" />
+    <Content Include="Assets\js\directives\template2\ui\products\productViewFilter\productViewFilter.html" />
+    <Content Include="Assets\js\directives\template2\ui\products\productViewFilter\productViewFilter.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.aspx" />
     <Content Include="packages.config" />
     <Content Include="scripts\angular-animate.js" />
@@ -300,6 +314,8 @@
     <Content Include="scripts\angular-touch.min.js" />
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="scripts\i18n\angular-locale_aa-et.js" />
@@ -1044,6 +1060,12 @@
     <Content Include="scripts\i18n\angular-locale_zh.js" />
     <Content Include="scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\i18n\angular-locale_zu.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="scripts\jquery-1.9.0.js" />
+    <Content Include="scripts\jquery-1.9.0.min.js" />
     <Content Include="scripts\version.json" />
     <Content Include="scripts\errors.json" />
     <Content Include="scripts\angular.min.js.map" />
@@ -1061,6 +1083,7 @@
     <None Include="Properties\PublishProfiles\IIS Testing.pubxml" />
     <None Include="Properties\PublishProfiles\smarterasp.net.pubxml" />
     <None Include="Properties\PublishProfiles\test.pubxml" />
+    <Content Include="scripts\jquery-1.9.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1086,6 +1109,7 @@
   <ItemGroup>
     <Folder Include="Assets\js\directives\template1\ui\adminDashboard\adminToolBar\" />
     <Folder Include="Assets\js\directives\template2\ui\newsComponents\newsBody\css\" />
+    <Folder Include="Assets\js\directives\template2\ui\products\productDelete\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibraryRepository\ClassLibraryRepository.csproj">

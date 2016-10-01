@@ -24,9 +24,11 @@ angular.module('otherApp')
             case '/Products':
                 if (userInformation.islogin == false /*&& userInformation.isadmin */){
                     productService.isenableAddingToCart = false;
-                } else {
+                } else if(userInformation.islogin == true && userInformation.isadmin == false) {
                     productService.isenableAddingToCart = true;
                 }
+                productService.isEnableDeleteProduct = false;
+                productService.isEnableEditProduct = false;
                 $location.path(path);
                 break;
             case '/News':
@@ -57,6 +59,9 @@ angular.module('otherApp')
                 }
                 break;
             case '/Franchise':
+                $location.path(path);
+                break;
+            case '/ViewProducts':
                 $location.path(path);
                 break;
             default:

@@ -2,21 +2,28 @@
     <table>
         <tr>
             <td>
-                <h5 ng-if="username!=''">FROM: <span ng-bind="username"></span></h5>
+                <table class="bgColorWhiteTransparent borderRadiusRight50px" style="width:300px; margin-bottom:10px;">
+                    <tr>
+                        <td>
+                            <h5 style="margin-left:30px;" ng-if="username!=''">FROM: <span ng-bind="username"></span></h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 style="margin-left:30px;" ng-if="subject != ''">Subject: <span ng-bind="subject"></span></h6>
+                        </td>
+                    </tr>
+                </table>
             </td>
         </tr>
-        <tr>
-            <td>
-                <h6 ng-if="subject != ''">Subject: <span ng-bind="subject"></span></h6>
-            </td>
-        </tr>
+
         <tr ng-repeat="itm in content">
             <td>
                 <table>
                     <tr>
                         <td>
-                            <div style="word-break:break-word; width:380px; background-color:yellow;">
-                                <p ng-bind="itm.message"></p>
+                            <div class="bgColorWhiteTransparent borderRadiusRight50px wordBreak" style="width:380px; margin-bottom:5px;">
+                                <p style="margin-left:30px;" ng-bind="itm.message"></p>
                             </div>
                         </td>
                     </tr>

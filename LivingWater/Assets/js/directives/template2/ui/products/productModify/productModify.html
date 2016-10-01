@@ -1,8 +1,8 @@
 ﻿<div>
-    <table>
+    <table style="width:1000px;">
         <tr>
             <td>
-                <table style="width:1000px; height:100px;">
+                <table style="height:100px;">
                     <tr>
                         <td>
                             <input type="button" value="ADD" ng-click="ChangeModes(1)" ng-disabled="isAddingEnable"/>
@@ -62,11 +62,12 @@
                 </div>
                 <div ng-show="isDeleteEnable">
                     <h1>DELETE</h1>
+                    <product-view-filter ng-if="isDeleteEnable" mode="1"></product-view-filter>
                 </div>
                 <div ng-show="isEditEnable">
                     <h1>Edit</h1>
+                    <product-view-filter ng-if="isEditEnable" mode="2"></product-view-filter>
                 </div>
-
             </td>
         </tr>
     </table>

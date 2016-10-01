@@ -1,5 +1,11 @@
 ﻿.auImg {
+    border-radius:300px;
     width:500px;
     height:200px;
     align-content:center;
+}
+
+.block {
+	background-color:rgba(0,0,0,0.2);
+  	padding:15px;
 }

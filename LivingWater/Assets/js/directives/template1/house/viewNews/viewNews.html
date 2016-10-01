@@ -4,20 +4,26 @@
             <table>
                 <tr>
                     <td>
-                        <h1 ng-bind="title">Title News Here</h1>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Date Published <span ng-bind="datePublished" ></span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <table style="word-break:break-word; margin-top: 100px; margin-bottom:50px; width: 1000px; ">
+                        <table class="bgColorBlackTransparent borderRadiusRight50px" style="width:1000px;">
                             <tr>
                                 <td>
-                                    <p ng-bind="content"></p>
+                                    <h1 style="color:white; margin-left:50px;" ng-bind="title">Title News Here</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="color:white; margin-left:50px;">Date Published <span ng-bind="datePublished"></span></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table style="background-color:rgba(255,255,255,0.3); padding:10px; word-break:break-word; margin-top: 100px; margin-bottom:50px; width: 1000px; ">
+                            <tr>
+                                <td>
+                                    <p style="color:white; margin-left:50px; margin-top:10px;" ng-bind="content"></p>
                                 </td>
                             </tr>
                         </table>

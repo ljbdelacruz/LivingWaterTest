@@ -6,7 +6,7 @@
                 <table class="imageTable" style="width:250px; height:500px">
                     <tr ng-repeat="video in videos">
                         <td ng-click="playVideo($index)" style="padding-bottom:30px">
-                            <img src="{{video.thumbnail}}" />
+                            <img class="borderRadiusRight50px" src="{{video.thumbnail}}" />
                             <input type="button" value="DELETE" ng-click="remove($index)" ng-show="isShowDelete"/>
                         </td>
                     </tr>

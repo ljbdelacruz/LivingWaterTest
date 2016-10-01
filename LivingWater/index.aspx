@@ -37,7 +37,7 @@
 
     <!--Directives-->
     <link rel="stylesheet" type="text/css" href="/Assets/js/directives/template1/ui/navigationBar/css/navigationBar.css" />
-    <script src="Assets/js/directives/template2/ui/navigationBar/navigationBar.js"></script>
+    <script src="/Assets/js/directives/template2/ui/navigationBar/navigationBar.js"></script>
     <!--Sub Directives-->
     <script src="/Assets/js/directives/template1/ui/registration/registration.js"></script>
     <script src="/Assets/js/directives/template1/ui/loginComponent/loginComponent.js"></script>
@@ -51,7 +51,7 @@
     <script src="/Assets/js/directives/template1/ui/adminDashboard/newsSection/newsSection.js"></script>
     <script src="/Assets/js/directives/template1/ui/newsComponents/newsContainer/newsContainer.js"></script>
     <script src="/Assets/js/directives/template1/ui/displayImage/displayImage.js"></script>
-    <script src="/Assets/js/directives/template1/ui/displayVideo/displayVideo.js"></script>
+    <script src="/Assets/js/directives/template2/ui/displayVideo/displayVideo.js"></script>
     <script src="/Assets/js/directives/template1/ui/playlistComponent/playlistComponent.js"></script>
     <script src="/Assets/js/directives/template1/ui/embeddedVideo/embedVideo.js"></script>
     <script src="/Assets/js/directives/template1/ui/carouselImage/carouselImage.js"></script>
@@ -62,6 +62,7 @@
     <script src="/Assets/js/directives/template2/ui/newsComponents/newsBody/newsBody.js"></script>
     <script src="/Assets/js/directives/template2/ui/newsComponents/newsPreview/newsPreview.js"></script>
     <script src="/Assets/js/directives/template2/ui/products/productModify/productModify.js"></script>
+    <script src="/Assets/js/directives/template2/ui/products/productViewFilter/productViewFilter.js"></script>
     <!--Services-->
     <script src="/Assets/js/directives/services/sharedControllerService.js"></script>
     <script src="/Assets/js/directives/services/registrationService.js"></script>
@@ -139,6 +140,9 @@
     <!--Modules Franchise-->
     <script src="/Assets/js/directives/template1/house/franchise/module.js"></script>
     <script src="/Assets/js/directives/template1/house/franchise/franchiseCtrl.js"></script>
+    <!--Module View Products-->
+    <script src="/Assets/js/directives/template1/house/viewProducts/module.js"></script>
+    <script src="/Assets/js/directives/template1/house/viewProducts/viewProductsCtrl.js"></script>
 
     <script src="Assets/js/directives/template1/mainController/App.js"></script>
     <script src="Assets/js/directives/template1/mainController/AppCtrl.js"></script>
