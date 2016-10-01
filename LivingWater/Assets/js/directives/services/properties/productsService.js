@@ -11,7 +11,8 @@ angular.module('otherApp')
         isenableAddingToCart: false,
         mode: 1,
         newProductItem: [],
-        newGenre:[],
+        newGenre: [],
+
     };
     return productService;
 });

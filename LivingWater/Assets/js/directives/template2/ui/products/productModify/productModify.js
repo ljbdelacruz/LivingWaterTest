@@ -51,8 +51,10 @@ angular.module('directives.productModify', [])
                         };
                     };
                     scope.ChangeModes(1);
+
+                    scope.imageUploaded = "";
                     scope.AddNewProduct = function () {
-                        
+                            
                     };
                     scope.AddNewProductGenre = function () {
                         addProduct({ id: -2, genre: scope.newGenre, items: [] }, scope.SuccessAddingNewGenre);

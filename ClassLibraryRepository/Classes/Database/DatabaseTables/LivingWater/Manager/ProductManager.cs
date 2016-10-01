@@ -71,25 +71,15 @@ namespace ClassLibraryRepository
             dbh.newConnection();
             dbh.ExecuteNonQuery(query);
         }
-        public void addProductItem(ProductItem pi) {
-            string query = insertProductItem(pi, "");
+        public void addProductItem(List<ProductItem> pi) {
             dbh.newConnection();
+            string query = "";
+            for (int i = 0; i < pi.Count; i++) {
+                query = dq.insertProductItem(pi[i], query);
+            }
             dbh.ExecuteNonQuery(query);
         }
-        public void insertNewProductAndItems(List<Products> prod)
-        {
-            for (int i = 0; i < prod.Count; i++) {
-                int id = prod[i].id;
-                if (prod[i].id == -2) { //if -2 means product is new
-                    string query = this.insertProduct(prod[i], "");
-                    dbh.newConnection();
-                    dbh.ExecuteNonQuery(query);
-                }
-                for (var c = 0; c < prod[i].items.Count; c++) {
 
-                }
-            }
-        }
         
 		#region filters
         /*
