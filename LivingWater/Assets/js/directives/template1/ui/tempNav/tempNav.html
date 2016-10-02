@@ -1,0 +1,71 @@
+﻿<div>
+    <div class="bs-example" style="z-index:1">
+        <nav id="myNavbar" class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">Living Water Inc</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a ng-click="goto('/Home')">Home</a></li>
+                        <li><a ng-click="goto('/News')">News</a></li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Living Water<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a ng-click="goto('/Products')">Products</a></li>
+                                <li class="divider"></li>
+                                <li><a ng-click="goto('/Franchise')">Franchise</a></li>
+                                <li class="divider"></li>
+                                <li><a ng-click="goto('/AboutUs')">About Us</a></li>
+                                <li class="divider"></li>
+                                <li><a ng-click="goto('/ContactUs')">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Messages <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a ng-click="goto('/Inbox')">Inbox</a></li>
+                                <li><a>Drafts</a></li>
+                                <li><a>Sent Items</a></li>
+                                <li class="divider"></li>
+                                <li><a>Trash</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" ng-if="isShowAdmin">
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a ng-click="goto('/AdminDashboard', 'News')">Manage News</a></li>
+                                <li><a ng-click="goto('/AdminDashboard', 'Products')">Manage Products</a></li>
+                                <li><a ng-click="goto('/AdminDashboard', 'Settings')">Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a ng-click="goto('/Login')">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" ng-if="isShowUser">
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">User<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Order History</a></li>
+                                <li><a href="#">Manage Products</a></li>
+                                <li class="divider"></li>
+                                <li><a ng-click="goto('/Login')">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+    </div>
+</div>

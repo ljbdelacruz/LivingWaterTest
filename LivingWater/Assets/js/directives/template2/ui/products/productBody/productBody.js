@@ -5,7 +5,8 @@ angular.module('directives.productBody', [])
 .directive('productBody',
            ['$location',
             'productService',
-            function ($location, productService) {
+            'routeChecker',
+            function ($location, productService, routeChecker) {
                 function preFn(scope, element, attr) {
                     /* TODO: Do something here before post function */
                 }
@@ -15,9 +16,10 @@ angular.module('directives.productBody', [])
                     scope.enableEditMode = productService.isEnableEditProduct;
                     scope.enablePurchase = productService.isenableAddingToCart;
                     scope.nMode = scope.mode;
-
                     scope.LearnMore_OnClicked = function (itm) {
+                        alert(itm.item);
                         productService.productSelected = itm;
+                        routeChecker('/ViewProducts');
                     }
                 }
                 return {

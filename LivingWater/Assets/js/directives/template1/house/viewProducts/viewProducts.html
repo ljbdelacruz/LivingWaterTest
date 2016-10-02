@@ -1,9 +1,29 @@
 ﻿<div>
     <div ng-controller="viewProductsCtrl">
-        <img src="img" />
-        <h1 ng-bind="product"></h1>
-        <p ng-bind="description"></p>
-        <button type="button" value="ADD"></button>
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        <img src="{{img}}" style="width:100px; height:100px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1 ng-bind="products"></h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p ng-bind="content"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="ADD" />
+                    </td>
+                </tr>
+            </table>
+        </center>
     </div>
 </div>
 

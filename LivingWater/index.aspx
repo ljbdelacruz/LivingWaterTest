@@ -5,9 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="/Assets/css/template1/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/Assets/css/template1/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="/Assets/css/template1/Custom.css" />
     <link rel="stylesheet" type="text/css" href="/Assets/css/template1/global.css" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet" />
@@ -24,20 +24,20 @@
     }
     </style>
 </head>
-<body ng-controller="AppCtrl" ng-init="filterNavItems(); loadAllData()" class="bg1">
+<body ng-controller="AppCtrl" ng-init="filterNavItems(); loadAllData()">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
     
     <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" class="bgvid1" playsinline autoplay muted loop>
         <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
         <source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
     </video>
-
     <navigation-bar></navigation-bar>
+    <temp-nav></temp-nav>
     <div ng-view></div>
-
     <!--Directives-->
     <link rel="stylesheet" type="text/css" href="/Assets/js/directives/template1/ui/navigationBar/css/navigationBar.css" />
     <script src="/Assets/js/directives/template2/ui/navigationBar/navigationBar.js"></script>
+    <script src="Assets/js/directives/template1/ui/tempNav/tempNav.js"></script>
     <!--Sub Directives-->
     <script src="/Assets/js/directives/template1/ui/registration/registration.js"></script>
     <script src="/Assets/js/directives/template1/ui/loginComponent/loginComponent.js"></script>

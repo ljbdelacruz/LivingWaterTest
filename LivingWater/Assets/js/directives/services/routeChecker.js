@@ -62,7 +62,11 @@ angular.module('otherApp')
                 $location.path(path);
                 break;
             case '/ViewProducts':
-                $location.path(path);
+                if (productService.productSelected.item != '') {
+                    $location.path(path);
+                } else {
+                    $location.path('/Products');
+                }
                 break;
             default:
                 break;

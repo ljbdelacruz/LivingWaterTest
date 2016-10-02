@@ -41,6 +41,7 @@ angular.module('ngStarterKit', [
             'directives.newsPreview',
             'directives.productModify',
             'directives.productViewFilter',
+            'directives.tempNav',
             /*Modules*/
             'modules.Home',
             'modules.Login',

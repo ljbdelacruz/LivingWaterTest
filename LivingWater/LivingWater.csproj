@@ -259,6 +259,8 @@
     <Content Include="Assets\js\directives\template1\ui\socialNavBar\socialNavBar.css" />
     <Content Include="Assets\js\directives\template1\ui\socialNavBar\socialNavBar.html" />
     <Content Include="Assets\js\directives\template1\ui\socialNavBar\socialNavBar.js" />
+    <Content Include="Assets\js\directives\template1\ui\tempNav\tempNav.html" />
+    <Content Include="Assets\js\directives\template1\ui\tempNav\tempNav.js" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\css\verificationCode.css" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.html" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.js" />

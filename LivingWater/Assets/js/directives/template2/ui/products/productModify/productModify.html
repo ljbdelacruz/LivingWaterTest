@@ -2,19 +2,21 @@
     <table style="width:1000px;">
         <tr>
             <td>
-                <table style="height:100px;">
-                    <tr>
-                        <td>
-                            <input type="button" value="ADD" ng-click="ChangeModes(1)" ng-disabled="isAddingEnable"/>
-                        </td>
-                        <td>
-                            <input type="button" value="DELETE" ng-click="ChangeModes(2)" ng-disabled="isDeleteEnable"/>
-                        </td>
-                        <td>
-                            <input type="button" value="EDIT" ng-click="ChangeModes(3)" ng-disabled="isEditEnable"/>
-                        </td>
-                    </tr>
-                </table>
+                <center>
+                    <table style="height:100px;">
+                        <tr>
+                            <td>
+                                <input type="button" value="ADD" ng-click="ChangeModes(1)" ng-disabled="isAddingEnable" />
+                            </td>
+                            <td>
+                                <input type="button" value="DELETE" ng-click="ChangeModes(2)" ng-disabled="isDeleteEnable" />
+                            </td>
+                            <td>
+                                <input type="button" value="EDIT" ng-click="ChangeModes(3)" ng-disabled="isEditEnable" />
+                            </td>
+                        </tr>
+                    </table>
+                </center>
             </td>
         </tr>
         <tr>
@@ -26,14 +28,23 @@
                         <option value="2">Product</option>
                         <option value="-1">Add New Genre</option>
                     </select>
-                    <input type="text" value="" placeholder="Genre" ng-show="enableNewGenre" />
                     <table>
-                        <tr>
+                        <tr ng-if="enableNewGenre">
                             <td>
-                                <input type="text" placeholder="Product Name" ng-model="newGenre"/>
+                                <input type="text" value="" placeholder="Genre" />
                             </td>
                             <td>
-                                <input type="button" value="ADD" ng-click="AddNewProductGenre()"/>
+                                <input type="button" value="ADD" ng-click="AddNewProductGenre()" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="Product Name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea placeholder="Product Brief Description" style="width:300px; height:200px;"></textarea>
                             </td>
                         </tr>
                         <tr>
