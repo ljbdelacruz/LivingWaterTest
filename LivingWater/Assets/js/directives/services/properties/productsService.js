@@ -20,6 +20,7 @@ angular.module('otherApp')
         isEnableDeleteProduct: false,
         isEnableEditProduct: false,
         productSelected: {},
+        newGenre: [],
     };
     return productService;
 });

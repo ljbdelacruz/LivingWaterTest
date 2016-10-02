@@ -49,7 +49,13 @@
                         </tr>
                         <tr>
                             <td>
-                                <input type="file" />
+                                <input type="file" ng-model="imageUploaded" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span ng-bind="imageUploaded"></span>
+                                <img src="" />
                             </td>
                         </tr>
                         <tr>
