@@ -7,5 +7,11 @@
                  $scope.products = productService.productSelected.item;
                  $scope.img = productService.productSelected.source;
                  $scope.content = productService.productSelected.content;
+                 
+
+                 $scope.productEdit = productService.productSelected;
+                 $scope.viewProduct = false;
+                 $scope.editProduct = true;
+
              }
             ]);

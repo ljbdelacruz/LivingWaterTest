@@ -20,7 +20,11 @@ angular.module('directives.productBody', [])
                         alert(itm.item);
                         productService.productSelected = itm;
                         routeChecker('/ViewProducts');
-                    }
+                    };
+                    scope.Edit_OnClicked = function (itm) {
+                        productService.productSelected = itm;
+                        routeChecker('/ViewProducts');
+                    };
                 }
                 return {
                     restrict: 'E',

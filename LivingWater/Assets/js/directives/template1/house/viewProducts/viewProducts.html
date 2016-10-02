@@ -1,6 +1,6 @@
 ﻿<div>
     <div ng-controller="viewProductsCtrl">
-        <center>
+        <center ng-if="viewProduct">
             <table>
                 <tr>
                     <td>
@@ -24,7 +24,43 @@
                 </tr>
             </table>
         </center>
+
+        <center ng-if="editProduct">
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Product Title" ng-model="productEdit.item"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea placeholder="Product Brief Description" style="width:300px; height:200px;" ng-model="productEdit.content"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Price" ng-model="productEdit.price" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="file" />
+                    </td>
+                    <td>
+                        <img src="{{img}}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="SAVE CHANGES" />
+                     </td>
+                </tr>
+            </table>
+        </center>
+        
     </div>
+
+
 </div>
 
 
