@@ -196,6 +196,9 @@
     <Content Include="Assets\js\directives\template1\house\products\module.js" />
     <Content Include="Assets\js\directives\template1\house\products\products.html" />
     <Content Include="Assets\js\directives\template1\house\products\productsCtrl.js" />
+    <Content Include="Assets\js\directives\template1\house\transaction\module.js" />
+    <Content Include="Assets\js\directives\template1\house\transaction\transaction.html" />
+    <Content Include="Assets\js\directives\template1\house\transaction\transactionCtrl.js" />
     <Content Include="Assets\js\directives\template1\house\viewNews\module.js" />
     <Content Include="Assets\js\directives\template1\house\viewNews\viewNews.html" />
     <Content Include="Assets\js\directives\template1\house\viewNews\viewNewsCtrl.js" />
