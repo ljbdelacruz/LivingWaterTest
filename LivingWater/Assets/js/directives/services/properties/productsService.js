@@ -20,6 +20,7 @@ angular.module('otherApp')
         isEnableDeleteProduct: false,
         isEnableEditProduct: false,
         productSelected: {},
+        subItems:[], //the purpose of this is that it contains the items which has isselected property
         newGenre: [],
     };
     return productService;

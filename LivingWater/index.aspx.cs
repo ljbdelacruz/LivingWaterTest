@@ -139,16 +139,31 @@ namespace LivingWater
             }
             return false;
         }
+
         [WebMethod]
         public static void UpdateData(string data, int process)
         {
-
+            /*legend
+             * 1 - product 
+             * 2 - news 
+            */
+            switch (process) {
+                case 1:
+                    Debug.WriteLine("Excute Data");
+                    var product = JsonConvert.DeserializeObject<ProductItem>(data);
+                    ProductManager pm = new ProductManager();
+                    pm.updateProductItem(product);
+                    break;
+            }
         }
         [WebMethod]
         public static void DeleteItem(string data, int process)
         {
             switch (process) {
                 case 1:
+                    var product = JsonConvert.DeserializeObject<List<ProductItem>>(data);
+                    ProductManager pm = new ProductManager();
+                    pm.deleteProductItem(product);
                     break;
                 case 2:
                     break;
@@ -165,7 +180,6 @@ namespace LivingWater
                     }
                     im.ExecuteNonQuery(inboxQ);
                     im.ExecuteNonQuery(inboxC);
-                    
                     break;
                 default:
                     break;

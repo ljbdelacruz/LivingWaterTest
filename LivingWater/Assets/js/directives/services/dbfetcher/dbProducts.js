@@ -16,7 +16,8 @@
                                        temp.items.push({
                                            id: data['d'][i]['items'][c]['id'], item: data['d'][i]['items'][c]['item'],
                                            price: data['d'][i]['items'][c]['price'], source: data['d'][i]['items'][c]['source'],
-                                           quantity: data['d'][i]['items'][c]['stock'], product_id: data['d'][i]['items'][c]['product_id']
+                                           quantity: data['d'][i]['items'][c]['stock'], product_id: data['d'][i]['items'][c]['product_id'],
+                                           content: data['d'][i]['items'][c]['content'], isselected:false
                                        });
                                    }
                                    productService.products.push(temp);

@@ -35,7 +35,7 @@ namespace ClassLibraryRepository
                 IDataReader reader2 = dbh2.GetQueryResult(sql2);
                 while (reader2.Read()) {
                     temp.appendProductItem(new ProductItem(Convert.ToInt16(reader2["id"]), "" + reader2["item"], Convert.ToDouble(reader2["price"]), 
-                                                           "" + reader2["source"], Convert.ToInt16(reader2["stock"]), Convert.ToInt16(reader2["product_id"])));
+                                                           "" + reader2["source"], Convert.ToInt16(reader2["stock"]), Convert.ToInt16(reader2["product_id"]), ""+reader2["content"]));
                 }
                 this.products.Add(temp);
             }
@@ -55,7 +55,7 @@ namespace ClassLibraryRepository
                 while (reader2.Read())
                 {
                     temp.appendProductItem(new ProductItem(Convert.ToInt16(reader2["id"]), "" + reader2["item"], Convert.ToDouble(reader2["price"]),
-                                                           "" + reader2["source"], Convert.ToInt16(reader2["stock"]), Convert.ToInt16(reader2["product_id"])));
+                                                           "" + reader2["source"], Convert.ToInt16(reader2["stock"]), Convert.ToInt16(reader2["product_id"]), ""+reader2["content"]));
                 }
                 this.products.Add(temp);
             }
@@ -79,8 +79,24 @@ namespace ClassLibraryRepository
             }
             dbh.ExecuteNonQuery(query);
         }
-
-        
+        public void updateProductItem(ProductItem pi) {
+            dbh.newConnection();
+            string sql=dq.updateProductItem(pi, "");
+            Debug.WriteLine(sql);
+            dbh.ExecuteNonQuery(sql);
+            dbh.CloseConnection();
+            Debug.WriteLine("Done!");
+        }
+        public void deleteProductItem(List<ProductItem> lpi) {
+            dbh.newConnection();
+            string sql = "";
+            for (int i = 0; i < lpi.Count; i++) {
+                sql = dq.deleteProductItem(lpi[i].id, sql);
+            }
+            Debug.WriteLine(sql);
+            dbh.ExecuteNonQuery(sql);
+            dbh.CloseConnection();
+        }
 		#region filters
         /*
 		public List<Products> filterByType(int type) {

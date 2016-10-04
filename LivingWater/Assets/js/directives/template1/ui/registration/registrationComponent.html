@@ -25,7 +25,7 @@
                     <input type="text" class="form-control" aria-describedby="basic-addon1" placeholder="Last Name" ng-model="lastname" required/>
                 </div>
                 <div class="form-group">
-                    <select ng-model="sex" style="width:100%">
+                    <select class="form-control" aria-describedby="basic-addon1" ng-model="sex" style="width:100%">
                         <option value="1">Male</option>
                         <option value="2">Female</option>
                     </select>
@@ -34,7 +34,7 @@
                     <verification-code image="choosenVerification"></verification-code>
                 </div>
                 <div class="form-group">
-                    <input type="button" value="Change Verification Code" ng-click="changeVerificationCode()"/>
+                    <input type="button" class="btn btn-md btn-hover btn-info" value="Change Verification Code" ng-click="changeVerificationCode()"/>
                 </div>
                 <div class="form-group">
                     <div class="form-inline">
@@ -47,7 +47,7 @@
                         <input type="text" class="form-control" placeholder="YYYY" ng-model="birthYear"/>
                     </div>
                 </div>
-                <input type="button" ng-click="submit()" class="btn btn-md btn-hover btn-info btn-block" value="SIGN UP" />
+                <input type="button" ng-click="submit()" class="btn btn-md btn-hover btn-primary btn-block" value="SIGN UP" />
             </nav>
         </div>
     </div>

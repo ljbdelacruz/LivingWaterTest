@@ -1,5 +1,5 @@
 ﻿<div>
-    <input type="button" value="DELETE" ng-if="(mode==1)?true:false"/>
+    <input type="button" value="DELETE" ng-if="(mode==1)?true:false" ng-click="delete_OnClicked()"/>
     <table>
         <tr ng-repeat="row in items">
             <td ng-repeat="col in row.items" style="padding-right:50px; padding-top:50px">
@@ -7,14 +7,14 @@
                     <tr ng-if="(mode==1)?true:false">
                         <td>
                             <center>
-                                <input type="checkbox" />
+                                <input type="checkbox" ng-click="selectedItem(col)" ng-model="col.isselected"/>
                             </center>
                         </td>
                     </tr>
                     <tr ng-if="(mode==2)?true:false">
                         <td>
                             <center>
-                                <input type="button" value="EDIT" ng-click="Edit_OnClicked(col)"/>
+                                <input type="button" value="EDIT" ng-click="Edit_OnClicked(col)" class="btn btn-md btn-hover btn-primary"/>
                             </center>
                         </td>
                     </tr>
@@ -40,14 +40,14 @@
                     <tr>
                         <td>
                             <center>
-                                <input type="button" value="LEARN MORE" ng-click="LearnMore_OnClicked(col)" />
+                                <input type="button" value="LEARN MORE" ng-click="LearnMore_OnClicked(col)" class="btn btn-md btn-hover btn-success" style="margin-bottom:5px;"/>
                             </center>
                         </td>
                     </tr>
                     <tr ng-if="enablePurchase">
                         <td>
                             <center>
-                                <input type="button" value="BUY" />
+                                <input type="button" value="BUY" class="btn btn-md btn-hover btn-success" style="margin-bottom:5px;"/>
                             </center>
                         </td>
                     </tr>

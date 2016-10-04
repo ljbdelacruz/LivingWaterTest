@@ -90,6 +90,8 @@
     <script src="Assets/js/directives/services/dbpost/dbAddInboxContent.js"></script>
     <script src="Assets/js/directives/services/dbpost/dbDeleteInboxSelected.js"></script>
     <script src="Assets/js/directives/services/dbpost/dbAddProduct.js"></script>
+    <script src="Assets/js/directives/services/dbpost/dbDeleteProductItems.js"></script>
+    <script src="/Assets/js/directives/services/dbpost/dbUpdateProduct.js"></script>
 
     <!--Service Properties-->
     <script src="/Assets/js/directives/services/properties/productsService.js"></script>

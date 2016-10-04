@@ -20,7 +20,7 @@ namespace ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater.Uti
             return "SELECT id, genre from products WHERE genre='" + genre + "'; ";
         }
         public string GetProductItem(int prod_id) {
-            return "SELECT id, item, price, source, stock, product_id FROM productitem WHERE product_id=" + prod_id + ";";
+            return "SELECT id, item, price, source, stock, product_id, content FROM productitem WHERE product_id=" + prod_id + ";";
         }
         
         public string insertProduct(Products prod, string query) {
@@ -31,6 +31,12 @@ namespace ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater.Uti
         }
         public string findProductID(string genre) {
             return "SELECT id from products WHERE genre='"+genre+"'; ";
+        }
+        public string updateProductItem(ProductItem pi, string query) {
+            return query+" UPDATE productitem SET item='"+pi.item+"', price="+pi.price+", source='"+pi.source+"', product_id="+pi.product_id+", content='"+pi.content+"' WHERE id="+pi.id+"; ";
+        }
+        public string deleteProductItem(int id, string query) {
+            return query + " DELETE FROM productitem WHERE id=" + id + "; ";
         }
         #endregion
 
