@@ -138,9 +138,11 @@
     <Content Include="Assets\js\directives\services\dbfetcher\dbUserSettings.js" />
     <Content Include="Assets\js\directives\services\dbfetcher\dbVerificationCode.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbAddInboxContent.js" />
+    <Content Include="Assets\js\directives\services\dbpost\dbAddNews.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbAddProduct.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbDeleteInboxSelected.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbDeleteProductItems.js" />
+    <Content Include="Assets\js\directives\services\dbpost\dbUpdateNews.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbGlobByLanguage.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbSubmitConcern.js" />
     <Content Include="Assets\js\directives\services\dbpost\dbSubmitLogin.js" />
@@ -269,6 +271,8 @@
     <Content Include="Assets\js\directives\template1\ui\verificationCode\css\verificationCode.css" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.html" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.js" />
+    <Content Include="Assets\js\directives\template2\ui\displayVideo2\displayVideo2.html" />
+    <Content Include="Assets\js\directives\template2\ui\displayVideo2\displayVideo2.js" />
     <Content Include="Assets\js\directives\template2\ui\displayVideo\displayVideo.html" />
     <Content Include="Assets\js\directives\template2\ui\displayVideo\displayVideo.js" />
     <Content Include="Assets\js\directives\template2\ui\navigationBar\navigationBar.html" />

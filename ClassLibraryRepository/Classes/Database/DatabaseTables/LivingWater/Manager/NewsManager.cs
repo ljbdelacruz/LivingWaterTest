@@ -67,7 +67,7 @@ namespace ClassLibraryRepository
                 }
                 for (int i = 0; i < news.videos.Count; i++) {
                     news.videos[i].news_id= Convert.ToInt16(reader["id"]);
-                    sql2 = dq.InsertNewsVides(news.videos[i], sql2);
+                    sql2 = dq.InsertNewsVideos(news.videos[i], sql2);
                 }
                 DatabaseHandler dh2 = new DatabaseHandler();
                 dh2.newConnection();
@@ -75,6 +75,22 @@ namespace ClassLibraryRepository
                 dh2.CloseConnection();
             }
         }
+        public void updateNews(News news) {
+            dh.newConnection();
+            string sql = dq.updateNews(news, "");
+            sql = dq.RemoveNewsImagesRelatedToId(news, sql);
+            for (int i = 0; i < news.images.Count; i++) {
+                sql = dq.InsertNewsImages(news.images[i], sql);
+            }
+            sql = dq.RemoveNewsVideosRelatedToId(news, sql);
+            for (int i = 0; i < news.videos.Count; i++) {
+                sql = dq.InsertNewsVideos(news.videos[i], sql);
+            }
+            dh.ExecuteNonQuery(sql);
+
+
+        }
+
 
 	}
 }

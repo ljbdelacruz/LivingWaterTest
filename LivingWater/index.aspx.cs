@@ -115,6 +115,12 @@ namespace LivingWater
                             return true;
                         }
                         break;
+                    case 2:
+                        //this process is for adding new news in database
+                        var news = JsonConvert.DeserializeObject<News>(data);
+                        NewsManager nm = new NewsManager();
+                        nm.InsertNewNews(news);
+                        break;
                     case 3:
                         //do a database insertion from database here call a method from a class to insert data from registration of new users
                         var ic = JsonConvert.DeserializeObject<InboxContent>(data);
@@ -153,6 +159,11 @@ namespace LivingWater
                     var product = JsonConvert.DeserializeObject<ProductItem>(data);
                     ProductManager pm = new ProductManager();
                     pm.updateProductItem(product);
+                    break;
+                case 2:
+                    var news = JsonConvert.DeserializeObject<News>(data);
+                    NewsManager nm = new NewsManager();
+                    nm.updateNews(news);
                     break;
             }
         }

@@ -13,6 +13,7 @@ namespace ClassLibraryRepository
 		public int Id { get; set; }
 		public string title { get; set;}
 		public string content { get; set; }
+        public string datePublished { get; set; }
 		public List<Images> images;
 		public List<Video> videos;
 		public List<Buttons> buttons;

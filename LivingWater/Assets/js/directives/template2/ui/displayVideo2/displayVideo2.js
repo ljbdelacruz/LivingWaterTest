@@ -1,9 +1,9 @@
 ﻿'use strict';
 
 /* Create module for navbar directive */
-angular.module('directives.displayVideo', [])
+angular.module('directives.displayVideo2', [])
 
-.directive('displayVideo',
+.directive('displayVideo2',
            ['$location',
             'userInformation',
             'userListService',
@@ -22,7 +22,6 @@ angular.module('directives.displayVideo', [])
                         }
                     };
                     scope.checkMode();
-
                     scope.remove = function (index) {
                         userListService.news[userInformation.newsToModify_id].videos.splice(index, 1);
                         scope.videos = userListService.news[userInformation.newsToModify_id].videos;
@@ -35,7 +34,7 @@ angular.module('directives.displayVideo', [])
                         mode:'='
                     },
                     replace: true,
-                    templateUrl: '/Assets/js/directives/template1/ui/displayVideo/displayVideo.html',
+                    templateUrl: '/Assets/js/directives/template2/ui/displayVideo2/displayVideo2.html',
                     compile: function (scope, element, attr) {
                         return {
                             pre: preFn,

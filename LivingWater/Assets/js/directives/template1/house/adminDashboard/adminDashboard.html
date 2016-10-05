@@ -5,40 +5,109 @@
             <h1>Product Modification</h1>
             <product-modify></product-modify>
         </div>
+
         <div ng-if="isEnableNewsModify">
             <h1>News Modification</h1>
             <table>
                 <tr>
                     <td>
-                        <input type="text" placeholder="Title" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <textarea placeholder="News Description"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="file" />
+                        <input type="button" value="ADD" ng-click="switchModes(1)" ng-disabled="(isEnableAddNews)?true:false"/>
                     </td>
                     <td>
-                        <img src="" style="width:100px; height:100px;" />
+                        <input type="button" value="EDIT" ng-click="switchModes(3)" ng-disabled="(isEnableEditNews)?true:false"/>
                     </td>
-                </tr>
-                <tr>
                     <td>
-                        <input type="text" placeholder="Youtube Video Code" />
-                    </td> 
-                </tr>
-
-
-                <tr>
-                    <td>
-
+                        <input type="button" value="DELETE" ng-click="switchModes(2)" ng-disabled="(isEnableDeleteNews)?true:false"/>
                     </td>
                 </tr>
             </table>
+
+            <table ng-if="isEnableEditNews">
+                <tr>
+                    <td>
+                        <h1>EDIT NEWS</h1>
+                    </td>
+                </tr>
+            </table>
+            <table ng-if="isEnableDeleteNews">
+                <tr>
+                    <td>
+                        <h1>DELETE NEWS</h1>
+                    </td>
+                </tr>
+            </table>
+            <table ng-if="isEnableAddNews">
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Title" style="width:500px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea placeholder="News Description" style="width:500px; height:200px;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="file" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="{{news.images[0].image}}" style="width:100px; height:100px;" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="text" placeholder="Youtube Video Code" ng-model="videoCode" />
+                                </td>
+                                <td>
+                                    <input type="button" ng-click="AddVideo_OnClicked(videoCode)" value="ADD VIDEO" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td> 
+                </tr>
+                <tr>
+                    <td>
+                        <table style="overflow-x:scroll;display:block; width:500px;height:150px;"> 
+                            <tr>
+                                <td ng-repeat="video in news.videos">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <img src="{{video.thumbnail}}" style="width:100px; height:100px;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <center>
+                                                    <input type="button" value="DELETE" ng-click="DeleteVideo_OnClicked($index)"/>
+                                                </center>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="POST NEWS" ng-click="Post_OnClicked()"/>
+                    </td>
+                </tr>
+            </table>
+
         </div>
         <div ng-if="isEnableSettingsModify">
             <h1>Settings</h1>

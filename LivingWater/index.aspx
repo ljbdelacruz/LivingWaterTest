@@ -92,6 +92,7 @@
     <script src="Assets/js/directives/services/dbpost/dbAddProduct.js"></script>
     <script src="Assets/js/directives/services/dbpost/dbDeleteProductItems.js"></script>
     <script src="/Assets/js/directives/services/dbpost/dbUpdateProduct.js"></script>
+    <script src="/Assets/js/directives/services/dbpost/dbAddNews.js"></script>
 
     <!--Service Properties-->
     <script src="/Assets/js/directives/services/properties/productsService.js"></script>
