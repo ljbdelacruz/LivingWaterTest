@@ -1,0 +1,105 @@
+﻿<div>
+
+        <table ng-if="editEnable">
+              <tr>
+                  <td>
+                        <input type="text" placeholder="News Title" ng-model="{{newsSelected.title}}" />
+                   </td>
+              </tr>
+              <tr>
+                  <td>
+                        <textarea placeholder="News Content" ng-model="{{newsSelected.content}}"></textarea>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      <table>
+                            <tr>
+                                <td>
+                                    <input type="file" />
+                                </td>
+                                <td>
+                                    <img src="{{newsSelected.images[0].source}}" style="width:100px; height:100px;" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td ng-repeat="video in newsSelected.videos">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <img src="{{video.thumbnail}}" style="width:100px; height:100px;" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="button" value="DELETE" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="SAVE CHANGES" ng-click="Save_OnClicked()"/>
+                    </td>
+                </tr>
+            </table>
+
+            <table ng-show="(editEnable)?false:true">
+                <tr ng-repeat="page in news">
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <h1 ng-bind="{{page.title}}"></h1>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p ng-bind="{{page.content}}"></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            <tr>
+                            <tr>
+                                <td>
+                                    <div ng-if="(mode==1)?true:false">
+                                        <input type="button" value="EDIT" ng-click="Edit_OnClicked()"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div ng-if="(mode==2)?true:false">
+                                        <input type="button" value="DELETE" />
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+</div>
+
+

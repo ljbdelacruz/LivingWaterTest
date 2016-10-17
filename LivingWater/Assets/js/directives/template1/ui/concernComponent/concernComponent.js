@@ -26,7 +26,8 @@ angular.module('directives.concernComponent', [])
                     scope.isShowSuccessMessage = false;
                     scope.sendToAdmin = function () {
                         if (userInformation.sucessCreatingConcern == true) {
-                            var data = { subject: scope.subject, message: scope.message, unread: false, resolved: false };
+
+                            var data = { message: scope.message+" Contact Me At My Email: "+scope.email+" And My Contact Number: "+scope.contact, unread: false, resolved: false };
                             submitConcern(data, scope.pushDataToConcerns);
                         } else{
                             alert("Please Type in Correct Verification Code");
@@ -37,7 +38,6 @@ angular.module('directives.concernComponent', [])
                         scope.isShowSuccessMessage = true;
                         userListService.concerns.push(data);
                     };
-
                     scope.changeVerificationCode = function () {
                         scope.choosenVerification = userListService.verification[Math.floor((Math.random() * 2))];
                     };

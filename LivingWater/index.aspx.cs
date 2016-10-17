@@ -122,13 +122,13 @@ namespace LivingWater
                         nm.InsertNewNews(news);
                         break;
                     case 3:
-                        //do a database insertion from database here call a method from a class to insert data from registration of new users
                         var ic = JsonConvert.DeserializeObject<InboxContent>(data);
                         InboxManager im = new InboxManager();
                         im.insertNewMessageContent(ic);
                         break;
                     case 4:
-                        //Adding inbox from a user
+                        //Adding inbox from a guest
+                        var inboxC = JsonConvert.DeserializeObject<InboxContent>(data);
                         break;
                     case 5:
                         //this is for inserting genre(Product)

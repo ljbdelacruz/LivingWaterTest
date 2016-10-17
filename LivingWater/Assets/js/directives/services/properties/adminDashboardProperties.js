@@ -4,7 +4,8 @@ angular.module('otherApp')
     var adminDashboardProperties = {
         isAddingNewsEnable:false,
         isModifyProductsEnable: false,
-        isModifySettingsEnable:false,
+        isModifySettingsEnable: false,
+        isModifyOrderEnable:false,
         update:'&',
     };
     return adminDashboardProperties;

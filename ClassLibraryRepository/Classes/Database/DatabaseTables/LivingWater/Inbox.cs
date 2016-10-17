@@ -25,6 +25,11 @@ namespace ClassLibraryRepository
 			this.receiver_id = nReceiver_id;
             this.InboxContent = new List<InboxContent>();
 		}
+        public Inbox(int nSender_id, int nReceiver_id, string nSubject) {
+            this.sender_id = nSender_id;
+            this.receiver_id = nReceiver_id;
+            this.subject = nSubject;
+        }
 
 
 

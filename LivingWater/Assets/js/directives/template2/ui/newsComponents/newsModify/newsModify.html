@@ -4,85 +4,120 @@
         <table>
             <tr>
                 <td>
-                    <input type="button" value="ADD" />
+                    <input type="button" value="ADD" ng-disabled="(mode==1)?true:false" ng-click="SwitchMode(1)"/>
                 </td>
                 <td>
-                    <input type="button" value="EDIT" />
+                    <input type="button" value="EDIT" ng-disabled="(mode==2)?true:false" ng-click="SwitchMode(2)"/>
                 </td>
                 <td>
-                    <input type="button" value="DELETE" />
+                    <input type="button" value="DELETE" ng-disabled="(mode==3)?true:false" ng-click="SwitchMode(3)"/>
                 </td>
             </tr>
         </table>
-        <table ng-if="(mode==1) ? true : false">
+        <table ng-if="(mode==1)?true:false">
             <tr>
                 <td>
-                    <input type="text" placeholder="Title Of News" ng-model="title"/>
+                    <h1>ADD NEWS</h1>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <textarea placeholder="Content Of News" ng-model="content"></textarea>
+                    <input type="text" placeholder="Title" style="width:500px;" />
                 </td>
             </tr>
             <tr>
                 <td>
-                    <!--Adding Image To Your News and also displays image uploaded-->
-                    <input type="file" />
+                    <textarea placeholder="News Description" style="width:500px; height:200px;"></textarea>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <!--Displays Video Uploaded and also can upload video to be displayed in news-->
-                    <display-video mode="1"></display-video>
-                    <input type="text" placeholder="Video Code From Youtube Paste Here" />
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="file" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{{news.images[0].image}}" style="width:100px; height:100px;" />
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="button" value="POST NEWS" />
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="Youtube Video Code" ng-model="videoCode" />
+                            </td>
+                            <td>
+                                <input type="button" ng-click="AddVideo_OnClicked(videoCode)" value="ADD VIDEO" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table style="overflow-x:scroll;display:block; width:500px;height:150px;">
+                        <tr>
+                            <td ng-repeat="video in news.videos">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img src="{{video.thumbnail}}" style="width:100px; height:100px;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <center>
+                                                <input type="button" value="DELETE" ng-click="DeleteVideo_OnClicked($index)" />
+                                            </center>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="POST NEWS" ng-click="Post_OnClicked()" />
                 </td>
             </tr>
         </table>
-        <table ng-if="(mode==2) ? true : false">
+        <table ng-if="(mode==2)?true:false">
             <tr>
                 <td>
-                    <input type="button" value="DELETE NEWS" />
+                    <h1>EDIT NEWS</h1>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <h1 ng-bind="title"></h1>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p ng-bind="content"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <!--Displays Images in this news-->
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <!--Displays Videos in this news-->
-                    <display-video mode="1"></display-video>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <input type="button" value="SAVE CHANGES" />
+                    <display-news mode="1"></display-news>
                 </td>
             </tr>
         </table>
-
+        <table ng-if="(mode==3)?true:false">
+            <tr>
+                <td>
+                    <h1>DELETE NEWS</h1>
+                    <display-news mode="2"></display-news>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        
+                </td>
+            </tr>
+        </table>
 
     </div>
-
-
+        
 </div>
 
 

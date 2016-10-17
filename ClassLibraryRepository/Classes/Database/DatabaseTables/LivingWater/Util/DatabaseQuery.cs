@@ -14,7 +14,7 @@ namespace ClassLibraryRepository.Classes.Database.DatabaseTables.LivingWater.Uti
         }
         #region products
         public string GetProductGenre() {
-            return "SELECT id, genre from products";
+            return "SELECT id, genre from products; ";
         }
         public string GetProductGenre(string genre) {
             return "SELECT id, genre from products WHERE genre='" + genre + "'; ";

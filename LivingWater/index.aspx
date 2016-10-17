@@ -63,6 +63,9 @@
     <script src="/Assets/js/directives/template2/ui/newsComponents/newsPreview/newsPreview.js"></script>
     <script src="/Assets/js/directives/template2/ui/products/productModify/productModify.js"></script>
     <script src="/Assets/js/directives/template2/ui/products/productViewFilter/productViewFilter.js"></script>
+    <script src="Assets/js/directives/template2/ui/newsComponents/newsModify/newsModify.js"></script>
+    <script src="Assets/js/directives/template2/ui/newsComponents/displayNews/displayNews.js"></script>
+
     <!--Services-->
     <script src="/Assets/js/directives/services/sharedControllerService.js"></script>
     <script src="/Assets/js/directives/services/registrationService.js"></script>

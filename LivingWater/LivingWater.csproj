@@ -277,12 +277,16 @@
     <Content Include="Assets\js\directives\template2\ui\displayVideo\displayVideo.js" />
     <Content Include="Assets\js\directives\template2\ui\navigationBar\navigationBar.html" />
     <Content Include="Assets\js\directives\template2\ui\navigationBar\navigationBar.js" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\displayNews\displayNews.html" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\displayNews\displayNews.js" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.html" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.js" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsModify\newsModify.html" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsModify\newsModify.js" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsPreview\newsPreview.html" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsPreview\newsPreview.js" />
+    <Content Include="Assets\js\directives\template2\ui\orderComponents\orderBody\orderBody.html" />
+    <Content Include="Assets\js\directives\template2\ui\orderComponents\orderBody\orderBody.js" />
     <Content Include="Assets\js\directives\template2\ui\products\productBody\productBody.html" />
     <Content Include="Assets\js\directives\template2\ui\products\productBody\productBody.js" />
     <Content Include="Assets\js\directives\template2\ui\products\productItem\productItem.html" />

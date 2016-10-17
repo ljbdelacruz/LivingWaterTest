@@ -37,14 +37,22 @@ angular.module('directives.tempNav', [])
                             adminDashboardProperties.isAddingNewsEnable = true;
                             adminDashboardProperties.isModifyProductsEnable = false;
                             adminDashboardProperties.isModifySettingsEnable = false;
+                            adminDashboardProperties.isModifyOrderEnable = false;
                         } else if (btn == 'Products') {
                             adminDashboardProperties.isAddingNewsEnable = false;
                             adminDashboardProperties.isModifyProductsEnable = true;
                             adminDashboardProperties.isModifySettingsEnable = false;
+                            adminDashboardProperties.isModifyOrderEnable = false;
                         } else if (btn == 'Settings') {
                             adminDashboardProperties.isAddingNewsEnable = false;
                             adminDashboardProperties.isModifyProductsEnable = false;
                             adminDashboardProperties.isModifySettingsEnable = true;
+                            adminDashboardProperties.isModifyOrderEnable = false;
+                        } else if (btn == 'Orders') {
+                            adminDashboardProperties.isAddingNewsEnable = false;
+                            adminDashboardProperties.isModifyProductsEnable = false;
+                            adminDashboardProperties.isModifySettingsEnable = false;
+                            adminDashboardProperties.isModifyOrderEnable = true;
                         }
                         routeChecker(path);
                     };
