@@ -1,0 +1,79 @@
+<div>
+	<table>
+
+		<!--Content Of News-->
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td>
+							<input type="text" placeholder="Title" ng-model="news.title" style="width:300px; height:30px;" ng-disabled="(mode2==3)?true:false"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<textarea style="width:300px; height:200px;" placeholder="News Content" ng-model="news.content" ng-disabled="(mode2==3)?true:false"></textarea>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--Images-->
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td>
+							<!--display list of images here-->
+						</td>
+					</tr>
+					<tr ng-if="(mode2==3) ? false : true">
+						<td>
+							<input type="file" />	
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--Video stuff-->
+		<tr>
+			<td>
+				<table ng-if="(mode2 == 3) ? false:true">
+					<tr>
+						<td>
+							<input type="text" placeholder="Youtube Video Code" ng-model="videoCode" />	
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" value="Submit" ng-click="AddNewVideo()" />
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--Buttons-->
+		<tr>
+			<td>
+				<table>
+					<tr ng-if="(mode2==1)?true:false">
+						<td>
+							<input type="button" value="POST" />	
+						</td>
+					</tr>
+					<tr ng-if="(mode2==2)?true:false">
+						<td>
+							<input type="button" value="Save Changes" />
+						</td>
+					</tr>
+					<tr ng-if="(mode2==3)?true:false" >
+						<td>
+							<input type="button" value="Delete" />
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+	</table>
+</div>

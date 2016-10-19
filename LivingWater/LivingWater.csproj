@@ -279,6 +279,8 @@
     <Content Include="Assets\js\directives\template2\ui\navigationBar\navigationBar.js" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\displayNews\displayNews.html" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\displayNews\displayNews.js" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\modifyNews\modifyNews.html" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\modifyNews\modifyNews.js" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.html" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.js" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsModify\newsModify.html" />
