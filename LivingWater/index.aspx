@@ -63,6 +63,7 @@
     <script src="/Assets/js/directives/template2/ui/products/productViewFilter/productViewFilter.js"></script>
     <script src="Assets/js/directives/template2/ui/newsComponents/newsModify/newsModify.js"></script>
     <script src="Assets/js/directives/template2/ui/newsComponents/displayNews/displayNews.js"></script>
+    <script src="Assets/js/directives/template2/ui/cartComponent/cartComponent.js"></script>
 
     <!--Services-->
     <script src="/Assets/js/directives/services/sharedControllerService.js"></script>

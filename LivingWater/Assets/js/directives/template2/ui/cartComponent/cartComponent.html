@@ -1,0 +1,46 @@
+<div>
+	<div>
+		<table>
+			<tr>
+				<td>
+					<input type="button" value="Remove Items" ng-click="Remove_OnClicked()"/>
+				</td>
+			</tr>
+		</table>
+		<table style="width:500px;">
+				<tr ng-repeat="item in items">
+					<td style="margin-right:20px;">
+						<input type="checkbox" ng-model="item.isSelected" />
+					</td>
+					<td style="margin-right:30px;">
+						<table>
+							<tr>
+								<td>
+									<img src="item.item.source" style="width:100px; height:100px;" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>{{item.item.item}}</p>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<input type="text" placeholder="Quantity" ng-model="item.item.quantity" />
+					</td>
+				</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<input type="button" value="Order Now" ng-click="MakeOrder()"/>
+				</td>
+				<td>
+					<input type="button" value="Cancel Orders" ng-click="CancelOrders()"/>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+</div>

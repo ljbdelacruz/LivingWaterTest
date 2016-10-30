@@ -44,6 +44,7 @@ angular.module('ngStarterKit', [
             'directives.tempNav',
             'directives.newsModify',
             'directives.displayNews',
+            'directives.cartComponent',
             /*Modules*/
             'modules.Home',
             'modules.Login',

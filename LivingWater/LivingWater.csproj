@@ -271,6 +271,8 @@
     <Content Include="Assets\js\directives\template1\ui\verificationCode\css\verificationCode.css" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.html" />
     <Content Include="Assets\js\directives\template1\ui\verificationCode\verificationCode.js" />
+    <Content Include="Assets\js\directives\template2\ui\cartComponent\cartComponent.html" />
+    <Content Include="Assets\js\directives\template2\ui\cartComponent\cartComponent.js" />
     <Content Include="Assets\js\directives\template2\ui\displayVideo2\displayVideo2.html" />
     <Content Include="Assets\js\directives\template2\ui\displayVideo2\displayVideo2.js" />
     <Content Include="Assets\js\directives\template2\ui\displayVideo\displayVideo.html" />
@@ -285,6 +287,7 @@
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsBody\newsBody.js" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsModify\newsModify.html" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsModify\newsModify.js" />
+    <Content Include="Assets\js\directives\template2\ui\newsComponents\newsPreview\css\newsPrev.css" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsPreview\newsPreview.html" />
     <Content Include="Assets\js\directives\template2\ui\newsComponents\newsPreview\newsPreview.js" />
     <Content Include="Assets\js\directives\template2\ui\orderComponents\orderBody\orderBody.html" />

@@ -6,7 +6,7 @@ angular.module('directives.concernComponent', [])
 .directive('concernComponent',
            ['$location',
             'sharedService',
-            'userListService',
+            'userListService',  
             'userInformation',
             'submitConcern',
             'processChecker',

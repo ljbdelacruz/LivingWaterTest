@@ -1,0 +1,42 @@
+﻿.contentPrev {
+  /* These rules create an artificially confined space, so we get 
+     a scrollbar that we can hide. They are not part of the hiding itself. */
+
+  border: 1px dashed gray;
+  padding: .5em;
+  
+  white-space: pre-wrap;
+  height: 5em;
+  overflow-y: scroll;
+}
+
+.contentPrev::-webkit-scrollbar { 
+  /* This is the magic bit */
+  display: none;
+}
+
+/***div class***/
+.parent{
+      position: relative;
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
+    overflow: hidden;}
+.child{
+  height: 150px;   
+   width: 318px;
+   overflow-y: scroll;
+}
+/***div id***/
+#wrapper {
+    width: 250px;
+    overflow: hidden;
+    outline: 1px solid blue;
+}
+
+#scroller {
+    width: 270px;
+    height: 100px;
+    overflow: auto;
+    background: yellow;
+}
